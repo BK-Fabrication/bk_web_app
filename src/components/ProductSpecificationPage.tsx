@@ -226,10 +226,9 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Technical Specifications & Clinical Details Card */}
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs p-4 sm:p-6 md:p-8 space-y-6">
+            {/* Technical Specifications & Clinical Details (Joined with divider line) */}
+            <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-slate-200 space-y-6">
               <div>
                 <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
                   <Maximize2 className="w-4 h-4 text-orange-600 shrink-0" />
@@ -335,6 +334,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                 </div>
               </div>
             </div>
+          </div>
 
           {/* Bottom Contact / RFQ Strip */}
           <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 border border-slate-800 text-center md:text-left">
