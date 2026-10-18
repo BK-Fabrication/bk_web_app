@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { X, Check, Plus, ShieldCheck, Phone, MessageSquare } from 'lucide-react';
+import { X, Check, Plus, ShieldCheck, Phone } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { MedicalProduct } from '../types';
 import { COMPANY_DETAILS } from '../data/products';
 
@@ -163,7 +164,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                     onClick={handleWhatsAppInquiry}
                     className="py-2.5 px-3 text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                   >
-                    <MessageSquare className="w-4 h-4 text-emerald-600" />
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
                     <span>WhatsApp RFQ</span>
                   </button>
 

@@ -6,9 +6,9 @@ import {
   Clock, 
   ShieldCheck, 
   ArrowUp, 
-  MessageSquare,
   Award
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { COMPANY_DETAILS } from '../data/products';
 import { BKLogo } from './BKLogo';
 
@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
               onClick={handleWhatsApp}
               className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
             </button>
           </div>

@@ -5,9 +5,9 @@ import {
   Pause, 
   Play, 
   ArrowRight, 
-  MessageSquare,
   ShieldCheck
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { COMPANY_DETAILS } from '../data/products';
 
 export interface CleanSlideData {
@@ -230,7 +230,7 @@ export const HomeImageSlider: React.FC<HomeImageSliderProps> = ({
                 rel="noopener noreferrer"
                 className="px-4 py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs sm:text-sm rounded-lg border border-emerald-200 transition-colors flex items-center gap-2 shadow-2xs"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
                 <span>WhatsApp Quote</span>
               </a>
             </div>

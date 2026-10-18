@@ -9,9 +9,9 @@ import {
   ChevronRight, 
   Search, 
   ArrowRight,
-  Sparkles,
-  MessageSquare
+  Sparkles
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from '../data/products';
 import { MedicalProduct } from '../types';
 import { BKLogo } from './BKLogo';
@@ -529,7 +529,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={handleMobileWhatsApp}
                 className="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-2xs"
               >
-                <MessageSquare className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Message on WhatsApp</span>
               </button>
 
