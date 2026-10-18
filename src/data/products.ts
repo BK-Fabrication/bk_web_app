@@ -2,37 +2,6 @@ import { MedicalProduct } from '../types';
 
 export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   {
-    id: 'icu-bed-pro',
-    modelCode: 'BK-ICU-900',
-    name: 'Electric Multi-Function ICU Hospital Bed',
-    category: 'beds',
-    categoryLabel: 'Hospital Beds',
-    subtitle: 'Motorized hospital bed with CPR rapid release & angle tilt sensors',
-    description: 'Engineered for intensive care units and critical post-operative recovery. Features heavy-gauge rectangular steel tubing with antibacterial epoxy coating, 4 heavy-duty linear actuators, dual-sided CPR quick release, and collapsible ABS side rails with built-in angle inclinometers.',
-    image: '/assets/images/product_icu_bed_1792303339395.jpg',
-    specs: {
-      material: 'CRCA Steel frame + ABS polymer head/foot & safety side panels',
-      dimensions: '2150 mm (L) × 1020 mm (W) × 500–750 mm (Adjustable H)',
-      loadCapacity: '260 kg safe working load',
-      finish: 'Antimicrobial epoxy powder coated (tested to 1000 hrs salt spray)',
-      castors: '125 mm diagonal luxury castors with central foot-brake mechanism',
-      adjustments: 'Backrest (0–75°), Knee rest (0–40°), Trendelenburg / Rev-Trend (0–12°)',
-      warranty: '24 Months On-site Comprehensive Warranty'
-    },
-    keyFeatures: [
-      'Four smooth Linak-grade silent electric actuators with handheld nurse controller',
-      'Instant manual dual-sided CPR flat release for cardiac resuscitation emergencies',
-      'Split tuck-away ABS side rails with clear degree of tilt indicators',
-      'Integrated IV pole mount sockets on all four corners + drainage bag hooks',
-      'Removable blow-molded ABS head and foot boards with locking mechanism'
-    ],
-    applications: ['Intensive Care Units (ICU)', 'Cardiology Wards', 'Post-Op Recovery', 'Trauma Centers'],
-    certifications: ['ISO 13485:2016 Compliant', 'CE Certified Design', 'Hospital Grade Electrical Safety'],
-    inStock: true,
-    leadTime: '3 - 5 business days',
-    isFeatured: true
-  },
-  {
     id: 'emergency-crash-cart',
     modelCode: 'BK-CC-400',
     name: 'Hospital Emergency Medicine Crash Cart',
@@ -453,7 +422,43 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     inStock: true,
     leadTime: 'Immediate Dispatch / 24 hrs',
     isFeatured: false
-  }
+  },
+    {
+    id: 'hospital-semi-fowler-bed',
+    modelCode: 'BK001',
+    name: 'Hospital Semi-Fowler Bed',
+    category: 'beds',
+    categoryLabel: 'Hospital Beds',
+    subtitle: 'Manual one-function hospital bed with adjustable backrest',
+    description: 'Designed for hospitals, nursing homes, and patient care facilities. Features a sturdy mild steel frame with epoxy powder coating, manual backrest adjustment, two-section perforated bed platform, removable moulded head and foot panels, and smooth-rolling castors.',
+    image: '/assets/images/product_hospital_semi_fowler_bed.jpg',
+    specs: {
+      material: 'Mild Steel (M.S.) frame with moulded ABS head & foot panels',
+      dimensions: '2060 mm (L) × 900 mm (W) × 600 mm (H)',
+      loadCapacity: '180 kg safe working load',
+      finish: 'Epoxy powder-coated finish',
+      castors: '100 mm smooth-rolling castors',
+      adjustments: 'Manual backrest adjustment (One Function)',
+      warranty: '12 Months Manufacturing Warranty'
+    },
+    keyFeatures: [
+      'Manual one-function backrest adjustment',
+      'Two-section perforated bed platform',
+      'High-quality removable moulded head and foot panels',
+      'Durable epoxy powder-coated mild steel frame',
+      'Smooth-rolling castors for easy mobility'
+    ],
+    applications: [
+      'General Hospital Wards',
+      'Nursing Homes',
+      'Clinics',
+      'Patient Recovery Rooms'
+    ],
+    certifications: [],
+    inStock: true,
+    leadTime: '3 - 5 business days',
+    isFeatured: false
+  },
 ];
 
 export const COMPANY_DETAILS = {

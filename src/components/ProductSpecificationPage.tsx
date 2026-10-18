@@ -221,14 +221,10 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                 </p>
 
                 {/* Highlights Strip */}
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 pt-1 text-xs">
-                  <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                    <span className="text-[11px] text-slate-500 block">Lead Time:</span>
+                <div className="pt-1 text-xs">
+                  <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200 inline-flex items-center gap-2">
+                    <span className="text-[11px] text-slate-500 font-medium">Standard Lead Time:</span>
                     <span className="font-bold text-slate-800 font-mono text-xs sm:text-sm">{currentProduct.leadTime}</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                    <span className="text-[11px] text-slate-500 block">Warranty Support:</span>
-                    <span className="font-bold text-orange-600 text-xs sm:text-sm">{currentProduct.specs.warranty}</span>
                   </div>
                 </div>
 
@@ -312,10 +308,6 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                           <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words print:py-1.5 print:px-3">{currentProduct.specs.adjustments}</td>
                         </tr>
                       )}
-                      <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Warranty Coverage</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-bold text-orange-600 print:py-1.5 print:px-3">{currentProduct.specs.warranty}</td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>
