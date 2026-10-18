@@ -9,7 +9,8 @@ import {
   ChevronRight, 
   Search, 
   ArrowRight,
-  Sparkles
+  Sparkles,
+  MessageSquare
 } from 'lucide-react';
 import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from '../data/products';
 import { MedicalProduct } from '../types';
@@ -119,6 +120,14 @@ export const Header: React.FC<HeaderProps> = ({
   const handleMobileNav = (section: string) => {
     setMobileMenuOpen(false);
     onNavigate(section);
+  };
+
+  const handleMobileWhatsApp = () => {
+    setMobileMenuOpen(false);
+    const text = encodeURIComponent(
+      `Hello BK Fabrication,\nI am looking for hospital furniture and medical equipment specifications and pricing for our healthcare facility.`
+    );
+    window.open(`https://wa.me/919591244345?text=${text}`, '_blank');
   };
 
   return (

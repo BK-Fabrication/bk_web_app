@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Check, Plus, ShieldCheck, Phone, MessageSquare } from 'lucide-react';
 import { MedicalProduct } from '../types';
 import { COMPANY_DETAILS } from '../data/products';
@@ -22,6 +22,29 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   isCompared,
   onViewSpecsPage,
 }) => {
+  // Lock background scroll when modal is open
+  useEffect(() => {
+    if (product) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [product]);
+
+  // Close on Escape key press
+  useEffect(() => {
+    if (!product) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [product, onClose]);
+
   if (!product) return null;
 
   const handleWhatsAppInquiry = () => {
