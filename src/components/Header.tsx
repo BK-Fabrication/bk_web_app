@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, FileText, ShieldCheck, Menu, X, ChevronRight, MessageSquare, Layers } from 'lucide-react';
-import { COMPANY_DETAILS } from '../data/products';
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  Phone, 
+  Mail, 
+  FileText, 
+  ShieldCheck, 
+  Menu, 
+  X, 
+  ChevronRight, 
+  Search, 
+  ArrowRight,
+  Sparkles
+} from 'lucide-react';
+import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from '../data/products';
+import { MedicalProduct } from '../types';
 import { BKLogo } from './BKLogo';
 
 interface HeaderProps {
@@ -10,6 +22,7 @@ interface HeaderProps {
   onNavigate: (section: string) => void;
   compareCount: number;
   onOpenCompare: () => void;
+  onSelectProduct?: (product: MedicalProduct) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -19,8 +32,66 @@ export const Header: React.FC<HeaderProps> = ({
   onNavigate,
   compareCount,
   onOpenCompare,
+  onSelectProduct,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [mobileSearchExpanded, setMobileSearchExpanded] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Close search results on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Quick keyboard shortcut (Cmd/Ctrl + K) to focus search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+        setIsSearchOpen(true);
+      }
+      if (e.key === 'Escape') {
+        setIsSearchOpen(false);
+        setMobileSearchExpanded(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Filter products live
+  const searchResults = searchQuery.trim()
+    ? MEDICAL_PRODUCTS.filter((p) => {
+        const q = searchQuery.toLowerCase().trim();
+        return (
+          p.name.toLowerCase().includes(q) ||
+          p.modelCode.toLowerCase().includes(q) ||
+          p.categoryLabel.toLowerCase().includes(q) ||
+          p.specs.material.toLowerCase().includes(q)
+        );
+      }).slice(0, 5)
+    : [];
+
+  const handleProductClick = (product: MedicalProduct) => {
+    setIsSearchOpen(false);
+    setSearchQuery('');
+    setMobileSearchExpanded(false);
+    if (onSelectProduct) {
+      onSelectProduct(product);
+    } else {
+      onNavigate('catalog');
+    }
+  };
 
   // Lock body scroll when mobile menu sidebar is open
   useEffect(() => {
@@ -48,14 +119,6 @@ export const Header: React.FC<HeaderProps> = ({
   const handleMobileNav = (section: string) => {
     setMobileMenuOpen(false);
     onNavigate(section);
-  };
-
-  const handleMobileWhatsApp = () => {
-    setMobileMenuOpen(false);
-    const text = encodeURIComponent(
-      `Hello BK Fabrication,\nI am looking for hospital furniture and medical equipment specifications and pricing for our healthcare facility.`
-    );
-    window.open(`https://wa.me/919591244345?text=${text}`, '_blank');
   };
 
   return (
@@ -106,9 +169,9 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Primary Top Bar: Zone 1 (Logo Only) — Zone 2 (Desktop Nav links) — Zone 3 (Actions & Menu Toggle) */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4 sm:gap-8">
-          {/* Zone 1: Authentic BK Logo Only (No text) */}
+        {/* Primary Top Bar */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3 sm:gap-6">
+          {/* Zone 1: Authentic BK Logo */}
           <button
             onClick={() => onNavigate('hero')}
             className="text-left group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm shrink-0"
@@ -117,10 +180,112 @@ export const Header: React.FC<HeaderProps> = ({
             <BKLogo variant="icon" size="md" />
           </button>
 
+          {/* Zone 2: Modern Responsive Search Bar */}
+          <div ref={searchContainerRef} className="relative flex-1 max-w-lg hidden md:block">
+            <div className="relative flex items-center">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" />
+              <input
+                ref={searchInputRef}
+                type="text"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setIsSearchOpen(true);
+                }}
+                onFocus={() => setIsSearchOpen(true)}
+                placeholder="Search hospital beds, crash carts, SS 304, model code..."
+                className="w-full pl-9 pr-14 py-2 text-xs bg-slate-100/80 hover:bg-slate-100 focus:bg-white text-slate-800 placeholder-slate-400 border border-slate-200 focus:border-orange-500 rounded-xl outline-none transition-all shadow-2xs focus:ring-2 focus:ring-orange-500/15"
+              />
+              <div className="absolute right-2.5 flex items-center gap-1">
+                {searchQuery ? (
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      searchInputRef.current?.focus();
+                    }}
+                    className="p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-200 transition-colors"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                ) : (
+                  <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-400 bg-white border border-slate-200 rounded shadow-2xs">
+                    ⌘K
+                  </kbd>
+                )}
+              </div>
+            </div>
 
+            {/* Live Search Results Dropdown */}
+            {isSearchOpen && searchQuery.trim().length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="p-2 border-b border-slate-100 flex items-center justify-between text-[11px] text-slate-500 bg-slate-50">
+                  <span className="font-semibold text-slate-700">Products ({searchResults.length})</span>
+                  <span>Press Esc to close</span>
+                </div>
 
-          {/* Zone 3: Primary Actions (Compare + RFQ Basket + Right Menu Toggle Button) */}
+                {searchResults.length > 0 ? (
+                  <div className="divide-y divide-slate-100 max-h-80 overflow-y-auto">
+                    {searchResults.map((product) => (
+                      <button
+                        key={product.id}
+                        onClick={() => handleProductClick(product)}
+                        className="w-full p-3 text-left hover:bg-orange-50/70 transition-colors flex items-center justify-between gap-3 group cursor-pointer"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          {product.image && (
+                            <img
+                              src={product.image}
+                              alt={product.name}
+                              className="w-9 h-9 rounded-lg object-cover bg-slate-100 border border-slate-200 shrink-0"
+                            />
+                          )}
+                          <div className="min-w-0">
+                            <p className="text-xs font-bold text-slate-800 group-hover:text-orange-600 transition-colors truncate">
+                              {product.name}
+                            </p>
+                            <p className="text-[11px] text-slate-500 font-mono flex items-center gap-2">
+                              <span className="font-semibold text-orange-600">{product.modelCode}</span>
+                              <span>·</span>
+                              <span>{product.categoryLabel}</span>
+                            </p>
+                          </div>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-orange-600 shrink-0" />
+                      </button>
+                    ))}
+                    <button
+                      onClick={() => {
+                        setIsSearchOpen(false);
+                        onNavigate('catalog');
+                      }}
+                      className="w-full p-2.5 text-center text-xs font-semibold text-orange-600 bg-orange-50/50 hover:bg-orange-100/70 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    >
+                      <span>Explore all matching products in Catalog</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="p-6 text-center text-slate-500">
+                    <p className="text-xs font-medium text-slate-700">No hospital equipment matching "{searchQuery}"</p>
+                    <p className="text-[11px] text-slate-400 mt-1">Try searching bed, cart, SS 304, or trolley</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Zone 3: Primary Actions (Mobile Search Toggle + Compare + RFQ Basket + Menu Toggle) */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Mobile Search Button Toggle */}
+            <button
+              onClick={() => setMobileSearchExpanded(!mobileSearchExpanded)}
+              className="md:hidden p-2 text-slate-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors border border-slate-200 cursor-pointer"
+              title="Search Products"
+              aria-label="Search"
+            >
+              <Search className="w-4 h-4" />
+            </button>
+
             {compareCount > 0 && (
               <button
                 onClick={onOpenCompare}
@@ -145,7 +310,7 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </button>
 
-            {/* Right Sidebar Menu Toggle Button (Visible across viewports for quick sidebar navigation) */}
+            {/* Right Sidebar Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="flex items-center gap-1.5 p-2 sm:px-3 sm:py-2 text-slate-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors cursor-pointer border border-slate-200"
@@ -157,6 +322,56 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
         </div>
+
+        {/* Mobile Search Input Drawer (Visible when expanded on mobile) */}
+        {mobileSearchExpanded && (
+          <div className="md:hidden px-4 pb-3 pt-1 border-t border-slate-100 bg-white">
+            <div className="relative flex items-center">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" />
+              <input
+                type="text"
+                autoFocus
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search bed, trolley, crash cart, SS 304..."
+                className="w-full pl-9 pr-8 py-2 text-xs bg-slate-100 text-slate-800 placeholder-slate-400 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-orange-500/20"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="p-1 text-slate-400 hover:text-slate-600 absolute right-2"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            {/* Mobile Search Results */}
+            {searchQuery.trim().length > 0 && (
+              <div className="mt-2 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden max-h-64 overflow-y-auto divide-y divide-slate-100">
+                {searchResults.length > 0 ? (
+                  searchResults.map((product) => (
+                    <button
+                      key={product.id}
+                      onClick={() => handleProductClick(product)}
+                      className="w-full p-2.5 text-left flex items-center justify-between text-xs hover:bg-orange-50 transition-colors"
+                    >
+                      <div className="min-w-0 pr-2">
+                        <p className="font-semibold text-slate-800 truncate">{product.name}</p>
+                        <p className="text-[11px] text-slate-500 font-mono">{product.modelCode} · {product.categoryLabel}</p>
+                      </div>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                    </button>
+                  ))
+                ) : (
+                  <div className="p-4 text-center text-xs text-slate-500">
+                    No results for "{searchQuery}"
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
       </header>
 
       {/* Right-Side Sliding Menu Sidebar Drawer (Mounted outside sticky header for absolute layout integrity) */}

@@ -179,6 +179,7 @@ export default function App() {
         onNavigate={handleNavigate}
         compareCount={comparedIds.size}
         onOpenCompare={() => setIsCompareOpen(true)}
+        onSelectProduct={handleOpenIndividualSpecs}
       />
 
       <main className="flex-1">
