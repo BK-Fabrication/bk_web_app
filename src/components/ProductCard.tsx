@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Check, Eye, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { MedicalProduct } from '../types';
 
 interface ProductCardProps {
@@ -78,12 +79,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
 
-          <h3
-            onClick={() => onSelect(product)}
-            className="text-base font-bold text-slate-900 group-hover:text-orange-600 transition-colors cursor-pointer line-clamp-1"
+          <Link
+            to={`/products/${product.id}`}
+            onClick={(e) => {
+              if (onViewSpecsPage) {
+                e.preventDefault();
+                onViewSpecsPage(product);
+              }
+            }}
+            className="text-base font-bold text-slate-900 group-hover:text-orange-600 transition-colors cursor-pointer line-clamp-1 block"
           >
             {product.name}
-          </h3>
+          </Link>
 
           <p className="text-xs text-slate-500 line-clamp-2 mt-1 leading-relaxed">
             {product.subtitle}
@@ -110,12 +117,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Interactive Action Bar with Brand Colors */}
         <div className="pt-2 flex items-center gap-2">
-          <button
-            onClick={() => onViewSpecsPage ? onViewSpecsPage(product) : onSelect(product)}
-            className="flex-1 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-orange-600 bg-slate-100 hover:bg-orange-50 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-orange-200"
+          <Link
+            to={`/products/${product.id}`}
+            onClick={(e) => {
+              if (onViewSpecsPage) {
+                e.preventDefault();
+                onViewSpecsPage(product);
+              }
+            }}
+            className="flex-1 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-orange-600 bg-slate-100 hover:bg-orange-50 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-orange-200 text-center"
           >
             Full Specs
-          </button>
+          </Link>
 
           <button
             onClick={() => onAddToQuote(product)}

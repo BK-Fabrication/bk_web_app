@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { HomeImageSlider } from './components/HomeImageSlider';
-import { ProductGrid } from './components/ProductGrid';
+import { HomePageView } from './components/HomePageView';
 import { ProductCatalogPage } from './components/ProductCatalogPage';
-import { ProductSpecificationPage } from './components/ProductSpecificationPage';
+import { ProductSpecificationRouteWrapper } from './components/ProductSpecificationRouteWrapper';
 import { ProductModal } from './components/ProductModal';
 import { QuotationDrawer } from './components/QuotationDrawer';
 import { ComparisonModal } from './components/ComparisonModal';
-import { CustomFabrication } from './components/CustomFabrication';
-import { QualitySection } from './components/QualitySection';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { MEDICAL_PRODUCTS } from './data/products';
 import { MedicalProduct, ProductCategory, QuoteItem } from './types';
-import { ArrowRight } from 'lucide-react';
-
-export type CurrentView = 'home' | 'catalog' | 'specification';
 
 export default function App() {
-  const [products, setProducts] = useState<MedicalProduct[]>(MEDICAL_PRODUCTS);
-  const [currentView, setCurrentView] = useState<CurrentView>('home');
-  const [activeCategory, setActiveCategory] = useState<ProductCategory>('all');
-  const [activeNav, setActiveNav] = useState<string>('hero');
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Individual specification page product ID
-  const [selectedSpecProductId, setSelectedSpecProductId] = useState<string>(MEDICAL_PRODUCTS[0].id);
+  const [products, setProducts] = useState<MedicalProduct[]>(MEDICAL_PRODUCTS);
+  const [activeCategory, setActiveCategory] = useState<ProductCategory>('all');
 
   // Quotation RFQ Basket state
   const [quoteItems, setQuoteItems] = useState<QuoteItem[]>(() => {
@@ -115,180 +107,141 @@ export default function App() {
     setIsQuoteOpen(true);
   };
 
-  // Navigate directly to individual specification page for a product
-  const handleOpenIndividualSpecs = (product: MedicalProduct) => {
-    setSelectedSpecProductId(product.id);
-    setCurrentView('specification');
-    setActiveNav('catalog');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  // Direct router navigation handler for header & footer
   const handleNavigate = (section: string) => {
-    setActiveNav(section);
-
-    if (section === 'hero') {
-      setCurrentView('home');
+    if (section === 'hero' || section === 'home') {
+      navigate('/');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (section === 'catalog') {
-      setCurrentView('catalog');
-      setActiveCategory('all');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      navigate('/catalog');
     } else if (section === 'beds') {
-      setCurrentView('catalog');
-      setActiveCategory('beds');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      navigate('/catalog?category=beds');
     } else if (section === 'custom') {
-      if (currentView !== 'home') {
-        setCurrentView('home');
-        setTimeout(() => {
-          document.getElementById('custom-fabrication')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+      if (location.pathname !== '/') {
+        navigate('/#custom-fabrication');
       } else {
         document.getElementById('custom-fabrication')?.scrollIntoView({ behavior: 'smooth' });
       }
     } else if (section === 'quality') {
-      if (currentView !== 'home') {
-        setCurrentView('home');
-        setTimeout(() => {
-          document.getElementById('quality-standards')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+      if (location.pathname !== '/') {
+        navigate('/#quality-standards');
       } else {
         document.getElementById('quality-standards')?.scrollIntoView({ behavior: 'smooth' });
       }
     } else if (section === 'contact') {
-      if (currentView !== 'home') {
-        setCurrentView('home');
-        setTimeout(() => {
-          document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+      if (location.pathname !== '/') {
+        navigate('/#contact-section');
       } else {
         document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
 
+  const handleSelectProduct = (product: MedicalProduct) => {
+    navigate(`/products/${product.id}`);
+  };
+
   const comparedProducts = products.filter((p) => comparedIds.has(p.id));
+
+  // Determine activeNav from path
+  const currentNav = location.pathname.startsWith('/catalog')
+    ? 'catalog'
+    : location.pathname.startsWith('/products')
+    ? 'catalog'
+    : 'hero';
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
-      {/* Top Header - No Specification Link */}
+      <ScrollToTop />
+
+      {/* Top Header */}
       <Header
         quoteCount={quoteItems.reduce((acc, i) => acc + i.quantity, 0)}
         onOpenQuote={() => setIsQuoteOpen(true)}
-        activeNav={activeNav}
+        activeNav={currentNav}
         onNavigate={handleNavigate}
         compareCount={comparedIds.size}
         onOpenCompare={() => setIsCompareOpen(true)}
-        onSelectProduct={handleOpenIndividualSpecs}
+        onSelectProduct={handleSelectProduct}
       />
 
       <main className="flex-1">
-        {currentView === 'catalog' ? (
-          /* Dedicated Full Product Catalog Page */
-          <ProductCatalogPage
-            products={products}
-            onSelectProductSpecs={handleOpenIndividualSpecs}
-            onQuickView={(p) => setQuickViewProduct(p)}
-            onAddToQuote={handleAddToQuote}
-            quoteIds={quoteIds}
-            onToggleCompare={handleToggleCompare}
-            comparedIds={comparedIds}
-            onBackToHome={() => handleNavigate('hero')}
-            onOpenQuote={() => setIsQuoteOpen(true)}
-          />
-        ) : currentView === 'specification' ? (
-          /* Individual Product Specification Page */
-          <ProductSpecificationPage
-            initialProductId={selectedSpecProductId}
-            onBackToCatalog={() => {
-              setCurrentView('catalog');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            onAddToQuote={handleAddToQuote}
-            isInQuote={quoteIds.has(selectedSpecProductId)}
-            onOpenQuote={() => setIsQuoteOpen(true)}
-          />
-        ) : (
-          /* Home Landing View */
-          <>
-            {/* Hero Section (Commented out) */}
-            {/* 
-            <Hero
-              onExploreClick={() => handleNavigate('catalog')}
-              onCustomClick={() => handleNavigate('custom')}
-              onOpenQuote={() => setIsQuoteOpen(true)}
-            />
-            */}
-
-            {/* Professional 4-Image Showcase Slider */}
-            <HomeImageSlider
-              onExploreClick={() => handleNavigate('catalog')}
-              onOpenQuote={() => setIsQuoteOpen(true)}
-              onSelectProduct={(productId) => {
-                const p = products.find((prod) => prod.id === productId);
-                if (p) handleOpenIndividualSpecs(p);
-                else handleNavigate('catalog');
-              }}
-            />
-
-            {/* Featured Product Catalog Section */}
-            <div className="relative">
-              <ProductGrid
+        <Routes>
+          {/* Home Route */}
+          <Route
+            path="/"
+            element={
+              <HomePageView
                 products={products}
-                onSelectProduct={handleOpenIndividualSpecs}
-                onViewSpecsPage={handleOpenIndividualSpecs}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+                quoteIds={quoteIds}
+                comparedIds={comparedIds}
+                onSelectProduct={handleSelectProduct}
+                onAddToQuote={handleAddToQuote}
+                onToggleCompare={handleToggleCompare}
+                onOpenQuote={() => setIsQuoteOpen(true)}
+                onAddCustomProduct={handleAddCustomProduct}
+              />
+            }
+          />
+
+          {/* Full Product Catalog Route with Category & Search Query Support */}
+          <Route
+            path="/catalog"
+            element={
+              <ProductCatalogPage
+                products={products}
+                onSelectProductSpecs={handleSelectProduct}
+                onQuickView={(p) => setQuickViewProduct(p)}
                 onAddToQuote={handleAddToQuote}
                 quoteIds={quoteIds}
                 onToggleCompare={handleToggleCompare}
                 comparedIds={comparedIds}
-                activeCategory={activeCategory}
-                onCategoryChange={(cat) => setActiveCategory(cat)}
+                onBackToHome={() => navigate('/')}
+                onOpenQuote={() => setIsQuoteOpen(true)}
               />
+            }
+          />
 
-              {/* Direct Full Catalog Banner Callout */}
-              <div className="max-w-7xl mx-auto px-6 pb-12">
-                <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md border border-slate-700">
-                  <div className="space-y-1 text-center sm:text-left">
-                    <div className="text-xs font-bold text-orange-400 uppercase tracking-wider">
-                      Need Complete Factory Price List or Full Catalog?
-                    </div>
-                    <h3 className="text-xl font-bold text-white">
-                      Explore All {products.length} Hospital Furniture Models & Custom Accessories
-                    </h3>
-                    <p className="text-xs text-slate-400 max-w-xl">
-                      Check complete technical specifications, exact dimensions, trolley models, and get instant direct factory wholesale quotation.
-                    </p>
-                  </div>
+          {/* Individual Product Specification Route with SEO & Rich JSON-LD */}
+          <Route
+            path="/products/:id"
+            element={
+              <ProductSpecificationRouteWrapper
+                onAddToQuote={handleAddToQuote}
+                quoteIds={quoteIds}
+                onOpenQuote={() => setIsQuoteOpen(true)}
+              />
+            }
+          />
 
-                  <button
-                    onClick={() => handleNavigate('catalog')}
-                    className="px-6 py-3.5 bg-orange-600 hover:bg-orange-700 active:bg-orange-800 text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer hover:shadow-md shrink-0"
-                  >
-                    <span>View Full Product Catalog</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Custom Hospital Equipment Fabrication */}
-            <CustomFabrication onAddCustomProduct={handleAddCustomProduct} />
-
-            {/* Quality, Metallurgy & ISO Standards */}
-            <QualitySection />
-
-            {/* Contact & Direct Factory Inquiry */}
-            <ContactSection />
-          </>
-        )}
+          {/* Fallback to Home */}
+          <Route
+            path="*"
+            element={
+              <HomePageView
+                products={products}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+                quoteIds={quoteIds}
+                comparedIds={comparedIds}
+                onSelectProduct={handleSelectProduct}
+                onAddToQuote={handleAddToQuote}
+                onToggleCompare={handleToggleCompare}
+                onOpenQuote={() => setIsQuoteOpen(true)}
+                onAddCustomProduct={handleAddCustomProduct}
+              />
+            }
+          />
+        </Routes>
       </main>
 
       {/* Footer */}
       <Footer
         onNavigate={handleNavigate}
         onSelectCategory={(cat) => {
-          setActiveCategory(cat);
-          handleNavigate('catalog');
+          navigate(`/catalog?category=${cat}`);
         }}
       />
 
@@ -300,7 +253,7 @@ export default function App() {
         isInQuote={quickViewProduct ? quoteIds.has(quickViewProduct.id) : false}
         onToggleCompare={handleToggleCompare}
         isCompared={quickViewProduct ? comparedIds.has(quickViewProduct.id) : false}
-        onViewSpecsPage={handleOpenIndividualSpecs}
+        onViewSpecsPage={handleSelectProduct}
       />
 
       {/* Request For Quotation (RFQ) Slide-Over Drawer */}

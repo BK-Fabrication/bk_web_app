@@ -16,6 +16,8 @@ import {
 } from 'lucide-react';
 import { MedicalProduct, ProductCategory } from '../types';
 import { ProductCard } from './ProductCard';
+import { SEO } from './SEO';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
 interface ProductCatalogPageProps {
   products: MedicalProduct[];
@@ -25,7 +27,7 @@ interface ProductCatalogPageProps {
   quoteIds: Set<string>;
   onToggleCompare: (product: MedicalProduct) => void;
   comparedIds: Set<string>;
-  onBackToHome: () => void;
+  onBackToHome?: () => void;
   onOpenQuote: () => void;
 }
 
@@ -39,11 +41,36 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
   onBackToHome,
   onOpenQuote,
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<ProductCategory>('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const urlCategory = (searchParams.get('category') as ProductCategory) || 'all';
+  const urlSearch = searchParams.get('q') || '';
+
+  const [searchQuery, setSearchQuery] = useState(urlSearch);
+  const [activeCategory, setActiveCategory] = useState<ProductCategory>(urlCategory);
   const [selectedMaterial, setSelectedMaterial] = useState<'all' | 'ss304' | 'powder'>('all');
   const [sortBy, setSortBy] = useState<'featured' | 'model' | 'name'>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
+
+  // Keep state in sync if URL query parameter changes
+  React.useEffect(() => {
+    const cat = searchParams.get('category') as ProductCategory;
+    if (cat && cat !== activeCategory) {
+      setActiveCategory(cat);
+    }
+  }, [searchParams]);
+
+  const handleCategoryChange = (cat: ProductCategory) => {
+    setActiveCategory(cat);
+    const newParams = new URLSearchParams(searchParams);
+    if (cat === 'all') {
+      newParams.delete('category');
+    } else {
+      newParams.set('category', cat);
+    }
+    setSearchParams(newParams);
+  };
 
   const categories: { id: ProductCategory; label: string; count: number }[] = [
     { id: 'all', label: 'All Products', count: products.length },
@@ -120,11 +147,18 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
 
   return (
     <div className="bg-slate-50 min-h-screen py-8">
+      {/* Product Catalog SEO */}
+      <SEO
+        title="Hospital Furniture & Medical Equipment Catalog | BK Fabrication"
+        description="Browse the complete BK Fabrication catalog: ICU electric beds, medical crash carts, SS 304 dressing trolleys, examination couches, and ward equipment with factory-direct pricing."
+        canonical={typeof window !== 'undefined' ? `${window.location.origin}/catalog` : undefined}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Navigation Breadcrumb */}
         <div className="flex items-center justify-between mb-6">
           <button
-            onClick={onBackToHome}
+            onClick={() => onBackToHome ? onBackToHome() : navigate('/')}
             className="text-xs font-semibold text-slate-600 hover:text-orange-600 transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
@@ -203,7 +237,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
             <div className="w-full md:w-64 shrink-0">
               <select
                 value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value as ProductCategory)}
+                onChange={(e) => handleCategoryChange(e.target.value as ProductCategory)}
                 className="w-full py-3 px-3.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-2xs cursor-pointer"
                 aria-label="Filter by product category"
               >
@@ -255,7 +289,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
+                    onClick={() => handleCategoryChange(cat.id)}
                     className={`px-3 py-1.5 text-xs font-bold rounded-lg whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
                       isActive
                         ? 'bg-orange-600 text-white shadow-2xs'

@@ -20,26 +20,13 @@ import {
 import { MedicalProduct } from '../types';
 import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from '../data/products';
 import { BKLogo } from './BKLogo';
-
-// Authentic WhatsApp SVG Icon Component
-const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    width="16" 
-    height="16" 
-    stroke="currentColor" 
-    strokeWidth="0" 
-    fill="currentColor" 
-    className={className}
-    aria-hidden="true"
-  >
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-  </svg>
-);
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { SEO } from './SEO';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 interface ProductSpecificationPageProps {
   initialProductId?: string;
-  onBackToCatalog: () => void;
+  onBackToCatalog?: () => void;
   onAddToQuote: (product: MedicalProduct) => void;
   isInQuote: boolean;
   onOpenQuote: () => void;
@@ -53,17 +40,19 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   isInQuote,
   onOpenQuote,
 }) => {
-  const [selectedProductId, setSelectedProductId] = useState<string>(
-    initialProductId || MEDICAL_PRODUCTS[0].id
-  );
+  const { id: routeProductId } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
-  React.useEffect(() => {
-    if (initialProductId) {
-      setSelectedProductId(initialProductId);
+  const activeId = routeProductId || initialProductId || MEDICAL_PRODUCTS[0].id;
+  const currentProduct = MEDICAL_PRODUCTS.find((p) => p.id === activeId) || MEDICAL_PRODUCTS[0];
+
+  const handleBack = () => {
+    if (onBackToCatalog) {
+      onBackToCatalog();
+    } else {
+      navigate('/catalog');
     }
-  }, [initialProductId]);
-
-  const currentProduct = MEDICAL_PRODUCTS.find((p) => p.id === selectedProductId) || MEDICAL_PRODUCTS[0];
+  };
 
   const handleWhatsAppInquiry = () => {
     const text = encodeURIComponent(
@@ -84,19 +73,52 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
 
   return (
     <div className="bg-slate-50 min-h-screen py-4 sm:py-8">
+      {/* Dynamic Product SEO Metadata & Schema.org JSON-LD */}
+      <SEO
+        title={`${currentProduct.name} (${currentProduct.modelCode}) | BK Fabrication`}
+        description={`Technical specifications, dimensions, materials, and wholesale factory pricing for ${currentProduct.name} (${currentProduct.modelCode}). Manufactured by BK Fabrication.`}
+        canonical={typeof window !== 'undefined' ? `${window.location.origin}/products/${currentProduct.id}` : undefined}
+        ogImage={currentProduct.image}
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: currentProduct.name,
+          image: currentProduct.image ? [currentProduct.image] : [],
+          description: currentProduct.description,
+          sku: currentProduct.modelCode,
+          mpn: currentProduct.modelCode,
+          brand: {
+            '@type': 'Brand',
+            name: 'BK Fabrication'
+          },
+          category: currentProduct.categoryLabel,
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'INR',
+            availability: currentProduct.inStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+            seller: {
+              '@type': 'Organization',
+              name: 'BK Fabrication'
+            }
+          }
+        }}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Navigation Breadcrumb & Back Link */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs text-slate-500 font-medium">
             <button
-              onClick={onBackToCatalog}
+              onClick={handleBack}
               className="hover:text-orange-600 transition-colors flex items-center gap-1 cursor-pointer font-semibold"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to Catalog</span>
             </button>
             <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-            <span className="text-slate-600 truncate max-w-[140px] sm:max-w-none">{currentProduct.categoryLabel}</span>
+            <Link to={`/catalog?category=${currentProduct.category}`} className="text-slate-600 hover:text-orange-600 truncate max-w-[140px] sm:max-w-none">
+              {currentProduct.categoryLabel}
+            </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
             <span className="font-bold text-orange-600 font-mono">{currentProduct.modelCode}</span>
           </div>
