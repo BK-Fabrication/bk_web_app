@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { SlidersHorizontal } from 'lucide-react';
+import { PackageOpen } from 'lucide-react';
 import { MedicalProduct, ProductCategory } from '../types';
 import { ProductCard } from './ProductCard';
 
@@ -41,28 +41,26 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <section id="products-section" className="max-w-7xl mx-auto px-6 py-16">
       {/* Section Header */}
-      <div className="mb-8">
-        <div>
-          <div className="text-xs font-bold uppercase tracking-wider text-orange-600 mb-1">
-            Direct Factory Catalogue & Ready Stock
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Hospital Furniture & Medical Ward Equipment
-          </h2>
-          <p className="text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
-            Manufactured using heavy-gauge steel pipe and rust-proof SS 304 stainless steel for 15+ years of rough hospital use.
-            Click any product below to check dimensions, full technical specifications, or get direct factory rate quotation.
-          </p>
+      <div className="mb-8 max-w-3xl">
+        <div className="text-xs font-bold uppercase tracking-wider text-orange-600 mb-1">
+          Direct Factory Catalogue & Ready Stock
         </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          Hospital Furniture & Medical Ward Equipment
+        </h2>
+        <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+          Manufactured using heavy-gauge steel pipe and rust-proof SS 304 stainless steel for 15+ years of rough hospital use.
+          Click any product below to check dimensions, full technical specifications, or get direct factory rate quotation.
+        </p>
       </div>
 
       {/* Main Content Area */}
       {filteredProducts.length === 0 ? (
         <div className="bg-white rounded-xl border border-slate-200 p-12 text-center max-w-lg mx-auto">
-          <SlidersHorizontal className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-          <h3 className="text-base font-bold text-slate-800">No matching hospital equipment found</h3>
+          <PackageOpen className="w-10 h-10 text-slate-300 mx-auto mb-3" />
+          <h3 className="text-base font-bold text-slate-800">No hospital equipment available</h3>
           <p className="text-xs text-slate-500 mt-1 mb-4">
-            Try searching with another model code or word, or call our factory directly at 95912 44345 for custom sizes.
+            Currently no products found. Call our factory directly at +91 95912 44345 for custom fabrication or ready stock inquiries.
           </p>
           {onCategoryChange && (
             <button
