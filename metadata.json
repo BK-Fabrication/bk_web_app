@@ -1,0 +1,8 @@
+{
+  "name": "BK Fabrication - Medical Equipment & Hospital Furniture",
+  "description": "Leading manufacturer of clinical hospital furniture, ICU beds, emergency trolleys, stainless steel medical equipment, and ward solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
