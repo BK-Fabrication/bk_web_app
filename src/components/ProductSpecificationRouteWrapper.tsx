@@ -22,6 +22,7 @@ export const ProductSpecificationRouteWrapper: React.FC<ProductSpecificationRout
       initialProductId={id}
       onAddToQuote={onAddToQuote}
       isInQuote={id ? quoteIds.has(id) : false}
+      quoteIds={quoteIds}
       onOpenQuote={onOpenQuote}
       onBackToCatalog={() => navigate('/catalog')}
     />
