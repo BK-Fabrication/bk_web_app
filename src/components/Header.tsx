@@ -183,10 +183,21 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Zone 1: Authentic BK Logo */}
           <button
             onClick={() => onNavigate('hero')}
-            className="text-left group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm shrink-0"
+            className="text-left group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm shrink-0 flex items-center gap-2.5"
             title="BK Fabrication Home"
           >
             <BKLogo variant="icon" size="md" />
+            <div className="hidden sm:flex flex-col">
+              <span className="font-extrabold text-sm sm:text-base text-slate-900 tracking-tight leading-none group-hover:text-orange-600 transition-colors">
+                B K FABRICATION
+              </span>
+              <span
+                style={{ fontFamily: 'Georgia, Cambria, serif' }}
+                className="text-[11px] sm:text-xs text-orange-600 italic font-medium leading-tight mt-0.5"
+              >
+                A Work of Perfect Design
+              </span>
+            </div>
           </button>
 
           {/* Zone 2: Modern Responsive Search Bar */}
