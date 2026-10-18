@@ -385,15 +385,15 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Right-Side Sliding Menu Sidebar Drawer (Mounted outside sticky header for absolute layout integrity) */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex justify-end">
-          {/* Backdrop Overlay */}
+        <div className="fixed inset-0 z-[100] flex justify-end overflow-hidden">
+          {/* Backdrop Overlay with smooth fade in */}
           <div
-            className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity cursor-pointer"
+            className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity cursor-pointer animate-fade-in"
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close menu backdrop"
           />
 
-          {/* Right-Side Sliding Panel (Scrolls fully as one unified panel without nested inner scrollers) */}
+          {/* Right-Side Sliding Panel (Smooth slide from right of screen to left) */}
           <div
             className="relative w-84 max-w-[85vw] h-full max-h-screen bg-white shadow-2xl flex flex-col z-[101] border-l border-slate-200 animate-slide-in-right overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
