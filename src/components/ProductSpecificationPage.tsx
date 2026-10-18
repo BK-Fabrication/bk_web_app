@@ -56,7 +56,6 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   const [selectedProductId, setSelectedProductId] = useState<string>(
     initialProductId || MEDICAL_PRODUCTS[0].id
   );
-  const [activeTab, setActiveTab] = useState<'specs' | 'features' | 'accessories' | 'standards'>('specs');
 
   React.useEffect(() => {
     if (initialProductId) {
@@ -229,53 +228,8 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
             </div>
           </div>
 
-          {/* Specification Tabs */}
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs">
-            <div className="flex border-b border-slate-200 bg-slate-50 overflow-x-auto scrollbar-none no-print">
-              <button
-                onClick={() => setActiveTab('specs')}
-                className={`py-3 px-4 sm:px-5 text-xs font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer shrink-0 ${
-                  activeTab === 'specs'
-                    ? 'border-orange-600 text-orange-600 bg-white'
-                    : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Technical Matrix
-              </button>
-              <button
-                onClick={() => setActiveTab('features')}
-                className={`py-3 px-4 sm:px-5 text-xs font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer shrink-0 ${
-                  activeTab === 'features'
-                    ? 'border-orange-600 text-orange-600 bg-white'
-                    : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Clinical Features & Safety
-              </button>
-              <button
-                onClick={() => setActiveTab('accessories')}
-                className={`py-3 px-4 sm:px-5 text-xs font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer shrink-0 ${
-                  activeTab === 'accessories'
-                    ? 'border-orange-600 text-orange-600 bg-white'
-                    : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Hospital Applications
-              </button>
-              <button
-                onClick={() => setActiveTab('standards')}
-                className={`py-3 px-4 sm:px-5 text-xs font-bold border-b-2 whitespace-nowrap transition-colors cursor-pointer shrink-0 ${
-                  activeTab === 'standards'
-                    ? 'border-orange-600 text-orange-600 bg-white'
-                    : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Quality & Compliance
-              </button>
-            </div>
-
-            {/* Tab Content Body */}
-            <div className="p-4 sm:p-6 md:p-8 space-y-6">
+          {/* Technical Specifications & Clinical Details Card */}
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs p-4 sm:p-6 md:p-8 space-y-6">
               <div>
                 <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
                   <Maximize2 className="w-4 h-4 text-orange-600 shrink-0" />
@@ -381,7 +335,6 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                 </div>
               </div>
             </div>
-          </div>
 
           {/* Bottom Contact / RFQ Strip */}
           <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 border border-slate-800 text-center md:text-left">
