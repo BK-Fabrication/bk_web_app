@@ -104,9 +104,9 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Navigation Breadcrumb & Back Link */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 print-page">
+        {/* Navigation Breadcrumb & Back Link (Hidden in print) */}
+        <div className="no-print flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs text-slate-500 font-medium">
             <button
               onClick={handleBack}
@@ -126,17 +126,17 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
           <div className="flex items-center gap-2 self-stretch sm:self-auto">
             <button
               onClick={handlePrint}
-              className="flex-1 sm:flex-initial justify-center px-3 py-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-lg shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer"
-              title="Print or Save as Technical PDF"
+              className="flex-1 sm:flex-initial justify-center px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-orange-600 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              title="Print or Save as Technical PDF Datasheet"
             >
-              <Printer className="w-3.5 h-3.5 text-slate-600" />
-              <span className="hidden xs:inline">Print Spec Sheet</span>
-              <span className="xs:hidden">Print</span>
+              <Printer className="w-3.5 h-3.5 text-orange-600" />
+              <span className="hidden xs:inline">Print / Save as PDF</span>
+              <span className="xs:hidden">PDF</span>
             </button>
 
             <button
               onClick={handleWhatsAppInquiry}
-              className="flex-1 sm:flex-initial justify-center px-3 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
+              className="flex-1 sm:flex-initial justify-center px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
               <span>WhatsApp RFQ</span>
@@ -144,36 +144,52 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
           </div>
         </div>
 
-        {/* Printable Letterhead (visible when printing) */}
-        <div className="hidden print:block mb-6 p-4 border-b-2 border-orange-600 bg-white">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-black text-slate-900">B K FABRICATION</h1>
-              <p className="text-xs text-orange-600 italic">A Work of Perfect Design</p>
-              <p className="text-xs text-slate-600 mt-1">Medical Equipment & Hospital Furniture Manufacturing Co.</p>
+        {/* ========================================================================= */}
+        {/* Printable Official Medical Letterhead & Technical Datasheet Header */}
+        {/* ========================================================================= */}
+        <div className="hidden print:block mb-6 pb-4 border-b-2 border-orange-600 bg-white print-avoid-break">
+          <div className="flex items-center justify-between gap-6">
+            <div className="flex items-center gap-3.5">
+              <BKLogo variant="icon" size="md" />
+              <div>
+                <div className="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                  B K FABRICATION
+                </div>
+                <div
+                  style={{ fontFamily: 'Georgia, Cambria, serif' }}
+                  className="text-xs text-orange-600 italic font-semibold mt-0.5"
+                >
+                  A Work of Perfect Design
+                </div>
+                <div className="text-[10px] text-slate-500 font-medium tracking-wide uppercase mt-1">
+                  Medical Equipment & Clinical Hospital Furniture Manufacturer
+                </div>
+              </div>
             </div>
-            <div className="text-right text-xs text-slate-700">
-              <p>Hotline: +91 95912 44345 / +91 78922 53940</p>
-              <p>Email: {COMPANY_DETAILS.email}</p>
-              <p>ISO 9001:2015 & CE Certified</p>
+
+            <div className="text-right text-[11px] text-slate-600 space-y-0.5">
+              <div className="font-bold text-slate-900">Official Product Technical Datasheet</div>
+              <div>Factory: Industrial Area, Bangalore, Karnataka, India</div>
+              <div>Tel: +91 95912 44345 / +91 78922 53940 · Email: {COMPANY_DETAILS.email}</div>
+              <div className="font-semibold text-orange-700">ISO 9001:2015 · ISO 13485:2016 · CE Certified</div>
             </div>
           </div>
         </div>
 
         {/* Main Comprehensive Datasheet (Full Width) */}
-        <div className="w-full space-y-6 sm:space-y-8">
+        <div className="w-full space-y-6 sm:space-y-8 print:space-y-4">
           {/* Top Product Hero Block */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-2xs">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+          <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-2xs print:border-none print:shadow-none print:p-0">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center print:grid-cols-12 print:gap-5">
               {/* Product Photography Viewport */}
-              <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 flex items-center justify-center relative min-h-[240px] sm:min-h-[320px]">
+              <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 flex items-center justify-center relative min-h-[240px] sm:min-h-[320px] print:col-span-5 print:min-h-0 print:h-48 print:p-2">
                 <img
                   src={currentProduct.image}
                   alt={currentProduct.name}
-                  className="max-h-56 sm:max-h-72 w-auto object-contain mx-auto"
+                  className="max-h-56 sm:max-h-72 w-auto object-contain mx-auto print:max-h-44"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-3 left-3">
+                <div className="absolute top-3 left-3 print:top-1.5 print:left-1.5">
                   <span className="font-mono text-xs font-bold text-orange-700 bg-orange-50 px-2.5 py-1 rounded border border-orange-200">
                     {currentProduct.modelCode}
                   </span>
@@ -181,7 +197,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
               </div>
 
               {/* Core Header Details */}
-              <div className="md:col-span-6 space-y-4">
+              <div className="md:col-span-6 space-y-4 print:col-span-7 print:space-y-2">
                 <div className="space-y-1.5">
                   <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-500">
                     <span>{currentProduct.categoryLabel}</span>
@@ -216,8 +232,8 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                   </div>
                 </div>
 
-                {/* Primary Buy / RFQ Actions in Brand Orange */}
-                <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
+                {/* Primary Buy / RFQ Actions in Brand Orange (Hidden in print) */}
+                <div className="pt-2 flex flex-col sm:flex-row gap-2.5 no-print">
                   <button
                     onClick={() => onAddToQuote(currentProduct)}
                     className={`flex-1 py-3 px-4 rounded-lg text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow-md ${
@@ -250,55 +266,55 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
             </div>
 
             {/* Technical Specifications & Clinical Details (Joined with divider line) */}
-            <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-slate-200 space-y-6">
-              <div>
-                <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
+            <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-slate-200 space-y-6 print:mt-4 print:pt-4 print:space-y-4">
+              <div className="print-avoid-break">
+                <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2 print:mb-2">
                   <Maximize2 className="w-4 h-4 text-orange-600 shrink-0" />
                   <span>Engineering Specifications & Dimensions</span>
                 </h3>
 
-                <div className="bg-slate-50 rounded-xl border border-slate-200 overflow-x-auto">
+                <div className="bg-slate-50 rounded-xl border border-slate-200 overflow-x-auto print:bg-white print:border-slate-300">
                   <table className="w-full text-xs text-left min-w-[320px]">
                     <tbody className="divide-y divide-slate-200">
-                      <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 w-2/5 sm:w-1/3">Model Identifier</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono font-bold text-orange-600">{currentProduct.modelCode}</td>
+                      <tr className="hover:bg-slate-100/60 print:bg-slate-50">
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 w-2/5 sm:w-1/3 print:py-1.5 print:px-3">Model Identifier</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono font-bold text-orange-600 print:py-1.5 print:px-3">{currentProduct.modelCode}</td>
                       </tr>
                       <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Raw Metallurgy & Material</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-800 break-words">{currentProduct.specs.material}</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Raw Metallurgy & Material</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-800 break-words print:py-1.5 print:px-3">{currentProduct.specs.material}</td>
                       </tr>
                       <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Metric Dimensions (L × W × H)</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold break-words">{currentProduct.specs.dimensions}</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Metric Dimensions (L × W × H)</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold break-words print:py-1.5 print:px-3">{currentProduct.specs.dimensions}</td>
                       </tr>
                       {currentProduct.specs.loadCapacity && (
                         <tr className="hover:bg-slate-100/60">
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Safe Working Load Capacity</td>
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold text-xs sm:text-sm text-orange-600">
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Safe Working Load Capacity</td>
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold text-xs sm:text-sm text-orange-600 print:py-1.5 print:px-3">
                             {currentProduct.specs.loadCapacity}
                           </td>
                         </tr>
                       )}
                       <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Surface Finish & Pre-Treatment</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words">{currentProduct.specs.finish}</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Surface Finish & Pre-Treatment</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words print:py-1.5 print:px-3">{currentProduct.specs.finish}</td>
                       </tr>
                       {currentProduct.specs.castors && (
                         <tr className="hover:bg-slate-100/60">
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Mobility & Castor Wheels</td>
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words">{currentProduct.specs.castors}</td>
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Mobility & Castor Wheels</td>
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words print:py-1.5 print:px-3">{currentProduct.specs.castors}</td>
                         </tr>
                       )}
                       {currentProduct.specs.adjustments && (
                         <tr className="hover:bg-slate-100/60">
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Articulations & Positions</td>
-                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words">{currentProduct.specs.adjustments}</td>
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Articulations & Positions</td>
+                          <td className="py-2.5 sm:py-3 px-3 sm:px-5 text-slate-800 break-words print:py-1.5 print:px-3">{currentProduct.specs.adjustments}</td>
                         </tr>
                       )}
                       <tr className="hover:bg-slate-100/60">
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500">Warranty Coverage</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-bold text-orange-600">{currentProduct.specs.warranty}</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Warranty Coverage</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-bold text-orange-600 print:py-1.5 print:px-3">{currentProduct.specs.warranty}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -359,17 +375,20 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
           </div>
 
           {/* Bottom Contact / RFQ Strip */}
-          <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 border border-slate-800 text-center md:text-left">
+          <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 border border-slate-800 text-center md:text-left print:bg-white print:text-slate-900 print:border-t-2 print:border-orange-600 print:rounded-none print:p-4 print-avoid-break">
             <div className="space-y-1">
-              <h3 className="text-sm sm:text-base font-bold text-white">
-                Need a Formal Proforma Quotation for {currentProduct.modelCode}?
+              <h3 className="text-sm sm:text-base font-bold text-white print:text-slate-900">
+                Official Manufacturer Quotation & Orders: {currentProduct.modelCode}
               </h3>
-              <p className="text-xs text-slate-400">
-                Our engineering team provides official stamped quotes, GST breakdown, and freight delivery schedules.
+              <p className="text-xs text-slate-400 print:text-slate-600">
+                BK Fabrication Bangalore Factory · Stamped proforma invoices, custom sizing, and freight delivery all over India.
               </p>
+              <div className="hidden print:block text-[10px] text-slate-500 pt-1">
+                Generated: {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · Document Ref: BKF-{currentProduct.modelCode}-SPEC
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full md:w-auto shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full md:w-auto shrink-0 no-print">
               <button
                 onClick={handleWhatsAppInquiry}
                 className="justify-center px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition-colors flex items-center gap-2 cursor-pointer shadow-sm"
