@@ -77,16 +77,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product Content & Typography */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          {/* Clean Unboxed Metadata: NO PILLS */}
-          <div className="flex items-center gap-2 text-xs text-slate-500 font-mono tabular-nums mb-1.5">
-            <span className="font-bold text-orange-600">{product.modelCode}</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-slate-600">{product.categoryLabel}</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-emerald-700 font-sans font-medium">
-              {product.inStock ? 'Ready Stock' : 'Made to Order'}
-            </span>
-          </div>
 
           <h3
             onClick={() => onSelect(product)}
@@ -115,12 +105,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 </span>
               </div>
             )}
-            <div className="flex items-start justify-between gap-2">
-              <span className="text-slate-400 shrink-0">Warranty:</span>
-              <span className="font-medium text-slate-700">
-                {product.specs.warranty.split(' ')[0]} {product.specs.warranty.split(' ')[1] || ''}
-              </span>
-            </div>
           </div>
         </div>
 
