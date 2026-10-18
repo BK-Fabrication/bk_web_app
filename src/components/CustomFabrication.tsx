@@ -45,7 +45,7 @@ export const CustomFabrication: React.FC<CustomFabricationProps> = ({
       categoryLabel: 'Custom Fabrication',
       subtitle: `${metallurgy} · ${colorScheme}`,
       description: `Bespoke hospital equipment fabricated to custom clinical specifications. Includes ${accessories.join(', ')}. Wheel setup: ${wheelType}.${customDimensions ? ` Dimensions: ${customDimensions}` : ''}`,
-      image: '/src/assets/images/product_icu_bed_1792303339395.jpg',
+      image: '/assets/images/product_icu_bed_1792303339395.jpg',
       specs: {
         material: metallurgy,
         dimensions: customDimensions || 'Custom Client Dimensions',

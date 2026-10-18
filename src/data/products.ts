@@ -9,7 +9,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Hospital Beds',
     subtitle: 'Motorized hospital bed with CPR rapid release & angle tilt sensors',
     description: 'Engineered for intensive care units and critical post-operative recovery. Features heavy-gauge rectangular steel tubing with antibacterial epoxy coating, 4 heavy-duty linear actuators, dual-sided CPR quick release, and collapsible ABS side rails with built-in angle inclinometers.',
-    image: '/src/assets/images/product_icu_bed_1792303339395.jpg',
+    image: '/assets/images/product_icu_bed_1792303339395.jpg',
     specs: {
       material: 'CRCA Steel frame + ABS polymer head/foot & safety side panels',
       dimensions: '2150 mm (L) × 1020 mm (W) × 500–750 mm (Adjustable H)',
@@ -40,7 +40,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Emergency & Ward Trolleys',
     subtitle: 'Multi-drawer rapid response resuscitation cart with defibrillator shelf',
     description: 'Comprehensive mobile crash cart for critical emergency response. Equipped with 5 color-coded centralized-locking drawers with modular drug separator trays, 360° rotating defibrillator tray, oxygen cylinder bracket, cardiac CPR board, and disposable sharps container.',
-    image: '/src/assets/images/product_crash_cart_1792303340280.jpg',
+    image: '/assets/images/product_crash_cart_1792303340280.jpg',
     specs: {
       material: 'Grade 304 Stainless Steel working top + aluminum & epoxy-coated steel body',
       dimensions: '850 mm (L) × 520 mm (W) × 1020 mm (H)',
@@ -71,7 +71,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Emergency & Ward Trolleys',
     subtitle: 'Double shelf medical grade stainless steel with perimeter guardrails',
     description: 'Fabricated from authentic 304 grade non-magnetic stainless steel, argon TIG welded for zero crevices to prevent bacterial harboring. Features two deep pressed shelves with three-sided protective stainless safety rails, stainless steel bowl attachment, and anti-static swivel wheels.',
-    image: '/src/assets/images/product_dressing_trolley_1792303340011.jpg',
+    image: '/assets/images/product_dressing_trolley_1792303340011.jpg',
     specs: {
       material: '100% AISI Grade 304 Non-Magnetic Stainless Steel (1.2mm sheet thickness)',
       dimensions: '760 mm (L) × 460 mm (W) × 850 mm (H)',
@@ -101,7 +101,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Examination & OT',
     subtitle: 'Ergonomic diagnostic couch with built-in utility storage & footstep',
     description: 'Heavy-duty doctor consultation and clinical examination couch. Manufactured with welded rectangular steel section, premium anti-microbial blue leatherette upholstery over high-density foam, multi-position ratcheted headrest elevation, three side drawers, and a slide-out step stool.',
-    image: '/src/assets/images/product_exam_couch_1792303341691.jpg',
+    image: '/assets/images/product_exam_couch_1792303341691.jpg',
     specs: {
       material: 'Reinforced tubular steel framework + high-density foam & waterproof vinyl',
       dimensions: '1880 mm (L) × 600 mm (W) × 820 mm (H)',
@@ -131,7 +131,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: 'Clinical white & cobalt blue locker with stainless steel top tray',
     description: 'Precision manufactured patient bedside cabinet designed for hospital ward ergonomics. Features a deep-recessed stainless steel top tray preventing spills, smooth-running upper drawer, spacious lower cupboard with magnetic latch, built-in side towel rail, and swivel castors.',
-    image: '/src/assets/images/product_bedside_locker_1792303359577.jpg',
+    image: '/assets/images/product_bedside_locker_1792303359577.jpg',
     specs: {
       material: '0.8mm CRCA Steel with 304 Stainless Steel Pressed Top Sheet',
       dimensions: '410 mm (L) × 410 mm (W) × 820 mm (H)',
@@ -162,7 +162,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: 'Clear acrylic tilting cradle bassinet with lower utility wire basket',
     description: 'Specialized neonatal hospital bassinet engineered for infant comfort and nurse visibility. Features a seamless transparent acrylic cradle with rounded safety edges, adjustable Trendelenburg tilt mechanism, waterproof antibacterial baby mattress, and lower stainless steel storage basket.',
-    image: '/src/assets/images/product_baby_crib_1792303357673.jpg',
+    image: '/assets/images/product_baby_crib_1792303357673.jpg',
     specs: {
       material: 'High-grade tubular stainless steel frame + medical grade clear acrylic crib',
       dimensions: '810 mm (L) × 460 mm (W) × 900 mm (H)',
@@ -193,7 +193,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: 'Heavy-duty transfer trolley with collapsible side rails & IV stand',
     description: 'Engineered for smooth, rapid patient transfer between casualty, operating rooms, and wards. Built on a heavy tubular steel chassis with swing-down patient protective railings, pneumatic cylinder backrest elevation, high-density blue transfer mattress, and telescopic IV pole.',
-    image: '/src/assets/images/product_patient_stretcher_1792303359194.jpg',
+    image: '/assets/images/product_patient_stretcher_1792303359194.jpg',
     specs: {
       material: 'High-tensile CRCA tubular steel & Grade 304 Stainless Steel railings',
       dimensions: '1950 mm (L) × 650 mm (W) × 700 mm (H)',
@@ -224,7 +224,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Hospital Beds',
     subtitle: 'Smooth dual-crank mechanism with collapsible stainless safety rails',
     description: 'Versatile general ward hospital bed offering backrest and knee-rest elevation via smooth individual foldable crank handles. Features four-section perforated steel sheet top for optimal mattress ventilation, removable polymer head & foot panels, and 4 corner IV pole sockets.',
-    image: '/src/assets/images/product_icu_bed_1792303339395.jpg',
+    image: '/assets/images/product_icu_bed_1792303339395.jpg',
     specs: {
       material: 'CRCA Rectangular Pipe Frame with Perforated CRCA Steel Deck',
       dimensions: '2060 mm (L) × 900 mm (W) × 600 mm (Fixed H)',
@@ -255,7 +255,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Examination & OT',
     subtitle: 'Adjustable height cantilever surgical tray for operating rooms',
     description: 'Cantilever surgical instrument stand engineered for surgical ease and sterilization. Fabricated entirely in surgical 304 stainless steel with a removable deep-drawn instrument tray. Low clearance U-shaped base slides under operating tables and hospital beds effortlessly.',
-    image: '/src/assets/images/product_dressing_trolley_1792303340011.jpg',
+    image: '/assets/images/product_dressing_trolley_1792303340011.jpg',
     specs: {
       material: 'Complete AISI 304 Grade Stainless Steel with Argon TIG Welding',
       dimensions: 'Tray: 560 mm (L) × 410 mm (W) | Base: 600 mm (L) × 450 mm (W)',
@@ -285,7 +285,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: 'Folding privacy screen with flame-retardant antibacterial curtains',
     description: 'Essential hospital ward privacy screen featuring robust tubular steel or stainless steel frame with smooth-rolling swivel castors on every panel. Fitted with hospital-grade, flame-retardant, anti-microbial fabric curtains in clinical green or blue, easily removable for laundering.',
-    image: '/src/assets/images/product_bedside_locker_1792303359577.jpg',
+    image: '/assets/images/product_bedside_locker_1792303359577.jpg',
     specs: {
       material: '19 mm dia Heavy Gauge Tubular Steel / SS 304 Frame with Washable Fabric',
       dimensions: '2400 mm (Total Extended W) × 1700 mm (H) — 3 Panels of 800 mm each',
@@ -315,7 +315,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Examination & OT',
     subtitle: 'Pneumatic height-adjustable clinical stool with circular foot ring',
     description: 'Heavy duty revolving clinical stool for surgeons, anesthesiologists, and consulting physicians. Features a solid 304 stainless steel circular seat with rolled safety rim, gas-spring pneumatic height lift with foot/hand lever, and a reinforced 5-prong chrome base on smooth castors.',
-    image: '/src/assets/images/product_exam_couch_1792303341691.jpg',
+    image: '/assets/images/product_exam_couch_1792303341691.jpg',
     specs: {
       material: 'Grade 304 Stainless Steel Seat + Chrome Plated Heavy Base',
       dimensions: 'Seat Diameter: 350 mm | Height: 480 mm to 680 mm',
@@ -345,7 +345,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Examination & OT',
     subtitle: 'Dual-tier medical stepping stool with anti-skid ribbed rubber matting',
     description: 'Engineered for patient safety when mounting high hospital beds, examination couches, and operating tables. Fabricated with heavy gauge square tubular steel or stainless steel, non-slip corrugated rubber step treads, and rubber floor ferrules.',
-    image: '/src/assets/images/product_exam_couch_1792303341691.jpg',
+    image: '/assets/images/product_exam_couch_1792303341691.jpg',
     specs: {
       material: 'Heavy Gauge Square Steel Tube / AISI 304 Stainless Steel + Rubber Mats',
       dimensions: 'Overall: 450 mm (L) × 500 mm (W) × 400 mm (H) | Step Height: 200 mm & 400 mm',
@@ -374,7 +374,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: 'Tubular steel medical gas cylinder carrier with dual solid rubber wheels',
     description: 'Ergonomic cylinder trolley designed for safe transport of high-pressure medical oxygen cylinders. Built with thick tubular steel framework, protective holding safety chain, curved back cradles, and puncture-proof solid rubber wheels.',
-    image: '/src/assets/images/product_crash_cart_1792303340280.jpg',
+    image: '/assets/images/product_crash_cart_1792303340280.jpg',
     specs: {
       material: 'Heavy Duty 25 mm Seamless Steel Pipe with Industrial Powder Coating',
       dimensions: 'Suitable for D-Type (Bulk) & B-Type (Ward) Oxygen Cylinders',
@@ -403,7 +403,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Examination & OT',
     subtitle: 'Mobile dual stainless steel wash basin stand for OT & clean rooms',
     description: 'Designed for sterile scrubbing, surgical hand disinfection, and sponge holding in operation theatres. Constructed entirely in AISI 304 stainless steel with two deep drawn seamless removable basins and rubber sound-dampening ring liners.',
-    image: '/src/assets/images/product_dressing_trolley_1792303340011.jpg',
+    image: '/assets/images/product_dressing_trolley_1792303340011.jpg',
     specs: {
       material: '100% AISI Grade 304 Stainless Steel Tubular Frame and Pressed Bowls',
       dimensions: '800 mm (W) × 400 mm (D) × 850 mm (H) | Bowl Dia: 350 mm',
@@ -432,7 +432,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     categoryLabel: 'Patient Room & Ward',
     subtitle: '5-Prong weighted base mobile IV drip stand with 4 stainless hooks',
     description: 'Mobile telescopic intravenous infusion stand featuring a heavy cast iron weighted base to prevent tipping, stainless steel telescopic upright pole with ergonomic quick-lock friction knob, 4 ram-horn safety hooks, and smooth-gliding nylon castors.',
-    image: '/src/assets/images/product_patient_stretcher_1792303359194.jpg',
+    image: '/assets/images/product_patient_stretcher_1792303359194.jpg',
     specs: {
       material: 'Grade 304 Stainless Steel Pole with Heavy Cast Iron / Poly Covered Base',
       dimensions: 'Height Adjustable: 1350 mm to 2400 mm | Base Diameter: 550 mm',

@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border-2 border-orange-500/30 bg-white shadow-xl group">
               <img
-                src="/src/assets/images/hero_medical_facility_1792303314930.jpg"
+                src="/assets/images/hero_medical_facility_1792303314930.jpg"
                 alt="State-of-the-art hospital room with BK Fabrication clinical beds and ward furniture"
                 className="w-full h-80 sm:h-96 object-cover object-center"
                 referrerPolicy="no-referrer"
