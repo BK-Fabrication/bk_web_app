@@ -8,6 +8,7 @@ export type ProductCategory =
 export interface ProductSpecification {
   material: string;
   dimensions: string;
+  size?: string;
   loadCapacity?: string;
   finish: string;
   castors?: string;

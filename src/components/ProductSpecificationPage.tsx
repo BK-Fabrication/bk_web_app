@@ -282,7 +282,14 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                       </tr>
                       <tr className="hover:bg-slate-100/60">
                         <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-semibold text-slate-500 print:py-1.5 print:px-3">Metric Dimensions (L × W × H)</td>
-                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold break-words print:py-1.5 print:px-3">{currentProduct.specs.dimensions}</td>
+                        <td className="py-2.5 sm:py-3 px-3 sm:px-5 font-mono tabular-nums text-slate-900 font-bold break-words print:py-1.5 print:px-3">
+                          {currentProduct.specs.dimensions}
+                          {currentProduct.specs.size && (
+                            <span className="block text-xs text-orange-600 font-sans font-medium mt-0.5">
+                              Standard Size: {currentProduct.specs.size}
+                            </span>
+                          )}
+                        </td>
                       </tr>
                       {currentProduct.specs.loadCapacity && (
                         <tr className="hover:bg-slate-100/60">

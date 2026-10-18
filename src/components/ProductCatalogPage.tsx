@@ -481,8 +481,8 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
                         <td className="py-3 px-4 text-slate-700 font-medium max-w-xs truncate">
                           {p.specs.material}
                         </td>
-                        <td className="py-3 px-4 text-slate-600 font-mono tabular-nums">
-                          {p.specs.dimensions}
+                        <td className="py-3 px-4 text-slate-600 font-mono tabular-nums whitespace-nowrap">
+                          {p.specs.size || p.specs.dimensions}
                         </td>
                         <td className="py-3 px-4 text-slate-700 font-mono tabular-nums">
                           {p.specs.loadCapacity || 'Standard'}

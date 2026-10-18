@@ -13,6 +13,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Grade 304 Stainless Steel working top + aluminum & epoxy-coated steel body',
       dimensions: '850 mm (L) × 520 mm (W) × 1020 mm (H)',
+      size: '85L x 52W x 102H cms',
       loadCapacity: '150 kg evenly distributed',
       finish: 'Clinical royal blue & sterile white powder coat with stainless steel rim',
       castors: '100 mm heavy-duty silent polyurethane swivel castors (2 with total brakes)',
@@ -44,6 +45,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: '100% AISI Grade 304 Non-Magnetic Stainless Steel (1.2mm sheet thickness)',
       dimensions: '760 mm (L) × 460 mm (W) × 850 mm (H)',
+      size: '76L x 46W x 85H cms',
       loadCapacity: '120 kg',
       finish: 'Mirror/Matt satin surgical polish (easy sanitize & autoclave resistant)',
       castors: '75 mm non-marking, anti-static swivel rubber castors (2 with brakes)',
@@ -74,6 +76,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Reinforced tubular steel framework + high-density foam & waterproof vinyl',
       dimensions: '1880 mm (L) × 600 mm (W) × 820 mm (H)',
+      size: '188L x 60W x 82H cms',
       loadCapacity: '220 kg patient weight rating',
       finish: 'Clinical powder-coated white frame with antibacterial cobalt blue mattress',
       castors: 'Optional heavy duty leveling rubber pads or locking castors',
@@ -104,6 +107,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: '0.8mm CRCA Steel with 304 Stainless Steel Pressed Top Sheet',
       dimensions: '410 mm (L) × 410 mm (W) × 820 mm (H)',
+      size: '41L x 41W x 82H cms',
       loadCapacity: '60 kg top load',
       finish: '7-tank phosphate pre-treatment with antibacterial epoxy powder coating',
       castors: '50 mm twin-wheel swivel castors (2 with brakes)',
@@ -135,6 +139,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'High-grade tubular stainless steel frame + medical grade clear acrylic crib',
       dimensions: '810 mm (L) × 460 mm (W) × 900 mm (H)',
+      size: '81L x 46W x 90H cms',
       loadCapacity: '25 kg infant load',
       finish: 'Mirror-polished SS 304 stainless steel tubular frame',
       castors: '75 mm swivel castors with diagonal wheel brake system',
@@ -166,6 +171,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'High-tensile CRCA tubular steel & Grade 304 Stainless Steel railings',
       dimensions: '1950 mm (L) × 650 mm (W) × 700 mm (H)',
+      size: '195L x 65W x 70H cms',
       loadCapacity: '200 kg dynamic patient capacity',
       finish: 'Sterile electropolished stainless finish with epoxy coated lower frame',
       castors: '150 mm heavy-duty diagonal brake rubber wheels for smooth rolling over thresholds',
@@ -197,6 +203,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'CRCA Rectangular Pipe Frame with Perforated CRCA Steel Deck',
       dimensions: '2060 mm (L) × 900 mm (W) × 600 mm (Fixed H)',
+      size: '206L x 90W x 60H cms',
       loadCapacity: '220 kg patient load',
       finish: 'Pure polyester antimicrobial epoxy powder coating in hospital white & blue',
       castors: '100 mm heavy-duty diagonal locking castors',
@@ -228,6 +235,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Complete AISI 304 Grade Stainless Steel with Argon TIG Welding',
       dimensions: 'Tray: 560 mm (L) × 410 mm (W) | Base: 600 mm (L) × 450 mm (W)',
+      size: '56L x 41W cms (Tray)',
       loadCapacity: '35 kg',
       finish: 'High-gloss surgical mirror polish',
       castors: '50 mm twin-wheel antistatic swivel castors',
@@ -258,6 +266,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: '19 mm dia Heavy Gauge Tubular Steel / SS 304 Frame with Washable Fabric',
       dimensions: '2400 mm (Total Extended W) × 1700 mm (H) — 3 Panels of 800 mm each',
+      size: '240W x 170H cms (3 Panels)',
       loadCapacity: 'Self-standing robust weight balance',
       finish: 'Epoxy powder coated white frame with medical green / blue curtain panels',
       castors: '50 mm smooth nylon swivel castors on each leaf for effortless glide',
@@ -288,6 +297,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Grade 304 Stainless Steel Seat + Chrome Plated Heavy Base',
       dimensions: 'Seat Diameter: 350 mm | Height: 480 mm to 680 mm',
+      size: '35 Dia x 48-68H cms',
       loadCapacity: '160 kg working load',
       finish: 'Satin finished stainless steel top with mirror chrome base',
       castors: '50 mm heavy-duty polyurethane swivel castors',
@@ -318,6 +328,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Heavy Gauge Square Steel Tube / AISI 304 Stainless Steel + Rubber Mats',
       dimensions: 'Overall: 450 mm (L) × 500 mm (W) × 400 mm (H) | Step Height: 200 mm & 400 mm',
+      size: '45L x 50W x 40H cms',
       loadCapacity: '180 kg static load capacity',
       finish: 'Epoxy powder coated medical white / Mirror polished SS 304',
       castors: 'Non-slip synthetic rubber shoe tips (stable zero-wobble floor contact)',
@@ -347,6 +358,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Heavy Duty 25 mm Seamless Steel Pipe with Industrial Powder Coating',
       dimensions: 'Suitable for D-Type (Bulk) & B-Type (Ward) Oxygen Cylinders',
+      size: 'Suitable for D & B Cylinders',
       loadCapacity: '90 kg (accommodates full oxygen cylinder with regulator)',
       finish: 'High-visibility scratch-resistant clinical blue epoxy powder coat',
       castors: '200 mm solid rubber heavy-duty wheels with steel rim & roller bearings',
@@ -376,6 +388,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: '100% AISI Grade 304 Stainless Steel Tubular Frame and Pressed Bowls',
       dimensions: '800 mm (W) × 400 mm (D) × 850 mm (H) | Bowl Dia: 350 mm',
+      size: '80W x 40D x 85H cms',
       loadCapacity: '40 kg',
       finish: 'Mirror/Satin surgical stainless steel polish',
       castors: '50 mm antistatic swivel castors with diagonal brakes',
@@ -405,6 +418,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Grade 304 Stainless Steel Pole with Heavy Cast Iron / Poly Covered Base',
       dimensions: 'Height Adjustable: 1350 mm to 2400 mm | Base Diameter: 550 mm',
+      size: '135-240H cms | 55 Dia Base',
       loadCapacity: '15 kg hook capacity (up to 4 infusion bags / infusion pumps)',
       finish: 'Satin Stainless Steel with Medical Blue Heavy Base',
       castors: '50 mm five-star swivel nylon castors',
@@ -423,9 +437,9 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     leadTime: 'Immediate Dispatch / 24 hrs',
     isFeatured: false
   },
-    {
+  {
     id: 'hospital-semi-fowler-bed',
-    modelCode: 'BK001',
+    modelCode: 'BK17F4KK',
     name: 'Hospital Semi-Fowler Bed',
     category: 'beds',
     categoryLabel: 'Hospital Beds',
@@ -435,6 +449,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     specs: {
       material: 'Mild Steel (M.S.) frame with moulded ABS head & foot panels',
       dimensions: '2060 mm (L) × 900 mm (W) × 600 mm (H)',
+      size: '206L x 90W x 60H cms',
       loadCapacity: '180 kg safe working load',
       finish: 'Epoxy powder-coated finish',
       castors: '100 mm smooth-rolling castors',

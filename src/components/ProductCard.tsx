@@ -97,22 +97,29 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </p>
 
           {/* Quick Technical Highlights (Unboxed) */}
-          <div className="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 space-y-1">
-            <div className="flex items-start justify-between gap-2">
-              <span className="text-slate-400 shrink-0">Material:</span>
-              <span className="font-medium text-slate-700 text-right truncate">
-                {product.specs.material.split('+')[0]}
-              </span>
+          {(product.modelCode || product.specs.size || product.specs.dimensions) && (
+            <div className="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 space-y-1">
+              {product.modelCode && (
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-slate-400 shrink-0">Model:</span>
+                  <span className="font-mono text-orange-600 font-bold text-right text-[11px]">
+                    {product.modelCode}
+                  </span>
+                </div>
+              )}
+              {(product.specs.size || product.specs.dimensions) && (
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-slate-400 shrink-0">Size:</span>
+                  <span
+                    className="font-mono text-slate-700 tabular-nums text-right text-[11px] font-semibold truncate"
+                    title={product.specs.size || product.specs.dimensions}
+                  >
+                    {product.specs.size || product.specs.dimensions}
+                  </span>
+                </div>
+              )}
             </div>
-            {product.specs.loadCapacity && (
-              <div className="flex items-start justify-between gap-2">
-                <span className="text-slate-400 shrink-0">Capacity:</span>
-                <span className="font-mono text-slate-700 tabular-nums">
-                  {product.specs.loadCapacity.split(' ')[0]} {product.specs.loadCapacity.split(' ')[1] || ''}
-                </span>
-              </div>
-            )}
-          </div>
+          )}
         </div>
 
         {/* Interactive Action Bar with Brand Colors */}
