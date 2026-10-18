@@ -12,7 +12,9 @@ import {
   ArrowRight,
   Filter,
   Sparkles,
-  RotateCcw
+  RotateCcw,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { MedicalProduct, ProductCategory } from '../types';
 import { ProductCard } from './ProductCard';
@@ -52,6 +54,8 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
   const [selectedMaterial, setSelectedMaterial] = useState<'all' | 'ss304' | 'powder'>('all');
   const [sortBy, setSortBy] = useState<'featured' | 'model' | 'name'>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
 
   // Keep state in sync if URL query parameter changes
   React.useEffect(() => {
@@ -63,6 +67,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
 
   const handleCategoryChange = (cat: ProductCategory) => {
     setActiveCategory(cat);
+    setCurrentPage(1);
     const newParams = new URLSearchParams(searchParams);
     if (cat === 'all') {
       newParams.delete('category');
@@ -93,7 +98,8 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
 
   // Filtering products by name, category, model code, or material
   const filteredProducts = useMemo(() => {
-    return products
+    const reversed = [...products].reverse(); // newest insertion = first shown
+    return reversed
       .filter((p) => {
         // Category filter
         if (activeCategory !== 'all' && p.category !== activeCategory) {
@@ -126,23 +132,24 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
         return true;
       })
       .sort((a, b) => {
-        if (sortBy === 'featured') {
-          if (a.isFeatured && !b.isFeatured) return -1;
-          if (!a.isFeatured && b.isFeatured) return 1;
-          return a.name.localeCompare(b.name);
-        }
-        if (sortBy === 'model') {
-          return a.modelCode.localeCompare(b.modelCode);
-        }
+        if (sortBy === 'featured') return 0; // preserve reversed insertion order
+        if (sortBy === 'model') return a.modelCode.localeCompare(b.modelCode);
         return a.name.localeCompare(b.name);
       });
   }, [products, activeCategory, selectedMaterial, searchQuery, sortBy]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / itemsPerPage));
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   const handleResetFilters = () => {
     setSearchQuery('');
     setActiveCategory('all');
     setSelectedMaterial('all');
     setSortBy('featured');
+    setCurrentPage(1);
   };
 
   return (
@@ -217,14 +224,14 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
                 placeholder="Search products by name (e.g. ICU Bed, Crash Cart) or category (Beds, Trolleys, Ward)..."
                 className="w-full pl-11 pr-10 py-3 text-sm bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all shadow-2xs font-medium"
                 aria-label="Search products by name or category"
               />
               {searchQuery && (
                 <button
-                  onClick={() => setSearchQuery('')}
+                  onClick={() => { setSearchQuery(''); setCurrentPage(1); }}
                   className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
                   title="Clear search input"
                 >
@@ -259,7 +266,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
             {quickSearchTags.map((tag) => (
               <button
                 key={tag}
-                onClick={() => setSearchQuery(tag)}
+                onClick={() => { setSearchQuery(tag); setCurrentPage(1); }}
                 className={`px-2.5 py-1 rounded-md text-xs transition-colors cursor-pointer border ${
                   searchQuery.toLowerCase() === tag.toLowerCase()
                     ? 'bg-orange-600 text-white border-orange-600 font-bold'
@@ -310,7 +317,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
               {/* Metallurgy Filter */}
               <select
                 value={selectedMaterial}
-                onChange={(e) => setSelectedMaterial(e.target.value as any)}
+                onChange={(e) => { setSelectedMaterial(e.target.value as any); setCurrentPage(1); }}
                 className="py-1.5 px-2.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                 aria-label="Filter by material"
               >
@@ -322,13 +329,13 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
               {/* Sort Dropdown */}
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => { setSortBy(e.target.value as any); setCurrentPage(1); }}
                 className="py-1.5 px-2.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                 aria-label="Sort products"
               >
-                <option value="featured">Featured</option>
+                <option value="featured">Newest First</option>
                 <option value="model">Model Code</option>
-                <option value="name">Name (A-Z)</option>
+                <option value="name">Name (A–Z)</option>
               </select>
 
               {/* Grid / Table View Switcher */}
@@ -391,7 +398,9 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
 
         {/* Results Counter Bar */}
         <div className="flex items-center justify-between text-xs text-slate-500 mb-6 font-mono">
-          <span>Showing <strong className="text-orange-600 font-bold">{filteredProducts.length}</strong> of {products.length} models</span>
+          <span>
+            Showing <strong className="text-orange-600 font-bold">{filteredProducts.length === 0 ? 0 : (currentPage - 1) * itemsPerPage + 1}–{Math.min(currentPage * itemsPerPage, filteredProducts.length)}</strong> of <strong className="text-slate-800 font-bold">{filteredProducts.length}</strong> models
+          </span>
           <span className="hidden sm:inline">Click any product to view its individual engineering specification sheet</span>
         </div>
 
@@ -412,7 +421,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
           </div>
         ) : viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
+            {paginatedProducts.map((product) => (
               <ProductCard
                 key={product.id}
                 product={product}
@@ -442,7 +451,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {filteredProducts.map((p) => {
+                  {paginatedProducts.map((p) => {
                     const inQuote = quoteIds.has(p.id);
                     return (
                       <tr key={p.id} className="hover:bg-slate-50/80 transition-colors">
@@ -509,6 +518,83 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
                   })}
                 </tbody>
               </table>
+            </div>
+          </div>
+        )}
+
+        {/* Pagination Controls */}
+        {filteredProducts.length > 0 && (
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-6">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium">
+              <span>
+                Showing page <span className="font-bold text-slate-800">{currentPage}</span> of <span className="font-bold text-slate-800">{totalPages}</span> ({filteredProducts.length} models)
+              </span>
+              <div className="flex items-center gap-1.5 border-l border-slate-200 pl-3">
+                <span className="text-slate-400">Per page:</span>
+                <select
+                  value={itemsPerPage}
+                  onChange={(e) => {
+                    setItemsPerPage(Number(e.target.value));
+                    setCurrentPage(1);
+                  }}
+                  className="py-1 px-2 text-xs bg-white border border-slate-200 rounded-md font-semibold text-slate-700 cursor-pointer focus:outline-none focus:ring-1 focus:ring-orange-500"
+                  aria-label="Products per page"
+                >
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                  <option value={50}>50</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => {
+                  setCurrentPage((p) => Math.max(1, p - 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                disabled={currentPage <= 1}
+                className="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                aria-label="Previous page"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span>Previous</span>
+              </button>
+
+              <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => {
+                  const isActive = currentPage === pageNum;
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => {
+                        setCurrentPage(pageNum);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className={`min-w-8 h-8 px-2 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center ${
+                        isActive
+                          ? 'bg-orange-600 text-white shadow-sm'
+                          : 'bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 hover:text-orange-600'
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <button
+                onClick={() => {
+                  setCurrentPage((p) => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                disabled={currentPage >= totalPages}
+                className="px-3.5 py-2 text-xs font-semibold rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                aria-label="Next page"
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         )}
