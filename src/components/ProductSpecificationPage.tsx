@@ -69,13 +69,9 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
       `/assets/images/${folder}/6.jpg`,
     ];
 
-    const candidates = currentProduct.images && currentProduct.images.length > 0
-      ? [...currentProduct.images, ...dynamicCandidates]
-      : [...dynamicCandidates, currentProduct.image];
-
-    const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+    const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
     const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
-    return filtered.length > 0 ? filtered : [currentProduct.image];
+    return filtered.length > 0 ? filtered : [`/assets/images/${folder}/2.png`];
   }, [currentProduct, failedImages]);
 
   const relatedProducts = useMemo(() => {

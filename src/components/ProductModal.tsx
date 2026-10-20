@@ -70,13 +70,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
       `/assets/images/${folder}/6.jpg`,
     ];
 
-    const candidates = product.images && product.images.length > 0
-      ? [...product.images, ...dynamicCandidates]
-      : [...dynamicCandidates, product.image];
-
-    const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+    const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
     const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
-    return filtered.length > 0 ? filtered : [product.image];
+    return filtered.length > 0 ? filtered : [`/assets/images/${folder}/2.png`];
   }, [product, failedImages]);
 
   const handleWhatsAppInquiry = () => {
