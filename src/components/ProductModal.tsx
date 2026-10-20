@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { X, Check, Plus, ShieldCheck, Phone } from 'lucide-react';
+import React, { useEffect, useState, useMemo } from 'react';
+import { X, Check, Plus, ShieldCheck, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { MedicalProduct } from '../types';
 import { COMPANY_DETAILS } from '../data/products';
@@ -47,6 +47,19 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   }, [product, onClose]);
 
   if (!product) return null;
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [product?.id]);
+
+  const productImages = useMemo(() => {
+    if (!product) return [];
+    return product.images && product.images.length > 0
+      ? product.images
+      : [product.image];
+  }, [product]);
 
   const handleWhatsAppInquiry = () => {
     const text = encodeURIComponent(
@@ -97,14 +110,61 @@ export const ProductModal: React.FC<ProductModalProps> = ({
         <div className="p-6 sm:p-8 space-y-8">
           {/* Top Split: Image & Primary Buy/Quote Box */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            {/* High-res Image Showcase */}
-            <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 border border-slate-200 flex items-center justify-center min-h-[300px]">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="max-h-80 w-auto object-contain mx-auto"
-                referrerPolicy="no-referrer"
-              />
+            {/* High-res Image Showcase with Multi-Image Slider */}
+            <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 border border-slate-200 flex flex-col items-center justify-between relative min-h-[300px]">
+              {productImages.length > 1 && (
+                <div className="absolute top-3 right-3 z-10 bg-slate-900/70 backdrop-blur-xs text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                  {activeImageIndex + 1} / {productImages.length}
+                </div>
+              )}
+
+              <div className="relative w-full h-64 flex items-center justify-center p-2">
+                {productImages.length > 1 && (
+                  <button
+                    onClick={() => setActiveImageIndex((prev) => (prev === 0 ? productImages.length - 1 : prev - 1))}
+                    className="absolute left-1 z-10 p-2 rounded-full bg-white/90 hover:bg-white text-slate-700 shadow-md border border-slate-200 transition-colors cursor-pointer"
+                    title="Previous Image"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                )}
+
+                <img
+                  src={productImages[activeImageIndex]}
+                  alt={`${product.name} - View ${activeImageIndex + 1}`}
+                  className="max-h-60 w-auto object-contain mx-auto transition-all duration-300"
+                  referrerPolicy="no-referrer"
+                />
+
+                {productImages.length > 1 && (
+                  <button
+                    onClick={() => setActiveImageIndex((prev) => (prev === productImages.length - 1 ? 0 : prev + 1))}
+                    className="absolute right-1 z-10 p-2 rounded-full bg-white/90 hover:bg-white text-slate-700 shadow-md border border-slate-200 transition-colors cursor-pointer"
+                    title="Next Image"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+
+              {productImages.length > 1 && (
+                <div className="w-full pt-3 mt-3 border-t border-slate-200 flex items-center justify-center gap-2 overflow-x-auto">
+                  {productImages.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImageIndex(idx)}
+                      className={`relative w-12 h-12 rounded-lg bg-white border-2 overflow-hidden flex items-center justify-center p-1 transition-all cursor-pointer shrink-0 ${
+                        activeImageIndex === idx
+                          ? 'border-orange-600 shadow-md scale-105 ring-2 ring-orange-600/20'
+                          : 'border-slate-200 opacity-70 hover:opacity-100 hover:border-slate-300'
+                      }`}
+                      title={`Switch to image ${idx + 1}`}
+                    >
+                      <img src={img} alt={`Thumb ${idx + 1}`} className="max-h-full max-w-full object-contain" />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Title & Purchase/Quote Module */}
