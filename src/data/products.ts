@@ -1811,7 +1811,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   },
   {
     "id": "icu-bed-electric-five-functions-bk081",
-    "modelCode": "BK081",
+    "modelCode": "BK_081",
     "name": "ICU Bed, Electric, Five Functions",
     "category": "beds",
     "categoryLabel": "Hospital Beds",
@@ -1858,7 +1858,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Fowler Bed. Framework: M.S.; Two functions; Manual knee-rest lifting and back lift; Removable moulded head and foot panels; Aluminium collapsible side railings; Four-section top; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "image": "/assets/images/bk_005/1.jpg",
     "specs": {
       "material": "M.S.",
       "dimensions": "210L x 93W x 49H cms",
