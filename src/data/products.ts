@@ -1899,7 +1899,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Head and foot panels: high-quality moulded, removable; Top: two sections; Back lift: manual; Epoxy powder coating.",
-    "image": "/assets/images/bk_001/bk001_100.png",
+    "image": "/assets/images/bk_001/2.png",
     "specs": {
       "material": "M.S.",
       "dimensions": "206L x 90W x 60H cms",
@@ -1923,12 +1923,12 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "leadTime": "",
     "isFeatured": false,
     "images": [
-      "/assets/images/bk_001/bk001_100.png",
-      "/assets/images/bk_001/1 BK001.jpg",
-      "/assets/images/bk_001/3 BK001.jpg",
-      "/assets/images/bk_001/4 BK001.jpg",
-      "/assets/images/bk_001/5 BK001.jpg",
-      "/assets/images/bk_001/6 BK001-3.jpg",
+      "/assets/images/bk_001/2.png",
+      "/assets/images/bk_001/1.jpg",
+      "/assets/images/bk_001/3.jpg",
+      "/assets/images/bk_001/4.jpg",
+      "/assets/images/bk_001/5.jpg",
+      "/assets/images/bk_001/6.jpg",
     ]
   }
 ];
