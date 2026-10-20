@@ -61,11 +61,9 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
 
     const dynamicCandidates = [
       `/assets/images/${folder}/2.png`,
-      `/assets/images/${folder}/1.jpg`,
-      `/assets/images/${folder}/3.jpg`,
-      `/assets/images/${folder}/4.jpg`,
-      `/assets/images/${folder}/5.jpg`,
-      `/assets/images/${folder}/6.jpg`,
+      `/assets/images/${folder}/1.png`,
+      `/assets/images/${folder}/3.png`,
+      `/assets/images/${folder}/4.png`
     ];
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
