@@ -1899,7 +1899,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Head and foot panels: high-quality moulded, removable; Top: two sections; Back lift: manual; Epoxy powder coating.",
-    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "image": "/assets/images/bk_001/1 BK001.jpg",
     "specs": {
       "material": "M.S.",
       "dimensions": "206L x 90W x 60H cms",
@@ -1923,10 +1923,11 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "leadTime": "",
     "isFeatured": false,
     "images": [
-      "/assets/images/product_icu_bed_1792303339395.jpg",
-      "/assets/images/product_bedside_locker_1792303359577.jpg",
-      "/assets/images/product_exam_couch_1792303341691.jpg",
-      "/assets/images/hero_medical_facility_1792303314930.jpg"
+      "/assets/images/bk_001/1 BK001.jpg",
+      "/assets/images/bk_001/3 BK001.jpg",
+      "/assets/images/bk_001/4 BK001.jpg",
+      "/assets/images/bk_001/5 BK001.jpg",
+      "/assets/images/bk_001/6 BK001-3.jpg",
     ]
   }
 ];
