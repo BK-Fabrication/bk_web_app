@@ -252,7 +252,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                   <img
                     src={productImages[activeImageIndex]}
                     alt={`${currentProduct.name} - View ${activeImageIndex + 1}`}
-                    className="max-h-52 sm:max-h-64 w-auto object-contain mx-auto transition-all duration-300 print:max-h-44"
+                    className="max-h-full max-w-full w-auto h-auto object-contain mx-auto transition-all duration-300 print:max-h-44"
                     referrerPolicy="no-referrer"
                     onError={() => {
                       const currentImg = productImages[activeImageIndex];
@@ -291,7 +291,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                         <img
                           src={img}
                           alt={`Thumb ${idx + 1}`}
-                          className="max-h-full max-w-full object-contain"
+                          className="w-full h-full object-contain"
                           onError={() => {
                             setFailedImages((prev) => new Set(prev).add(img));
                           }}
