@@ -30,7 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product Image Stage (65-70% visual focus on clean neutral surface) */}
       <div
         onClick={() => onSelect(product)}
-        className="relative h-64 bg-slate-50/80 cursor-pointer overflow-hidden border-b border-slate-100 flex items-center justify-center p-4"
+        className="relative h-64 bg-white cursor-pointer overflow-hidden border-b border-slate-100 flex items-center justify-center p-4"
       >
         {!imageError ? (
           <img

@@ -129,7 +129,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           {/* Top Split: Image & Primary Buy/Quote Box */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             {/* High-res Image Showcase with Multi-Image Slider */}
-            <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 border border-slate-200 flex flex-col items-center justify-between relative min-h-[300px]">
+            <div className="md:col-span-6 bg-white rounded-xl p-4 border border-slate-200 flex flex-col items-center justify-between relative min-h-[300px]">
               {productImages.length > 1 && (
                 <div className="absolute top-3 right-3 z-10 bg-slate-900/70 backdrop-blur-xs text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded">
                   {activeImageIndex + 1} / {productImages.length}

@@ -224,7 +224,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
           <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-2xs print:border-none print:shadow-none print:p-0">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center print:grid-cols-12 print:gap-5">
               {/* Product Photography & Multi-Image Slider Viewport */}
-              <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 flex flex-col items-center justify-between relative min-h-[280px] sm:min-h-[340px] print:col-span-5 print:min-h-0 print:h-48 print:p-2">
+              <div className="md:col-span-6 bg-white rounded-xl p-4 sm:p-6 border border-slate-200 flex flex-col items-center justify-between relative min-h-[280px] sm:min-h-[340px] print:col-span-5 print:min-h-0 print:h-48 print:p-2">
                 <div className="absolute top-3 left-3 z-10 print:top-1.5 print:left-1.5">
                   <span className="font-mono text-xs font-bold text-orange-700 bg-orange-50 px-2.5 py-1 rounded border border-orange-200 shadow-2xs">
                     {currentProduct.modelCode}
