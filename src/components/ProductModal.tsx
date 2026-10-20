@@ -49,17 +49,30 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   if (!product) return null;
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   useEffect(() => {
+    setFailedImages(new Set());
     setActiveImageIndex(0);
   }, [product?.id]);
 
   const productImages = useMemo(() => {
     if (!product) return [];
-    return product.images && product.images.length > 0
-      ? product.images
-      : [product.image];
-  }, [product]);
+    const folder = product.modelCode.toLowerCase();
+
+    const dynamicCandidates = [
+      `/assets/images/${folder}/2.png`,
+      `/assets/images/${folder}/1.jpg`,
+      `/assets/images/${folder}/3.jpg`,
+      `/assets/images/${folder}/4.jpg`,
+      `/assets/images/${folder}/5.jpg`,
+      `/assets/images/${folder}/6.jpg`,
+    ];
+
+    const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
+    const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
+    return filtered.length > 0 ? filtered : [`/assets/images/bk_logo.png`];
+  }, [product, failedImages]);
 
   const handleWhatsAppInquiry = () => {
     const text = encodeURIComponent(
@@ -134,6 +147,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   alt={`${product.name} - View ${activeImageIndex + 1}`}
                   className="max-h-60 w-auto object-contain mx-auto transition-all duration-300"
                   referrerPolicy="no-referrer"
+                  onError={() => {
+                    const currentImg = productImages[activeImageIndex];
+                    if (currentImg) {
+                      setFailedImages((prev) => new Set(prev).add(currentImg));
+                      setActiveImageIndex(0);
+                    }
+                  }}
                 />
 
                 {productImages.length > 1 && (

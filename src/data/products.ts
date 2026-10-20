@@ -1852,7 +1852,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   },
   {
     "id": "hospital-fowler-bed-bk19f5aa",
-    "modelCode": "BK19F5AA",
+    "modelCode": "bk_005",
     "name": "Hospital Fowler Bed",
     "category": "beds",
     "categoryLabel": "Hospital Beds",
@@ -1893,7 +1893,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   },
   {
     "id": "hospital-semi-fowler-bed-bk17f9aa",
-    "modelCode": "BK17F9AA",
+    "modelCode": "bk_001",
     "name": "Hospital Semi-Fowler Bed",
     "category": "beds",
     "categoryLabel": "Hospital Beds",

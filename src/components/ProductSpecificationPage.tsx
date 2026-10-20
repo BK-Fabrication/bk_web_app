@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   ArrowLeft, 
   Printer, 
@@ -49,16 +49,29 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   const currentProduct = MEDICAL_PRODUCTS.find((p) => p.id === activeId) || MEDICAL_PRODUCTS[0];
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setFailedImages(new Set());
     setActiveImageIndex(0);
   }, [activeId]);
 
   const productImages = useMemo(() => {
-    return currentProduct.images && currentProduct.images.length > 0
-      ? currentProduct.images
-      : [currentProduct.image];
-  }, [currentProduct]);
+    const folder = currentProduct.modelCode.toLowerCase();
+
+    const dynamicCandidates = [
+      `/assets/images/${folder}/2.png`,
+      `/assets/images/${folder}/1.jpg`,
+      `/assets/images/${folder}/3.jpg`,
+      `/assets/images/${folder}/4.jpg`,
+      `/assets/images/${folder}/5.jpg`,
+      `/assets/images/${folder}/6.jpg`,
+    ];
+
+    const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
+    const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
+    return filtered.length > 0 ? filtered : [`/assets/images/bk_logo.png`];
+  }, [currentProduct, failedImages]);
 
   const relatedProducts = useMemo(() => {
     const sameCategory = MEDICAL_PRODUCTS.filter(
@@ -236,6 +249,13 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                     alt={`${currentProduct.name} - View ${activeImageIndex + 1}`}
                     className="max-h-52 sm:max-h-64 w-auto object-contain mx-auto transition-all duration-300 print:max-h-44"
                     referrerPolicy="no-referrer"
+                    onError={() => {
+                      const currentImg = productImages[activeImageIndex];
+                      if (currentImg) {
+                        setFailedImages((prev) => new Set(prev).add(currentImg));
+                        setActiveImageIndex(0);
+                      }
+                    }}
                   />
 
                   {productImages.length > 1 && (
