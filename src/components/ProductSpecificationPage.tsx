@@ -59,12 +59,11 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   const productImages = useMemo(() => {
     const folder = currentProduct.modelCode.toLowerCase();
 
-    const dynamicCandidates = [
-      `/assets/images/${folder}/2.png`,
-      `/assets/images/${folder}/1.png`,
-      `/assets/images/${folder}/3.png`,
-      `/assets/images/${folder}/4.png`
-    ];
+    const dynamicCandidates: string[] = [];
+    for (let i = 1; i <= 6; i++) {
+      dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
+      dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+    }
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
     const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));

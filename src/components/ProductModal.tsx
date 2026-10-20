@@ -60,14 +60,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
     if (!product) return [];
     const folder = product.modelCode.toLowerCase();
 
-    const dynamicCandidates = [
-      `/assets/images/${folder}/2.png`,
-      `/assets/images/${folder}/1.jpg`,
-      `/assets/images/${folder}/3.jpg`,
-      `/assets/images/${folder}/4.jpg`,
-      `/assets/images/${folder}/5.jpg`,
-      `/assets/images/${folder}/6.jpg`,
-    ];
+    const dynamicCandidates: string[] = [];
+    for (let i = 1; i <= 6; i++) {
+      dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
+      dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+    }
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
     const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
