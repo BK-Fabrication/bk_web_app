@@ -150,7 +150,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 <img
                   src={productImages[activeImageIndex]}
                   alt={`${product.name} - View ${activeImageIndex + 1}`}
-                  className="max-h-60 w-auto object-contain mx-auto transition-all duration-300"
+                  className="max-h-full max-w-full w-auto h-auto object-contain mx-auto transition-all duration-300"
                   referrerPolicy="no-referrer"
                   onError={() => {
                     const currentImg = productImages[activeImageIndex];
@@ -188,7 +188,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                       <img
                         src={img}
                         alt={`Thumb ${idx + 1}`}
-                        className="max-h-full max-w-full object-contain"
+                        className="w-full h-full object-contain"
                         onError={() => {
                           setFailedImages((prev) => new Set(prev).add(img));
                         }}
