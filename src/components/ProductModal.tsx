@@ -63,8 +63,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
     const folders = Array.from(new Set([
       folderWithUnderscore,
-      code,
-      'bk_001'
+      code
     ]));
 
     const dynamicCandidates: string[] = [];
