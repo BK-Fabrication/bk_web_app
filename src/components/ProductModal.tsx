@@ -58,16 +58,21 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
   const productImages = useMemo(() => {
     if (!product) return [];
-    const folder = product.modelCode.toLowerCase();
+    const code = product.modelCode.toLowerCase();
+    const folderWithUnderscore = code.replace(/^([a-z]+)(\d+)/, '$1_$2');
 
-    const dynamicCandidates = [
-      `/assets/images/${folder}/2.png`,
-      `/assets/images/${folder}/1.jpg`,
-      `/assets/images/${folder}/3.jpg`,
-      `/assets/images/${folder}/4.jpg`,
-      `/assets/images/${folder}/5.jpg`,
-      `/assets/images/${folder}/6.jpg`,
-    ];
+    const folders = Array.from(new Set([
+      folderWithUnderscore,
+      code
+    ]));
+
+    const dynamicCandidates: string[] = [];
+    for (const folder of folders) {
+      for (let i = 1; i <= 6; i++) {
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+      }
+    }
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
     const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
@@ -180,7 +185,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                       }`}
                       title={`Switch to image ${idx + 1}`}
                     >
-                      <img src={img} alt={`Thumb ${idx + 1}`} className="max-h-full max-w-full object-contain" />
+                      <img
+                        src={img}
+                        alt={`Thumb ${idx + 1}`}
+                        className="max-h-full max-w-full object-contain"
+                        onError={() => {
+                          setFailedImages((prev) => new Set(prev).add(img));
+                        }}
+                      />
                     </button>
                   ))}
                 </div>
