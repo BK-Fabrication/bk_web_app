@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Phone, 
-  Mail, 
-  FileText, 
-  ShieldCheck, 
-  Menu, 
-  X, 
-  ChevronRight, 
-  Search, 
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Phone,
+  Mail,
+  FileText,
+  ShieldCheck,
+  Menu,
+  X,
+  ChevronRight,
+  Search,
   ArrowRight,
-  Sparkles
-} from 'lucide-react';
-import { WhatsAppIcon } from './WhatsAppIcon';
-import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from '../data/products';
-import { MedicalProduct } from '../types';
-import { BKLogo } from './BKLogo';
+  Sparkles,
+} from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import { COMPANY_DETAILS, MEDICAL_PRODUCTS } from "../data/products";
+import { MedicalProduct } from "../types";
+import { BKLogo } from "./BKLogo";
 
 interface HeaderProps {
   quoteCount: number;
@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
   onSelectProduct,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [mobileSearchExpanded, setMobileSearchExpanded] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
@@ -45,29 +45,32 @@ export const Header: React.FC<HeaderProps> = ({
   // Close search results on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(e.target as Node)
+      ) {
         setIsSearchOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Quick keyboard shortcut (Cmd/Ctrl + K) to focus search
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
         searchInputRef.current?.focus();
         setIsSearchOpen(true);
       }
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setIsSearchOpen(false);
         setMobileSearchExpanded(false);
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   // Filter products live
@@ -85,36 +88,36 @@ export const Header: React.FC<HeaderProps> = ({
 
   const handleProductClick = (product: MedicalProduct) => {
     setIsSearchOpen(false);
-    setSearchQuery('');
+    setSearchQuery("");
     setMobileSearchExpanded(false);
     if (onSelectProduct) {
       onSelectProduct(product);
     } else {
-      onNavigate('catalog');
+      onNavigate("catalog");
     }
   };
 
   // Lock body scroll when mobile menu sidebar is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [mobileMenuOpen]);
 
   // Close on Escape key press
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setMobileMenuOpen(false);
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const handleMobileNav = (section: string) => {
@@ -125,9 +128,9 @@ export const Header: React.FC<HeaderProps> = ({
   const handleMobileWhatsApp = () => {
     setMobileMenuOpen(false);
     const text = encodeURIComponent(
-      `Hello BK Fabrication,\nI am looking for hospital furniture and medical equipment specifications and pricing for our healthcare facility.`
+      `Hello BK Fabrication,\nI am looking for hospital furniture and medical equipment specifications and pricing for our healthcare facility.`,
     );
-    window.open(`https://wa.me/919591244345?text=${text}`, '_blank');
+    window.open(`https://wa.me/919591244345?text=${text}`, "_blank");
   };
 
   return (
@@ -137,7 +140,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 sm:px-6 border-b border-slate-800">
           <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-4 sm:gap-6">
-              <span className="text-slate-400 hidden xs:inline">Direct Factory Hotline:</span>
+              <span className="text-slate-400 hidden xs:inline">
+                Direct Factory Hotline:
+              </span>
               <a
                 href={`tel:${COMPANY_DETAILS.phones[0]}`}
                 className="text-white hover:text-orange-400 font-medium transition-colors flex items-center gap-1.5"
@@ -165,11 +170,13 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-4 text-slate-400">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-orange-400" />
-                <span className="text-slate-300">ISO 9001:2015 & CE Certified</span>
+                <span className="text-slate-300">
+                  ISO 9001:2015 & CE Certified
+                </span>
               </span>
               <span className="text-slate-600 hidden lg:inline">·</span>
               <span
-                style={{ fontFamily: 'Georgia, Cambria, serif' }}
+                style={{ fontFamily: "Georgia, Cambria, serif" }}
                 className="text-orange-400 italic hidden lg:inline font-normal text-[13px]"
               >
                 A Work of Perfect Design
@@ -182,7 +189,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3 sm:gap-6">
           {/* Zone 1: Authentic BK Logo */}
           <button
-            onClick={() => onNavigate('hero')}
+            onClick={() => onNavigate("hero")}
             className="text-left group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-sm shrink-0 flex items-center gap-2.5"
             title="BK Fabrication Home"
           >
@@ -192,7 +199,7 @@ export const Header: React.FC<HeaderProps> = ({
                 B K FABRICATION
               </span>
               <span
-                style={{ fontFamily: 'Georgia, Cambria, serif' }}
+                style={{ fontFamily: "Georgia, Cambria, serif" }}
                 className="text-[11px] sm:text-xs text-orange-600 italic font-medium leading-tight mt-0.5"
               >
                 A Work of Perfect Design
@@ -201,7 +208,10 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           {/* Zone 2: Modern Responsive Search Bar */}
-          <div ref={searchContainerRef} className="relative flex-1 max-w-lg hidden md:block">
+          <div
+            ref={searchContainerRef}
+            className="relative flex-1 max-w-lg hidden md:block"
+          >
             <div className="relative flex items-center">
               <Search className="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" />
               <input
@@ -213,24 +223,20 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchOpen(true);
                 }}
                 onFocus={() => setIsSearchOpen(true)}
-                placeholder="Search hospital beds, crash carts, SS 304, model code..."
+                placeholder="Search products, categories, or model codes..."
                 className="w-full pl-9 pr-14 py-2 text-xs bg-slate-100/80 hover:bg-slate-100 focus:bg-white text-slate-800 placeholder-slate-400 border border-slate-200 focus:border-orange-500 rounded-xl outline-none transition-all shadow-2xs focus:ring-2 focus:ring-orange-500/15"
               />
               <div className="absolute right-2.5 flex items-center gap-1">
-                {searchQuery ? (
+                {searchQuery && (
                   <button
                     onClick={() => {
-                      setSearchQuery('');
+                      setSearchQuery("");
                       searchInputRef.current?.focus();
                     }}
                     className="p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-200 transition-colors"
                   >
                     <X className="w-3.5 h-3.5" />
                   </button>
-                ) : (
-                  <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-400 bg-white border border-slate-200 rounded shadow-2xs">
-                    ⌘K
-                  </kbd>
                 )}
               </div>
             </div>
@@ -239,7 +245,9 @@ export const Header: React.FC<HeaderProps> = ({
             {isSearchOpen && searchQuery.trim().length > 0 && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-1 duration-150">
                 <div className="p-2 border-b border-slate-100 flex items-center justify-between text-[11px] text-slate-500 bg-slate-50">
-                  <span className="font-semibold text-slate-700">Products ({searchResults.length})</span>
+                  <span className="font-semibold text-slate-700">
+                    Products ({searchResults.length})
+                  </span>
                   <span>Press Esc to close</span>
                 </div>
 
@@ -264,7 +272,9 @@ export const Header: React.FC<HeaderProps> = ({
                               {product.name}
                             </p>
                             <p className="text-[11px] text-slate-500 font-mono flex items-center gap-2">
-                              <span className="font-semibold text-orange-600">{product.modelCode}</span>
+                              <span className="font-semibold text-orange-600">
+                                {product.modelCode}
+                              </span>
                               <span>·</span>
                               <span>{product.categoryLabel}</span>
                             </p>
@@ -276,7 +286,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <button
                       onClick={() => {
                         setIsSearchOpen(false);
-                        onNavigate('catalog');
+                        onNavigate("catalog");
                       }}
                       className="w-full p-2.5 text-center text-xs font-semibold text-orange-600 bg-orange-50/50 hover:bg-orange-100/70 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                     >
@@ -286,8 +296,12 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                 ) : (
                   <div className="p-6 text-center text-slate-500">
-                    <p className="text-xs font-medium text-slate-700">No hospital equipment matching "{searchQuery}"</p>
-                    <p className="text-[11px] text-slate-400 mt-1">Try searching bed, cart, SS 304, or trolley</p>
+                    <p className="text-xs font-medium text-slate-700">
+                      No hospital equipment matching "{searchQuery}"
+                    </p>
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Try searching bed, cart, SS 304, or trolley
+                    </p>
                   </div>
                 )}
               </div>
@@ -338,7 +352,9 @@ export const Header: React.FC<HeaderProps> = ({
               aria-label="Open sidebar menu"
             >
               <Menu className="w-5 h-5 text-slate-800" />
-              <span className="text-xs font-bold text-slate-800 hidden sm:inline">Menu</span>
+              <span className="text-xs font-bold text-slate-800 hidden sm:inline">
+                Menu
+              </span>
             </button>
           </div>
         </div>
@@ -358,7 +374,7 @@ export const Header: React.FC<HeaderProps> = ({
               />
               {searchQuery && (
                 <button
-                  onClick={() => setSearchQuery('')}
+                  onClick={() => setSearchQuery("")}
                   className="p-1 text-slate-400 hover:text-slate-600 absolute right-2"
                 >
                   <X className="w-3.5 h-3.5" />
@@ -377,8 +393,12 @@ export const Header: React.FC<HeaderProps> = ({
                       className="w-full p-2.5 text-left flex items-center justify-between text-xs hover:bg-orange-50 transition-colors"
                     >
                       <div className="min-w-0 pr-2">
-                        <p className="font-semibold text-slate-800 truncate">{product.name}</p>
-                        <p className="text-[11px] text-slate-500 font-mono">{product.modelCode} · {product.categoryLabel}</p>
+                        <p className="font-semibold text-slate-800 truncate">
+                          {product.name}
+                        </p>
+                        <p className="text-[11px] text-slate-500 font-mono">
+                          {product.modelCode} · {product.categoryLabel}
+                        </p>
                       </div>
                       <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                     </button>
@@ -418,7 +438,7 @@ export const Header: React.FC<HeaderProps> = ({
                     B K FABRICATION
                   </span>
                   <span
-                    style={{ fontFamily: 'Georgia, Cambria, serif' }}
+                    style={{ fontFamily: "Georgia, Cambria, serif" }}
                     className="text-[11px] text-orange-600 italic block leading-tight"
                   >
                     A Work of Perfect Design
@@ -442,9 +462,11 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
 
               <button
-                onClick={() => handleMobileNav('hero')}
+                onClick={() => handleMobileNav("hero")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'hero' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "hero"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>Home Page</span>
@@ -452,9 +474,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <button
-                onClick={() => handleMobileNav('catalog')}
+                onClick={() => handleMobileNav("catalog")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'catalog' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "catalog"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>Product Catalog (All Products)</span>
@@ -462,9 +486,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <button
-                onClick={() => handleMobileNav('beds')}
+                onClick={() => handleMobileNav("beds")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'beds' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "beds"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>ICU & Hospital Beds</span>
@@ -472,9 +498,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <button
-                onClick={() => handleMobileNav('custom')}
+                onClick={() => handleMobileNav("custom")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'custom' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "custom"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>Custom Hospital Fabrication</span>
@@ -482,9 +510,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <button
-                onClick={() => handleMobileNav('quality')}
+                onClick={() => handleMobileNav("quality")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'quality' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "quality"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>Quality & Metallurgy (SS 304)</span>
@@ -492,9 +522,11 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
 
               <button
-                onClick={() => handleMobileNav('contact')}
+                onClick={() => handleMobileNav("contact")}
                 className={`w-full text-left px-3.5 py-2.5 rounded-lg flex items-center justify-between transition-colors cursor-pointer ${
-                  activeNav === 'contact' ? 'bg-orange-50 text-orange-600 font-bold' : 'text-slate-700 hover:bg-slate-100 hover:text-orange-600'
+                  activeNav === "contact"
+                    ? "bg-orange-50 text-orange-600 font-bold"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-orange-600"
                 }`}
               >
                 <span>Factory Contact & Inquiries</span>
