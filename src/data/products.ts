@@ -9,7 +9,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Foot Steps",
     "subtitle": "",
     "description": "Foot Step Double. S.S. framework; Anti-slip platform; S.S. tubular legs.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "",
@@ -29,7 +29,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "foot-step-single-bk1f6aa",
@@ -39,7 +45,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Foot Steps",
     "subtitle": "",
     "description": "Foot Step Single. S.S. framework; Anti-slip platform; S.S. tubular legs.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "",
@@ -59,7 +65,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "kick-bucket-bk2f7aa",
@@ -69,7 +81,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Buckets",
     "subtitle": "",
     "description": "Kick Bucket. S.S. framework with steel bucket; On four castors.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "S.S. framework with steel bucket",
       "dimensions": "",
@@ -88,7 +100,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "small-kick-bucket-15-inches-bk2f4aa",
@@ -98,7 +116,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Buckets",
     "subtitle": "",
     "description": "Small Kick Bucket (15 inches). S.S. framework with steel bowl; On three castors.",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "S.S. framework with steel bowl",
       "dimensions": "",
@@ -117,7 +135,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "bed-side-screen-4-panels-bk8f4aa",
@@ -127,7 +151,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Screens",
     "subtitle": "",
     "description": "Bed Side Screen (4 Panels). M.S. tubular framework on 5 cm castors; Epoxy powder-coated framework; Supplied with one set of curtains.",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "M.S. tubular framework on 5 cm castors",
       "dimensions": "165H x 240L cms",
@@ -147,7 +171,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "bed-side-screen-3-panels-bk6f8aa",
@@ -157,7 +187,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Screens",
     "subtitle": "",
     "description": "Bed Side Screen (3 Panels). M.S. tubular framework on 5 cm castors; Epoxy powder-coated framework; Supplied with one set of curtains.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "M.S. tubular framework on 5 cm castors",
       "dimensions": "165H x 240L cms",
@@ -177,7 +207,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "saline-stand-bk3f6aa",
@@ -187,7 +223,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Stands",
     "subtitle": "",
     "description": "Saline Stand. S.S. tubular pipe; S.S. adjustable rod with two hooks; Four-leg S.S. base on 5 cm castors.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "S.S. tubular pipe",
       "dimensions": "",
@@ -207,7 +243,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "seating-stool-bk2f8aa",
@@ -217,7 +259,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Stools",
     "subtitle": "",
     "description": "Seating Stool. S.S. tubular pipe framework; Steel top; Height adjustable by rotation; Bush fitted in bottom.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "S.S. tubular pipe framework",
       "dimensions": "",
@@ -238,7 +280,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "fixed-seating-stool-bk1f6aa",
@@ -248,7 +296,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Stools",
     "subtitle": "",
     "description": "Fixed Seating Stool. M.S. framework; Bush fitted in bottom.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "300L x 300W x 500H mm",
@@ -267,7 +315,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "large-cylinder-trolley-bk2f9aa",
@@ -277,7 +331,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Large Cylinder Trolley. M.S. tubular framework; Two 10 cm castors; M.S. sheet base plate; Pre-treated and epoxy powder-coated finish.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "M.S. tubular framework",
       "dimensions": "",
@@ -298,7 +352,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "small-cylinder-trolley-bk2f4aa",
@@ -308,7 +368,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Small Cylinder Trolley. S.S. framework; Bag for dirty/soiled linen; Three shelves for fresh linen and utilities; On castors.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "950 x 500 x 900 mm",
@@ -329,7 +389,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "hospital-baby-crib-trolley-bk6f7aa",
@@ -339,7 +405,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Baby Cribs",
     "subtitle": "",
     "description": "Hospital Baby Crib Trolley. M.S. epoxy powder-coated framework; Crib size: 76L x 38W x 26H cm; On castors.",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "M.S. epoxy powder-coated framework",
       "dimensions": "",
@@ -359,7 +425,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "baby-crib-trolley-bk19f7aa",
@@ -369,7 +441,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Baby Cribs",
     "subtitle": "",
     "description": "Baby Crib Trolley. S.S. tubular structure on 100 mm castors; H slide-down railing; Mattress with rexine cover.",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "S.S. tubular structure on 100 mm castors",
       "dimensions": "1100L x 640W x 1040H mm",
@@ -389,7 +461,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "goods-trolley-bk7f6aa",
@@ -399,7 +477,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Goods Trolley. M.S. framework; 200 kg capacity; Pre-treated and epoxy powder-coated framework.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "",
@@ -419,7 +497,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "multipurpose-trolley-bk4f6aa",
@@ -429,7 +513,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Multipurpose Trolley. Size: 850 x 520 x 1045 mm; Compartments and drawers for medicines, documents, waste bin and utilities; ABS drawers with single total key lock system; On castors with brakes.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -450,7 +534,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "emergency-multipurpose-trolley-crash-cart-bk23f8aa",
@@ -460,7 +550,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Emergency & Multipurpose Trolley (Crash Cart). Multipurpose trolley with compartments, shelves and drawers; Compartments for medicines, medical consumables and utilities; Three shelves for surgical machines; Cylinder cage; On castors.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -482,7 +572,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "utility-trolley-bk8f6aa",
@@ -492,7 +588,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Utility Trolley. Three drawers under top shelf; Medicine compartments and waste bin; On castors; two lockable; Push handles.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -513,7 +609,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "medicine-trolley-utility-trolley-bk10f8aa",
@@ -523,7 +625,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Medicine Trolley/Utility Trolley. M.S. epoxy powder-coated framework; Two S.S. shelves with top S.S. railing; Two drawers under each shelf; On castors.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "M.S. epoxy powder-coated framework",
       "dimensions": "",
@@ -544,7 +646,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "ecg-trolley-bk11f5aa",
@@ -554,7 +662,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "ECG Trolley. M.S. epoxy powder-coated framework; Two ABS shelves; On castors; two with brakes.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "M.S. epoxy powder-coated framework",
       "dimensions": "615 x 460 x 1165 mm",
@@ -574,7 +682,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "instrument-equipment-trolley-bk5f5aa",
@@ -584,7 +698,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Instrument/Equipment Trolley. M.S. framework; Three M.S. shelves with side railings on three sides; On castors with brakes.",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "720 x 460 x 970 mm",
@@ -604,7 +718,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "dressing-trolley-bk8f5aa",
@@ -614,7 +734,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Dressing Trolley. S.S. framework and shelves; One bucket and one bowl; On castors.",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "S.S. framework and shelves",
       "dimensions": "76L x 46W x 81H cms",
@@ -634,7 +754,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "instrument-trolley-bk10f7aa",
@@ -644,7 +770,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Instrument Trolley. S.S. framework; Three S.S. shelves; Push handle at one end; On castors.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
@@ -665,7 +791,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "instrument-trolley-2-shelves-bk5f9aa",
@@ -675,7 +807,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Instrument Trolley (2 Shelves). S.S. framework; Two S.S. shelves with three-side railing on top shelf; On castors.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
@@ -695,7 +827,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "hand-wash-basin-stand-double-bk3f5aa",
@@ -705,7 +843,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Stands",
     "subtitle": "",
     "description": "Hand Wash Basin Stand (Double). M.S. five-leg base on 5 cm castors; Two approximately 35 cm steel basins; Pre-treated epoxy powder-coated support rods and rings.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "M.S. five-leg base on 5 cm castors",
       "dimensions": "",
@@ -725,7 +863,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "hand-wash-basin-stand-single-bk2f6aa",
@@ -735,7 +879,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Stands",
     "subtitle": "",
     "description": "Hand Wash Basin Stand (Single). M.S. three-leg base on 5 cm castors; One approximately 35 cm steel basin; Pre-treated epoxy powder-coated support rod and ring.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "M.S. three-leg base on 5 cm castors",
       "dimensions": "",
@@ -755,7 +899,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "mayo-s-instrument-trolley-bk4f3aa",
@@ -765,7 +915,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Mayo's Instrument Trolley. S.S. framework; S.S. tray; Height adjustable by knob; On castors.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "Tray 56L x 40W cms",
@@ -786,7 +936,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "over-bed-table-fixed-bk2f9aa",
@@ -796,7 +952,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Tables",
     "subtitle": "",
     "description": "Over Bed Table-Fixed. M.S. epoxy powder-coated framework; Fixed wood-laminated top (30 x 16 inches); On castors.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "M.S. epoxy powder-coated framework",
       "dimensions": "",
@@ -816,7 +972,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "locker-bed-side-bk5f9aa",
@@ -826,7 +988,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Bedside Lockers",
     "subtitle": "",
     "description": "Locker-Bed Side. M.S. epoxy powder-coated framework; S.S. laminated top; One storage compartment and one drawer.",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "M.S. epoxy powder-coated framework",
       "dimensions": "",
@@ -846,7 +1008,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "folding-patient-stretcher-trolley-bk19f7aa",
@@ -856,7 +1024,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Folding Patient Stretcher Trolley. M.S. tubular pipe framework; Fixed stretcher top; Folding design; 15 cm castors; two with brakes; Epoxy powder-coated finish.",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "M.S. tubular pipe framework",
       "dimensions": "210L x 56W x 83H cms",
@@ -878,7 +1046,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "patient-stretcher-trolley-bk15f6aa",
@@ -888,7 +1062,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Patient Stretcher Trolley. M.S. framework; Cylinder cage; Adjustable backrest; Removable stretcher top; 15 cm castors; two with brakes; Epoxy powder-coated finish.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "210L x 56W x 81H cms",
@@ -911,7 +1085,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "hospital-monitor-trolley-bk32f8aa",
@@ -921,7 +1101,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Hospital Monitor Trolley. Framework described as M.S. and stainless steel in catalogue; Backrest and leg-rest sections adjustable on ratchet/lever; PVC stumps on legs; 5 cm foam cushioned rexine-covered top; Adjustable arm rest; Two M.S. handles.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "Framework described as M.S. and stainless steel in catalogue",
       "dimensions": "150L x 50W x 46H cms",
@@ -944,7 +1124,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "hospital-attendant-bed-bk8f4aa",
@@ -954,7 +1140,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Attendant Bed. M.S. framework with M.S. tube legs; PVC stumps on legs; 5 cm foam cushioned rexine-covered top; Pre-treated and epoxy powder-coated.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "M.S. framework with M.S. tube legs",
       "dimensions": "180L x 60W x 75H cms",
@@ -975,7 +1161,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "gynaec-examination-table-plain-bk9f8aa",
@@ -985,7 +1177,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Tables",
     "subtitle": "",
     "description": "Gynaec Examination Table-Plain. M.S. framework with M.S. tube legs; PVC stumps on legs; 5 cm foam cushioned rexine-covered top with perineal cut; Adjustable lithotomy poles with straps; Epoxy powder-coated finish.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "M.S. framework with M.S. tube legs",
       "dimensions": "180L x 60W x 80H cms",
@@ -1007,7 +1199,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "obstetric-delivery-bed-in-2-parts-bk19f8aa",
@@ -1017,7 +1215,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Delivery Beds",
     "subtitle": "",
     "description": "Obstetric Delivery Bed in 2 Parts. M.S. framework; Two-section cushioned top; PVC stumps on body-section legs; Leg section castors with brakes; Pair of knee crutches/leg stirrups; Pre-treated and epoxy powder-coated.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "",
@@ -1040,7 +1238,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "examination-couch-with-cabinet-drawers-fixed-height-bk25f6aa",
@@ -1050,7 +1254,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Couches",
     "subtitle": "",
     "description": "Examination Couch with Cabinet & Drawers (Fixed Height). M.S. framework; Two-section top; Leg section with swivel castors and brakes; Leg section can be recessed under body section; Adjustable knee crutches; Epoxy powder-coated finish.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "",
@@ -1073,7 +1277,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "examination-couch-with-cabinet-drawers-bk26f8aa",
@@ -1083,7 +1293,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Couches",
     "subtitle": "",
     "description": "Examination Couch with Cabinet & Drawers. M.S. framework with manually adjustable backrest; Two-section foam upholstered top; Three drawers and three cabinets; Tray for B.P. apparatus; Pre-treated and epoxy powder-coated.",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "M.S. framework with manually adjustable backrest",
       "dimensions": "187L x 51W x 81H cms",
@@ -1105,7 +1315,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "gynaec-examination-table-two-section-bk17f7aa",
@@ -1115,7 +1331,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Tables",
     "subtitle": "",
     "description": "Gynaec Examination Table (Two Section). S.S. tubular framework; Backrest adjustable on ratchet/lever; PVC stumps on legs; 5 cm foam top covered with rexine with perineal cut; Adjustable lithotomy poles with straps.",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "S.S. tubular framework",
       "dimensions": "180L x 60W x 80H cms",
@@ -1137,7 +1353,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "examination-table-in-2-parts-2-section-top-bk13f9aa",
@@ -1147,7 +1369,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Tables",
     "subtitle": "",
     "description": "Examination Table in 2 Parts (2 Section Top). S.S. frame with adjustable backrest; Two-section foam upholstered top; Stainless steel framework.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "S.S. frame with adjustable backrest",
       "dimensions": "180L x 60W x 80H cms",
@@ -1167,7 +1389,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "gynaec-examination-table-three-sections-bk24f8aa",
@@ -1177,7 +1405,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Examination Tables",
     "subtitle": "",
     "description": "Gynaec Examination Table (Three Sections). S.S. framework; Backrest adjustable on ratchet/lever; PVC stumps on legs; 5 cm foam cushioned rexine-covered top; Adjustable knee crutches; Pair of shoulder supports.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "180L x 60W x 46H cms",
@@ -1200,7 +1428,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "cardiac-table-food-trolley-bk4f2aa",
@@ -1210,7 +1444,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Trolleys",
     "subtitle": "",
     "description": "Cardiac Table / Food Trolley. S.S. framework; Laminated wooden top (30 x 16 inches); Height adjustable by knob; On castors.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "S.S. framework",
       "dimensions": "",
@@ -1231,7 +1465,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "hospital-bed-plain-bk8f7aa",
@@ -1241,7 +1481,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Bed Plain. M.S. framework; Tubular head and foot bows of unequal height; Welded wire mesh M.S. top; Epoxy powder coating.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "206L x 90W x 60H cms",
@@ -1262,7 +1502,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "hospital-plain-bed-bk7f5aa",
@@ -1272,7 +1518,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Plain Bed. M.S. framework; One-section M.S. top; Tubular head and foot bows of unequal height; Epoxy powder coating.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "M.S. framework",
       "dimensions": "206L x 90W x 60H cms",
@@ -1293,7 +1539,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "semi-fowler-bed-mattress-bk3f7aa",
@@ -1303,7 +1555,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Mattresses",
     "subtitle": "",
     "description": "Semi Fowler Bed Mattress",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -1319,7 +1571,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "plain-bed-mattress-bk3f1aa",
@@ -1329,7 +1587,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Mattresses",
     "subtitle": "",
     "description": "Plain Bed Mattress",
-    "image": "",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -1345,7 +1603,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
   },
   {
     "id": "fowler-bed-mattress-bk4f2aa",
@@ -1355,7 +1619,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Mattresses",
     "subtitle": "",
     "description": "Fowler Bed Mattress",
-    "image": "",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
     "specs": {
       "material": "",
       "dimensions": "",
@@ -1371,7 +1635,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   },
   {
     "id": "icu-bed-bk35f5aa",
@@ -1381,7 +1651,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "ICU Bed. Five functions; Manual back lift, knee-rest lifting, Trendelenburg, reverse Trendelenburg and height adjustment; Removable moulded head and foot panels; Four-section top; Mild steel framework; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 60-80H cms",
@@ -1405,7 +1675,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
   },
   {
     "id": "electric-single-functions-bed-bk084",
@@ -1415,7 +1691,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Electric Single Functions Bed. Single function; Electric back lift; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Two-section top; Mild steel framework; 125 mm castors; Central braking system; Wired remote control.",
-    "image": "",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 60H cms",
@@ -1441,7 +1717,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
   },
   {
     "id": "electric-two-functions-bed-bk083",
@@ -1451,7 +1733,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Electric Two Functions Bed. Two functions; Electric back lift and knee-rest lifting; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; Central braking system; Wired remote control.",
-    "image": "",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 60H cms",
@@ -1477,7 +1759,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
   },
   {
     "id": "icu-bed-electric-three-functions-bk082",
@@ -1487,7 +1775,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "ICU Bed, Electric, Three Functions. Three functions; Electric back lift, knee-rest lifting and height adjustment; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; Central braking system; Wired remote control.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 60-80H cms",
@@ -1513,7 +1801,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
   },
   {
     "id": "icu-bed-electric-five-functions-bk081",
@@ -1523,7 +1817,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "ICU Bed, Electric, Five Functions. Five functions; Electric back lift, knee-rest lifting, Trendelenburg, reverse Trendelenburg and height adjustment; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; brakes on two castors; Wired remote control.",
-    "image": "",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 50-70H cms",
@@ -1548,7 +1842,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
   },
   {
     "id": "hospital-fowler-bed-bk19f5aa",
@@ -1558,7 +1858,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Fowler Bed. Framework: M.S.; Two functions; Manual knee-rest lifting and back lift; Removable moulded head and foot panels; Aluminium collapsible side railings; Four-section top; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
     "specs": {
       "material": "M.S.",
       "dimensions": "210L x 93W x 49H cms",
@@ -1583,7 +1883,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
   },
   {
     "id": "hospital-semi-fowler-bed-bk17f9aa",
@@ -1593,7 +1899,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Head and foot panels: high-quality moulded, removable; Top: two sections; Back lift: manual; Epoxy powder coating.",
-    "image": "",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
     "specs": {
       "material": "M.S.",
       "dimensions": "206L x 90W x 60H cms",
@@ -1615,7 +1921,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "certifications": [],
     "inStock": false,
     "leadTime": "",
-    "isFeatured": false
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
   }
 ];
 

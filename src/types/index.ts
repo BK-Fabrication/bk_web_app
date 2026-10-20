@@ -25,6 +25,7 @@ export interface MedicalProduct {
   subtitle: string;
   description: string;
   image: string;
+  images?: string[];
   specs: ProductSpecification;
   keyFeatures: string[];
   applications: string[];

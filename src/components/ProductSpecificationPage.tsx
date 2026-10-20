@@ -13,6 +13,7 @@ import {
   Scale, 
   Maximize2, 
   ChevronRight,
+  ChevronLeft,
   ArrowRight,
   Download
 } from 'lucide-react';
@@ -46,6 +47,18 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
 
   const activeId = routeProductId || initialProductId || MEDICAL_PRODUCTS[0].id;
   const currentProduct = MEDICAL_PRODUCTS.find((p) => p.id === activeId) || MEDICAL_PRODUCTS[0];
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  React.useEffect(() => {
+    setActiveImageIndex(0);
+  }, [activeId]);
+
+  const productImages = useMemo(() => {
+    return currentProduct.images && currentProduct.images.length > 0
+      ? currentProduct.images
+      : [currentProduct.image];
+  }, [currentProduct]);
 
   const relatedProducts = useMemo(() => {
     const sameCategory = MEDICAL_PRODUCTS.filter(
@@ -192,19 +205,69 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
           {/* Top Product Hero Block */}
           <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 shadow-2xs print:border-none print:shadow-none print:p-0">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center print:grid-cols-12 print:gap-5">
-              {/* Product Photography Viewport */}
-              <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 flex items-center justify-center relative min-h-[240px] sm:min-h-[320px] print:col-span-5 print:min-h-0 print:h-48 print:p-2">
-                <img
-                  src={currentProduct.image}
-                  alt={currentProduct.name}
-                  className="max-h-56 sm:max-h-72 w-auto object-contain mx-auto print:max-h-44"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-3 left-3 print:top-1.5 print:left-1.5">
-                  <span className="font-mono text-xs font-bold text-orange-700 bg-orange-50 px-2.5 py-1 rounded border border-orange-200">
+              {/* Product Photography & Multi-Image Slider Viewport */}
+              <div className="md:col-span-6 bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 flex flex-col items-center justify-between relative min-h-[280px] sm:min-h-[340px] print:col-span-5 print:min-h-0 print:h-48 print:p-2">
+                <div className="absolute top-3 left-3 z-10 print:top-1.5 print:left-1.5">
+                  <span className="font-mono text-xs font-bold text-orange-700 bg-orange-50 px-2.5 py-1 rounded border border-orange-200 shadow-2xs">
                     {currentProduct.modelCode}
                   </span>
                 </div>
+
+                {productImages.length > 1 && (
+                  <div className="absolute top-3 right-3 z-10 bg-slate-900/70 backdrop-blur-xs text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded">
+                    {activeImageIndex + 1} / {productImages.length}
+                  </div>
+                )}
+
+                {/* Main Slide Image */}
+                <div className="relative w-full h-56 sm:h-68 flex items-center justify-center p-2">
+                  {productImages.length > 1 && (
+                    <button
+                      onClick={() => setActiveImageIndex((prev) => (prev === 0 ? productImages.length - 1 : prev - 1))}
+                      className="absolute left-1 z-10 p-2 rounded-full bg-white/90 hover:bg-white text-slate-700 shadow-md border border-slate-200 transition-colors cursor-pointer"
+                      title="Previous Image"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+                  )}
+
+                  <img
+                    src={productImages[activeImageIndex]}
+                    alt={`${currentProduct.name} - View ${activeImageIndex + 1}`}
+                    className="max-h-52 sm:max-h-64 w-auto object-contain mx-auto transition-all duration-300 print:max-h-44"
+                    referrerPolicy="no-referrer"
+                  />
+
+                  {productImages.length > 1 && (
+                    <button
+                      onClick={() => setActiveImageIndex((prev) => (prev === productImages.length - 1 ? 0 : prev + 1))}
+                      className="absolute right-1 z-10 p-2 rounded-full bg-white/90 hover:bg-white text-slate-700 shadow-md border border-slate-200 transition-colors cursor-pointer"
+                      title="Next Image"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Thumbnail Strip (if multiple images) */}
+                {productImages.length > 1 && (
+                  <div className="w-full pt-3 mt-3 border-t border-slate-200/85 flex items-center justify-center gap-2 overflow-x-auto no-print">
+                    {productImages.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveImageIndex(idx)}
+                        className={`relative w-12 h-12 rounded-lg bg-white border-2 overflow-hidden flex items-center justify-center p-1 transition-all cursor-pointer shrink-0 ${
+                          activeImageIndex === idx
+                            ? 'border-orange-600 shadow-md scale-105 ring-2 ring-orange-600/20'
+                            : 'border-slate-200 opacity-70 hover:opacity-100 hover:border-slate-300'
+                        }`}
+                        title={`Switch to image ${idx + 1}`}
+                      >
+                        <img src={img} alt={`Thumb ${idx + 1}`} className="max-h-full max-w-full object-contain" />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Core Header Details */}
