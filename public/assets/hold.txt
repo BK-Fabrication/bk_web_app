@@ -1,0 +1,1198 @@
+ {
+    "id": "foot-step-double-bk2f5aa",
+    "modelCode": "BK2F5AA",
+    "name": "Foot Step Double",
+    "category": "ward",
+    "categoryLabel": "Foot Steps",
+    "subtitle": "",
+    "description": "Foot Step Double. S.S. framework; Anti-slip platform; S.S. tubular legs.",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "Anti-slip platform",
+      "S.S. tubular legs"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
+  },
+  {
+    "id": "foot-step-single-bk1f6aa",
+    "modelCode": "BK1F6AA",
+    "name": "Foot Step Single",
+    "category": "ward",
+    "categoryLabel": "Foot Steps",
+    "subtitle": "",
+    "description": "Foot Step Single. S.S. framework; Anti-slip platform; S.S. tubular legs.",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "Anti-slip platform",
+      "S.S. tubular legs"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
+  },
+  {
+    "id": "kick-bucket-bk2f7aa",
+    "modelCode": "BK2F7AA",
+    "name": "Kick Bucket",
+    "category": "ward",
+    "categoryLabel": "Buckets",
+    "subtitle": "",
+    "description": "Kick Bucket. S.S. framework with steel bucket; On four castors.",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "specs": {
+      "material": "S.S. framework with steel bucket",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On four castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework with steel bucket",
+      "On four castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
+  },
+  {
+    "id": "small-kick-bucket-15-inches-bk2f4aa",
+    "modelCode": "BK2F4AA",
+    "name": "Small Kick Bucket (15 inches)",
+    "category": "ward",
+    "categoryLabel": "Buckets",
+    "subtitle": "",
+    "description": "Small Kick Bucket (15 inches). S.S. framework with steel bowl; On three castors.",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
+    "specs": {
+      "material": "S.S. framework with steel bowl",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On three castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework with steel bowl",
+      "On three castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
+  },
+  {
+    "id": "bed-side-screen-4-panels-bk8f4aa",
+    "modelCode": "BK8F4AA",
+    "name": "Bed Side Screen (4 Panels)",
+    "category": "ward",
+    "categoryLabel": "Screens",
+    "subtitle": "",
+    "description": "Bed Side Screen (4 Panels). M.S. tubular framework on 5 cm castors; Epoxy powder-coated framework; Supplied with one set of curtains.",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
+    "specs": {
+      "material": "M.S. tubular framework on 5 cm castors",
+      "dimensions": "165H x 240L cms",
+      "size": "165H x 240L cms",
+      "loadCapacity": "",
+      "finish": "Epoxy powder-coated framework",
+      "castors": "M.S. tubular framework on 5 cm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. tubular framework on 5 cm castors",
+      "Epoxy powder-coated framework",
+      "Supplied with one set of curtains"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
+  },
+  {
+    "id": "bed-side-screen-3-panels-bk6f8aa",
+    "modelCode": "BK6F8AA",
+    "name": "Bed Side Screen (3 Panels)",
+    "category": "ward",
+    "categoryLabel": "Screens",
+    "subtitle": "",
+    "description": "Bed Side Screen (3 Panels). M.S. tubular framework on 5 cm castors; Epoxy powder-coated framework; Supplied with one set of curtains.",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
+    "specs": {
+      "material": "M.S. tubular framework on 5 cm castors",
+      "dimensions": "165H x 240L cms",
+      "size": "165H x 240L cms",
+      "loadCapacity": "",
+      "finish": "Epoxy powder-coated framework",
+      "castors": "M.S. tubular framework on 5 cm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. tubular framework on 5 cm castors",
+      "Epoxy powder-coated framework",
+      "Supplied with one set of curtains"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
+  },
+  {
+    "id": "saline-stand-bk3f6aa",
+    "modelCode": "BK3F6AA",
+    "name": "Saline Stand",
+    "category": "ward",
+    "categoryLabel": "Stands",
+    "subtitle": "",
+    "description": "Saline Stand. S.S. tubular pipe; S.S. adjustable rod with two hooks; Four-leg S.S. base on 5 cm castors.",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
+    "specs": {
+      "material": "S.S. tubular pipe",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "Four-leg S.S. base on 5 cm castors",
+      "adjustments": "S.S. adjustable rod with two hooks",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. tubular pipe",
+      "S.S. adjustable rod with two hooks",
+      "Four-leg S.S. base on 5 cm castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
+  },
+  {
+    "id": "seating-stool-bk2f8aa",
+    "modelCode": "BK2F8AA",
+    "name": "Seating Stool",
+    "category": "ward",
+    "categoryLabel": "Stools",
+    "subtitle": "",
+    "description": "Seating Stool. S.S. tubular pipe framework; Steel top; Height adjustable by rotation; Bush fitted in bottom.",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
+    "specs": {
+      "material": "S.S. tubular pipe framework",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "Height adjustable by rotation",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. tubular pipe framework",
+      "Steel top",
+      "Height adjustable by rotation",
+      "Bush fitted in bottom"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
+  },
+  {
+    "id": "fixed-seating-stool-bk1f6aa",
+    "modelCode": "BK1F6AA",
+    "name": "Fixed Seating Stool",
+    "category": "ward",
+    "categoryLabel": "Stools",
+    "subtitle": "",
+    "description": "Fixed Seating Stool. M.S. framework; Bush fitted in bottom.",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "specs": {
+      "material": "M.S. framework",
+      "dimensions": "300L x 300W x 500H mm",
+      "size": "300L x 300W x 500H mm",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. framework",
+      "Bush fitted in bottom"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
+  },
+  {
+    "id": "large-cylinder-trolley-bk2f9aa",
+    "modelCode": "BK2F9AA",
+    "name": "Large Cylinder Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Large Cylinder Trolley. M.S. tubular framework; Two 10 cm castors; M.S. sheet base plate; Pre-treated and epoxy powder-coated finish.",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
+    "specs": {
+      "material": "M.S. tubular framework",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "Pre-treated and epoxy powder-coated finish",
+      "castors": "Two 10 cm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. tubular framework",
+      "Two 10 cm castors",
+      "M.S. sheet base plate",
+      "Pre-treated and epoxy powder-coated finish"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
+  },
+  {
+    "id": "small-cylinder-trolley-bk2f4aa",
+    "modelCode": "BK2F4AA",
+    "name": "Small Cylinder Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Small Cylinder Trolley. S.S. framework; Bag for dirty/soiled linen; Three shelves for fresh linen and utilities; On castors.",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "950 x 500 x 900 mm",
+      "size": "950 x 500 x 900 mm",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "Bag for dirty/soiled linen",
+      "Three shelves for fresh linen and utilities",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
+  },
+  {
+    "id": "hospital-baby-crib-trolley-bk6f7aa",
+    "modelCode": "BK6F7AA",
+    "name": "Hospital Baby Crib Trolley",
+    "category": "ward",
+    "categoryLabel": "Baby Cribs",
+    "subtitle": "",
+    "description": "Hospital Baby Crib Trolley. M.S. epoxy powder-coated framework; Crib size: 76L x 38W x 26H cm; On castors.",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
+    "specs": {
+      "material": "M.S. epoxy powder-coated framework",
+      "dimensions": "",
+      "size": "91L x 45W x 91H cm",
+      "loadCapacity": "",
+      "finish": "M.S. epoxy powder-coated framework",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. epoxy powder-coated framework",
+      "Crib size: 76L x 38W x 26H cm",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
+  },
+  {
+    "id": "baby-crib-trolley-bk19f7aa",
+    "modelCode": "BK19F7AA",
+    "name": "Baby Crib Trolley",
+    "category": "ward",
+    "categoryLabel": "Baby Cribs",
+    "subtitle": "",
+    "description": "Baby Crib Trolley. S.S. tubular structure on 100 mm castors; H slide-down railing; Mattress with rexine cover.",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
+    "specs": {
+      "material": "S.S. tubular structure on 100 mm castors",
+      "dimensions": "1100L x 640W x 1040H mm",
+      "size": "1100L x 640W x 1040H mm",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "S.S. tubular structure on 100 mm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. tubular structure on 100 mm castors",
+      "H slide-down railing",
+      "Mattress with rexine cover"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
+  },
+
+  {
+    "id": "multipurpose-trolley-bk4f6aa",
+    "modelCode": "BK4F6AA",
+    "name": "Multipurpose Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Multipurpose Trolley. Size: 850 x 520 x 1045 mm; Compartments and drawers for medicines, documents, waste bin and utilities; ABS drawers with single total key lock system; On castors with brakes.",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
+    "specs": {
+      "material": "",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors with brakes",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "Size: 850 x 520 x 1045 mm",
+      "Compartments and drawers for medicines, documents, waste bin and utilities",
+      "ABS drawers with single total key lock system",
+      "On castors with brakes"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
+  },
+
+  {
+    "id": "utility-trolley-bk8f6aa",
+    "modelCode": "BK8F6AA",
+    "name": "Utility Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Utility Trolley. Three drawers under top shelf; Medicine compartments and waste bin; On castors; two lockable; Push handles.",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "specs": {
+      "material": "",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors; two lockable",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "Three drawers under top shelf",
+      "Medicine compartments and waste bin",
+      "On castors; two lockable",
+      "Push handles"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
+  },
+  {
+    "id": "medicine-trolley-utility-trolley-bk10f8aa",
+    "modelCode": "BK10F8AA",
+    "name": "Medicine Trolley/Utility Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Medicine Trolley/Utility Trolley. M.S. epoxy powder-coated framework; Two S.S. shelves with top S.S. railing; Two drawers under each shelf; On castors.",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
+    "specs": {
+      "material": "M.S. epoxy powder-coated framework",
+      "dimensions": "",
+      "size": "76 x 46 x 81 cm",
+      "loadCapacity": "",
+      "finish": "M.S. epoxy powder-coated framework",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. epoxy powder-coated framework",
+      "Two S.S. shelves with top S.S. railing",
+      "Two drawers under each shelf",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
+  },
+  {
+    "id": "ecg-trolley-bk11f5aa",
+    "modelCode": "BK11F5AA",
+    "name": "ECG Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "ECG Trolley. M.S. epoxy powder-coated framework; Two ABS shelves; On castors; two with brakes.",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "specs": {
+      "material": "M.S. epoxy powder-coated framework",
+      "dimensions": "615 x 460 x 1165 mm",
+      "size": "615 x 460 x 1165 mm",
+      "loadCapacity": "",
+      "finish": "M.S. epoxy powder-coated framework",
+      "castors": "On castors; two with brakes",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. epoxy powder-coated framework",
+      "Two ABS shelves",
+      "On castors; two with brakes"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
+  },
+  {
+    "id": "instrument-equipment-trolley-bk5f5aa",
+    "modelCode": "BK5F5AA",
+    "name": "Instrument/Equipment Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Instrument/Equipment Trolley. M.S. framework; Three M.S. shelves with side railings on three sides; On castors with brakes.",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
+    "specs": {
+      "material": "M.S. framework",
+      "dimensions": "720 x 460 x 970 mm",
+      "size": "720 x 460 x 970 mm",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors with brakes",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. framework",
+      "Three M.S. shelves with side railings on three sides",
+      "On castors with brakes"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
+  },
+  {
+    "id": "dressing-trolley-bk8f5aa",
+    "modelCode": "BK8F5AA",
+    "name": "Dressing Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Dressing Trolley. S.S. framework and shelves; One bucket and one bowl; On castors.",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
+    "specs": {
+      "material": "S.S. framework and shelves",
+      "dimensions": "76L x 46W x 81H cms",
+      "size": "76L x 46W x 81H cms",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework and shelves",
+      "One bucket and one bowl",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
+  },
+  {
+    "id": "instrument-trolley-bk10f7aa",
+    "modelCode": "BK10F7AA",
+    "name": "Instrument Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Instrument Trolley. S.S. framework; Three S.S. shelves; Push handle at one end; On castors.",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
+      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "Three S.S. shelves",
+      "Push handle at one end",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
+  },
+  {
+    "id": "instrument-trolley-2-shelves-bk5f9aa",
+    "modelCode": "BK5F9AA",
+    "name": "Instrument Trolley (2 Shelves)",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Instrument Trolley (2 Shelves). S.S. framework; Two S.S. shelves with three-side railing on top shelf; On castors.",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
+      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "Two S.S. shelves with three-side railing on top shelf",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
+  },
+  {
+    "id": "hand-wash-basin-stand-double-bk3f5aa",
+    "modelCode": "BK3F5AA",
+    "name": "Hand Wash Basin Stand (Double)",
+    "category": "ward",
+    "categoryLabel": "Stands",
+    "subtitle": "",
+    "description": "Hand Wash Basin Stand (Double). M.S. five-leg base on 5 cm castors; Two approximately 35 cm steel basins; Pre-treated epoxy powder-coated support rods and rings.",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
+    "specs": {
+      "material": "M.S. five-leg base on 5 cm castors",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "Pre-treated epoxy powder-coated support rods and rings",
+      "castors": "M.S. five-leg base on 5 cm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. five-leg base on 5 cm castors",
+      "Two approximately 35 cm steel basins",
+      "Pre-treated epoxy powder-coated support rods and rings"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
+  },
+  {
+    "id": "hand-wash-basin-stand-single-bk2f6aa",
+    "modelCode": "BK2F6AA",
+    "name": "Hand Wash Basin Stand (Single)",
+    "category": "ward",
+    "categoryLabel": "Stands",
+    "subtitle": "",
+    "description": "Hand Wash Basin Stand (Single). M.S. three-leg base on 5 cm castors; One approximately 35 cm steel basin; Pre-treated epoxy powder-coated support rod and ring.",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "specs": {
+      "material": "M.S. three-leg base on 5 cm castors",
+      "dimensions": "",
+      "size": "",
+      "loadCapacity": "",
+      "finish": "Pre-treated epoxy powder-coated support rod and ring",
+      "castors": "M.S. three-leg base on 5 cm castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. three-leg base on 5 cm castors",
+      "One approximately 35 cm steel basin",
+      "Pre-treated epoxy powder-coated support rod and ring"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
+  },
+  {
+    "id": "mayo-s-instrument-trolley-bk4f3aa",
+    "modelCode": "BK4F3AA",
+    "name": "Mayo's Instrument Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Mayo's Instrument Trolley. S.S. framework; S.S. tray; Height adjustable by knob; On castors.",
+    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
+    "specs": {
+      "material": "S.S. framework",
+      "dimensions": "Tray 56L x 40W cms",
+      "size": "Tray 56L x 40W cms",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "On castors",
+      "adjustments": "Height adjustable by knob",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "S.S. framework",
+      "S.S. tray",
+      "Height adjustable by knob",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg"
+    ]
+  },
+  {
+    "id": "over-bed-table-fixed-bk2f9aa",
+    "modelCode": "BK2F9AA",
+    "name": "Over Bed Table-Fixed",
+    "category": "ward",
+    "categoryLabel": "Tables",
+    "subtitle": "",
+    "description": "Over Bed Table-Fixed. M.S. epoxy powder-coated framework; Fixed wood-laminated top (30 x 16 inches); On castors.",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "specs": {
+      "material": "M.S. epoxy powder-coated framework",
+      "dimensions": "",
+      "size": "42\" x 16\" x 39\"",
+      "loadCapacity": "",
+      "finish": "M.S. epoxy powder-coated framework",
+      "castors": "On castors",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. epoxy powder-coated framework",
+      "Fixed wood-laminated top (30 x 16 inches)",
+      "On castors"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
+  },
+  {
+    "id": "locker-bed-side-bk5f9aa",
+    "modelCode": "BK5F9AA",
+    "name": "Locker-Bed Side",
+    "category": "ward",
+    "categoryLabel": "Bedside Lockers",
+    "subtitle": "",
+    "description": "Locker-Bed Side. M.S. epoxy powder-coated framework; S.S. laminated top; One storage compartment and one drawer.",
+    "image": "/assets/images/product_dressing_trolley_1792303340011.jpg",
+    "specs": {
+      "material": "M.S. epoxy powder-coated framework",
+      "dimensions": "",
+      "size": "16\" x 16\" x 32\"",
+      "loadCapacity": "",
+      "finish": "M.S. epoxy powder-coated framework",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. epoxy powder-coated framework",
+      "S.S. laminated top",
+      "One storage compartment and one drawer"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg"
+    ]
+  },
+  {
+    "id": "folding-patient-stretcher-trolley-bk19f7aa",
+    "modelCode": "BK19F7AA",
+    "name": "Folding Patient Stretcher Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Folding Patient Stretcher Trolley. M.S. tubular pipe framework; Fixed stretcher top; Folding design; 15 cm castors; two with brakes; Epoxy powder-coated finish.",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
+    "specs": {
+      "material": "M.S. tubular pipe framework",
+      "dimensions": "210L x 56W x 83H cms",
+      "size": "210L x 56W x 83H cms",
+      "loadCapacity": "",
+      "finish": "Epoxy powder-coated finish",
+      "castors": "15 cm castors; two with brakes",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. tubular pipe framework",
+      "Fixed stretcher top",
+      "Folding design",
+      "15 cm castors; two with brakes",
+      "Epoxy powder-coated finish"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
+  },
+  {
+    "id": "patient-stretcher-trolley-bk15f6aa",
+    "modelCode": "BK15F6AA",
+    "name": "Patient Stretcher Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Patient Stretcher Trolley. M.S. framework; Cylinder cage; Adjustable backrest; Removable stretcher top; 15 cm castors; two with brakes; Epoxy powder-coated finish.",
+    "image": "/assets/images/product_baby_crib_1792303357673.jpg",
+    "specs": {
+      "material": "M.S. framework",
+      "dimensions": "210L x 56W x 81H cms",
+      "size": "210L x 56W x 81H cms",
+      "loadCapacity": "",
+      "finish": "Epoxy powder-coated finish",
+      "castors": "15 cm castors; two with brakes",
+      "adjustments": "Adjustable backrest",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. framework",
+      "Cylinder cage",
+      "Adjustable backrest",
+      "Removable stretcher top",
+      "15 cm castors; two with brakes",
+      "Epoxy powder-coated finish"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg"
+    ]
+  },
+  {
+    "id": "hospital-monitor-trolley-bk32f8aa",
+    "modelCode": "BK32F8AA",
+    "name": "Hospital Monitor Trolley",
+    "category": "trolleys",
+    "categoryLabel": "Trolleys",
+    "subtitle": "",
+    "description": "Hospital Monitor Trolley. Framework described as M.S. and stainless steel in catalogue; Backrest and leg-rest sections adjustable on ratchet/lever; PVC stumps on legs; 5 cm foam cushioned rexine-covered top; Adjustable arm rest; Two M.S. handles.",
+    "image": "/assets/images/product_patient_stretcher_1792303359194.jpg",
+    "specs": {
+      "material": "Framework described as M.S. and stainless steel in catalogue",
+      "dimensions": "150L x 50W x 46H cms",
+      "size": "150L x 50W x 46H cms",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "Backrest and leg-rest sections adjustable on ratchet/lever; Adjustable arm rest",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "Framework described as M.S. and stainless steel in catalogue",
+      "Backrest and leg-rest sections adjustable on ratchet/lever",
+      "PVC stumps on legs",
+      "5 cm foam cushioned rexine-covered top",
+      "Adjustable arm rest",
+      "Two M.S. handles"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg"
+    ]
+  },
+  {
+    "id": "hospital-attendant-bed-bk8f4aa",
+    "modelCode": "BK8F4AA",
+    "name": "Hospital Attendant Bed",
+    "category": "beds",
+    "categoryLabel": "Hospital Beds",
+    "subtitle": "",
+    "description": "Hospital Attendant Bed. M.S. framework with M.S. tube legs; PVC stumps on legs; 5 cm foam cushioned rexine-covered top; Pre-treated and epoxy powder-coated.",
+    "image": "/assets/images/hero_medical_facility_1792303314930.jpg",
+    "specs": {
+      "material": "M.S. framework with M.S. tube legs",
+      "dimensions": "180L x 60W x 75H cms",
+      "size": "180L x 60W x 75H cms",
+      "loadCapacity": "",
+      "finish": "Pre-treated and epoxy powder-coated",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. framework with M.S. tube legs",
+      "PVC stumps on legs",
+      "5 cm foam cushioned rexine-covered top",
+      "Pre-treated and epoxy powder-coated"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/hero_medical_facility_1792303314930.jpg",
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg"
+    ]
+  },
+  {
+    "id": "hospital-bed-plain-bk8f7aa",
+    "modelCode": "BK8F7AA",
+    "name": "Hospital Bed Plain",
+    "category": "beds",
+    "categoryLabel": "Hospital Beds",
+    "subtitle": "",
+    "description": "Hospital Bed Plain. M.S. framework; Tubular head and foot bows of unequal height; Welded wire mesh M.S. top; Epoxy powder coating.",
+    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "specs": {
+      "material": "M.S. framework",
+      "dimensions": "206L x 90W x 60H cms",
+      "size": "206L x 90W x 60H cms",
+      "loadCapacity": "",
+      "finish": "Epoxy powder coating",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [
+      "M.S. framework",
+      "Tubular head and foot bows of unequal height",
+      "Welded wire mesh M.S. top",
+      "Epoxy powder coating"
+    ],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_icu_bed_1792303339395.jpg",
+      "/assets/images/product_bedside_locker_1792303359577.jpg",
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg"
+    ]
+  },
+
+  {
+    "id": "semi-fowler-bed-mattress-bk3f7aa",
+    "modelCode": "BK3F7AA",
+    "name": "Semi Fowler Bed Mattress",
+    "category": "ward",
+    "categoryLabel": "Mattresses",
+    "subtitle": "",
+    "description": "Semi Fowler Bed Mattress",
+    "image": "/assets/images/product_crash_cart_1792303340280.jpg",
+    "specs": {
+      "material": "",
+      "dimensions": "",
+      "size": "75\" x 35\" x 4\"",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_crash_cart_1792303340280.jpg",
+      "/assets/images/product_dressing_trolley_1792303340011.jpg",
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg"
+    ]
+  },
+  {
+    "id": "fowler-bed-mattress-bk4f2aa",
+    "modelCode": "BK4F2AA",
+    "name": "Fowler Bed Mattress",
+    "category": "ward",
+    "categoryLabel": "Mattresses",
+    "subtitle": "",
+    "description": "Fowler Bed Mattress",
+    "image": "/assets/images/product_exam_couch_1792303341691.jpg",
+    "specs": {
+      "material": "",
+      "dimensions": "",
+      "size": "75\" x 35\" x 4\"",
+      "loadCapacity": "",
+      "finish": "",
+      "castors": "",
+      "adjustments": "",
+      "warranty": ""
+    },
+    "keyFeatures": [],
+    "applications": [],
+    "certifications": [],
+    "inStock": false,
+    "leadTime": "",
+    "isFeatured": false,
+    "images": [
+      "/assets/images/product_exam_couch_1792303341691.jpg",
+      "/assets/images/product_baby_crib_1792303357673.jpg",
+      "/assets/images/product_patient_stretcher_1792303359194.jpg",
+      "/assets/images/hero_medical_facility_1792303314930.jpg"
+    ]
+  },
