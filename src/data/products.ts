@@ -1769,13 +1769,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   },
   {
     "id": "icu-bed-electric-three-functions-bk082",
-    "modelCode": "BK082",
+    "modelCode": "bk_082",
     "name": "ICU Bed, Electric, Three Functions",
     "category": "beds",
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "ICU Bed, Electric, Three Functions. Three functions; Electric back lift, knee-rest lifting and height adjustment; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; Central braking system; Wired remote control.",
-    "image": "/assets/images/product_icu_bed_1792303339395.jpg",
+    "image": "/assets/images/bk_082/1.png",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 60-80H cms",
@@ -1817,7 +1817,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "ICU Bed, Electric, Five Functions. Five functions; Electric back lift, knee-rest lifting, Trendelenburg, reverse Trendelenburg and height adjustment; Removable moulded head and foot panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; brakes on two castors; Wired remote control.",
-    "image": "/assets/images/product_bedside_locker_1792303359577.jpg",
+    "image": "/assets/images/bk_081/1.png",
     "specs": {
       "material": "Mild steel framework",
       "dimensions": "210L x 90W x 50-70H cms",
@@ -1858,7 +1858,7 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "categoryLabel": "Hospital Beds",
     "subtitle": "",
     "description": "Hospital Fowler Bed. Framework: M.S.; Two functions; Manual knee-rest lifting and back lift; Removable moulded head and foot panels; Aluminium collapsible side railings; Four-section top; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "/assets/images/bk_005/1.jpg",
+    "image": "/assets/images/bk_005/1.png",
     "specs": {
       "material": "M.S.",
       "dimensions": "210L x 93W x 49H cms",
