@@ -523,7 +523,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
         )}
 
         {/* Pagination Controls */}
-        {filteredProducts.length > 0 && (
+        {/* {filteredProducts.length > 0 && (
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-6">
             <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium">
               <span>
@@ -597,7 +597,7 @@ export const ProductCatalogPage: React.FC<ProductCatalogPageProps> = ({
               </button>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

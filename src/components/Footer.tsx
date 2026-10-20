@@ -1,32 +1,36 @@
-import React from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ShieldCheck, 
-  ArrowUp, 
-  Award
-} from 'lucide-react';
-import { WhatsAppIcon } from './WhatsAppIcon';
-import { COMPANY_DETAILS } from '../data/products';
-import { BKLogo } from './BKLogo';
+import React from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ShieldCheck,
+  ArrowUp,
+  Award,
+  FileText,
+} from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import { COMPANY_DETAILS } from "../data/products";
+import { BKLogo } from "./BKLogo";
 
 interface FooterProps {
   onNavigate: (section: string) => void;
   onSelectCategory: (cat: any) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) => {
+export const Footer: React.FC<FooterProps> = ({
+  onNavigate,
+  onSelectCategory,
+}) => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleWhatsApp = () => {
     const text = encodeURIComponent(
-      `Hello BK Fabrication team,\nI am looking for hospital furniture pricing, specifications, and factory wholesale rates.`
+      `Hello BK Fabrication team,\nI am looking for hospital furniture pricing, specifications, and factory wholesale rates.`,
     );
-    window.open(`https://wa.me/919591244345?text=${text}`, '_blank');
+    window.open(`https://wa.me/919591244345?text=${text}`, "_blank");
   };
 
   return (
@@ -39,8 +43,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
               <Award className="w-4 h-4" />
             </div>
             <div>
-              <p className="font-bold text-white text-sm">Direct Factory Manufacturer Rates</p>
-              <p className="text-slate-400 text-xs">Hospital ward setups, custom sizes & ready stock delivery across India</p>
+              <p className="font-bold text-white text-sm">
+                Direct Factory Manufacturer Rates
+              </p>
+              <p className="text-slate-400 text-xs">
+                Hospital ward setups, custom sizes & ready stock delivery across
+                India
+              </p>
             </div>
           </div>
 
@@ -69,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
           {/* Brand Info & Identity */}
           <div className="lg:col-span-5 space-y-3.5">
             <button
-              onClick={() => onNavigate('hero')}
+              onClick={() => onNavigate("hero")}
               className="text-left cursor-pointer focus:outline-none"
               title="BK Fabrication - Go to Home"
             >
@@ -77,7 +86,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
             </button>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Manufacturer of hospital beds, stainless steel dressing trolleys, emergency crash carts, and medical ward furniture built with SS 304 and heavy gauge steel.
+              Manufacturer of hospital beds, stainless steel dressing trolleys,
+              emergency crash carts, and medical ward furniture built with SS
+              304 and heavy gauge steel.
             </p>
 
             <div className="flex items-center gap-2 pt-1 text-[11px] text-slate-400">
@@ -91,91 +102,105 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
           </div>
 
           {/* Quick Navigation Links */}
-          <div className="lg:col-span-3 space-y-2.5">
+          {/* Quick Navigation Links */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="text-white font-semibold uppercase tracking-wider text-[11px]">
               Categories & Models
             </h4>
-            <ul className="space-y-1.5 text-xs text-slate-400">
+
+            <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
                 <button
                   onClick={() => {
-                    onSelectCategory('beds');
-                    onNavigate('catalog');
+                    onSelectCategory("beds");
+                    onNavigate("catalog");
                   }}
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-left"
+                  className="flex items-center gap-2 hover:text-orange-400 transition-colors cursor-pointer text-left"
                 >
+                  <ShieldCheck className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                   ICU & Hospital Beds
                 </button>
               </li>
+
               <li>
                 <button
                   onClick={() => {
-                    onSelectCategory('trolleys');
-                    onNavigate('catalog');
+                    onSelectCategory("trolleys");
+                    onNavigate("catalog");
                   }}
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-left"
+                  className="flex items-center gap-2 hover:text-orange-400 transition-colors cursor-pointer text-left"
                 >
+                  <Award className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                   Emergency Crash Carts & Trolleys
                 </button>
               </li>
+
               <li>
                 <button
                   onClick={() => {
-                    onSelectCategory('examination');
-                    onNavigate('catalog');
+                    onSelectCategory("examination");
+                    onNavigate("catalog");
                   }}
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-left"
+                  className="flex items-center gap-2 hover:text-orange-400 transition-colors cursor-pointer text-left"
                 >
+                  <FileText className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                   Examination & OT Equipment
                 </button>
               </li>
+
               <li>
                 <button
                   onClick={() => {
-                    onSelectCategory('ward');
-                    onNavigate('catalog');
+                    onSelectCategory("ward");
+                    onNavigate("catalog");
                   }}
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-left"
+                  className="flex items-center gap-2 hover:text-orange-400 transition-colors cursor-pointer text-left"
                 >
+                  <ShieldCheck className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                   Ward Care & Bedside Lockers
                 </button>
               </li>
+
               <li>
                 <button
-                  onClick={() => onNavigate('custom')}
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-left"
+                  onClick={() => onNavigate("custom")}
+                  className="flex items-center gap-2 hover:text-orange-400 transition-colors cursor-pointer text-left"
                 >
+                  <Award className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                   Custom Size Fabrication
                 </button>
               </li>
             </ul>
           </div>
-
           {/* Direct Factory Contact & Hours */}
           <div className="lg:col-span-4 space-y-2.5">
-            <h4 className="text-white font-semibold uppercase tracking-wider text-[11px]">
-              Factory Location & Contacts
+            <h4 className="text-white font-semibold uppercase tracking-wider text-[11px] flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-orange-400" />
+              Our Location
             </h4>
+
             <div className="space-y-2 text-xs text-slate-400">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-orange-400 shrink-0 mt-0.5" />
-                <span>Industrial Area, Bangalore, Karnataka, India</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                <a href={`tel:${COMPANY_DETAILS.phones[0]}`} className="hover:text-orange-400 transition-colors">
-                  +91 95912 44345 / +91 78922 53940
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                <a href={`mailto:${COMPANY_DETAILS.email}`} className="hover:text-orange-400 transition-colors">
-                  {COMPANY_DETAILS.email}
-                </a>
-              </div>
+              <a
+                href="https://share.google/ZI2p6kYjkNd8gFscY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-orange-400 transition-colors group"
+                aria-label="Open BK Fabrication location in Google Maps"
+              >
+                <MapPin className="w-3.5 h-3.5 text-orange-400 shrink-0 mt-0.5 group-hover:text-orange-300" />
+
+                <span>
+                  Kanaka Layout, Garudachar Palya, Mahadevapura, Bengaluru,
+                  Karnataka – 560048
+                  <span className="block mt-1 text-orange-400 font-medium">
+                    View on Google Maps →
+                  </span>
+                </span>
+              </a>
+
               <div className="flex items-center gap-2">
                 <Clock className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                <span>Mon – Sat: 9:00 AM – 7:30 PM</span>
+                <span>Mon – Sun: 9:00 AM – 9:00 PM</span>
               </div>
             </div>
           </div>
@@ -186,7 +211,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
       <div className="border-t border-slate-800 bg-slate-950/70 py-4 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
           <div>
-            © {new Date().getFullYear()} {COMPANY_DETAILS.legalName}. All Rights Reserved.
+            © {new Date().getFullYear()} {COMPANY_DETAILS.legalName}. All Rights
+            Reserved.
           </div>
 
           <div className="flex items-center gap-4">
@@ -206,4 +232,3 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
     </footer>
   );
 };
-
