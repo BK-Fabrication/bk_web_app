@@ -58,12 +58,21 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
   const productImages = useMemo(() => {
     if (!product) return [];
-    const folder = product.modelCode.toLowerCase();
+    const code = product.modelCode.toLowerCase();
+    const folderWithUnderscore = code.replace(/^([a-z]+)(\d+)/, '$1_$2');
+
+    const folders = Array.from(new Set([
+      folderWithUnderscore,
+      code,
+      'bk_001'
+    ]));
 
     const dynamicCandidates: string[] = [];
-    for (let i = 1; i <= 6; i++) {
-      dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
-      dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+    for (const folder of folders) {
+      for (let i = 1; i <= 6; i++) {
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+      }
     }
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));

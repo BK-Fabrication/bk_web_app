@@ -57,12 +57,21 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   }, [activeId]);
 
   const productImages = useMemo(() => {
-    const folder = currentProduct.modelCode.toLowerCase();
+    const code = currentProduct.modelCode.toLowerCase();
+    const folderWithUnderscore = code.replace(/^([a-z]+)(\d+)/, '$1_$2');
+
+    const folders = Array.from(new Set([
+      folderWithUnderscore,
+      code,
+      'bk_001'
+    ]));
 
     const dynamicCandidates: string[] = [];
-    for (let i = 1; i <= 6; i++) {
-      dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
-      dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+    for (const folder of folders) {
+      for (let i = 1; i <= 6; i++) {
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.png`);
+        dynamicCandidates.push(`/assets/images/${folder}/${i}.jpg`);
+      }
     }
 
     const uniqueCandidates = Array.from(new Set(dynamicCandidates.filter(Boolean)));
