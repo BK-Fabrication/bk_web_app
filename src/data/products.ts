@@ -2,73 +2,13 @@ import { MedicalProduct } from '../types';
 
 export const MEDICAL_PRODUCTS: MedicalProduct[] = [
   {
-    "id": "foot-step-double-bk1f8aa",
-    "modelCode": "BK1F8AA",
+    "id": "foot-step-double-bk2f5aa",
+    "modelCode": "BK2F5AA",
     "name": "Foot Step Double",
     "category": "ward",
     "categoryLabel": "Foot Steps",
     "subtitle": "",
-    "description": "Foot Step Double. M.S. framework, epoxy powder-coated; M.S. tubular legs; Anti-slip platform.",
-    "image": "",
-    "specs": {
-      "material": "M.S. framework, epoxy powder-coated",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "M.S. framework, epoxy powder-coated",
-      "castors": "",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. framework, epoxy powder-coated",
-      "M.S. tubular legs",
-      "Anti-slip platform"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "foot-step-single-bk1f1aa",
-    "modelCode": "BK1F1AA",
-    "name": "Foot Step Single",
-    "category": "ward",
-    "categoryLabel": "Foot Steps",
-    "subtitle": "",
-    "description": "Foot Step Single. M.S. tubular legs; Pre-treated and epoxy powder-coated; Anti-slip platform.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular legs",
-      "dimensions": "",
-      "size": "16\" x 9\" x 9\"",
-      "loadCapacity": "",
-      "finish": "Pre-treated and epoxy powder-coated",
-      "castors": "",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular legs",
-      "Pre-treated and epoxy powder-coated",
-      "Anti-slip platform"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "foot-step-single-bk1f6aa",
-    "modelCode": "BK1F6AA",
-    "name": "Foot Step Single",
-    "category": "ward",
-    "categoryLabel": "Foot Steps",
-    "subtitle": "",
-    "description": "Foot Step Single. S.S. framework; Anti-slip platform; S.S. tubular legs.",
+    "description": "Foot Step Double. S.S. framework; Anti-slip platform; S.S. tubular legs.",
     "image": "",
     "specs": {
       "material": "S.S. framework",
@@ -92,13 +32,13 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "foot-step-double-bk2f5aa",
-    "modelCode": "BK2F5AA",
-    "name": "Foot Step Double",
+    "id": "foot-step-single-bk1f6aa",
+    "modelCode": "BK1F6AA",
+    "name": "Foot Step Single",
     "category": "ward",
     "categoryLabel": "Foot Steps",
     "subtitle": "",
-    "description": "Foot Step Double. S.S. framework; Anti-slip platform; S.S. tubular legs.",
+    "description": "Foot Step Single. S.S. framework; Anti-slip platform; S.S. tubular legs.",
     "image": "",
     "specs": {
       "material": "S.S. framework",
@@ -270,36 +210,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "saline-stand-bk2f5aa",
-    "modelCode": "BK2F5AA",
-    "name": "Saline Stand",
-    "category": "ward",
-    "categoryLabel": "Stands",
-    "subtitle": "",
-    "description": "Saline Stand. M.S. tubular pipe; M.S. adjustable rod with two hooks; Four-leg M.S. base, epoxy powder-coated, on 5 cm castors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular pipe",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "Four-leg M.S. base, epoxy powder-coated, on 5 cm castors",
-      "castors": "Four-leg M.S. base, epoxy powder-coated, on 5 cm castors",
-      "adjustments": "M.S. adjustable rod with two hooks",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular pipe",
-      "M.S. adjustable rod with two hooks",
-      "Four-leg M.S. base, epoxy powder-coated, on 5 cm castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "seating-stool-bk2f8aa",
     "modelCode": "BK2F8AA",
     "name": "Seating Stool",
@@ -323,68 +233,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "Steel top",
       "Height adjustable by rotation",
       "Bush fitted in bottom"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "seating-stool-bk2f3aa",
-    "modelCode": "BK2F3AA",
-    "name": "Seating Stool",
-    "category": "ward",
-    "categoryLabel": "Stools",
-    "subtitle": "",
-    "description": "Seating Stool. M.S. tubular pipe framework; Cushioned top; Bush fitted in bottom; Pneumatic height adjustment.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular pipe framework",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "",
-      "adjustments": "Pneumatic height adjustment",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular pipe framework",
-      "Cushioned top",
-      "Bush fitted in bottom",
-      "Pneumatic height adjustment"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "seating-stool-bk1f9aa",
-    "modelCode": "BK1F9AA",
-    "name": "Seating Stool",
-    "category": "ward",
-    "categoryLabel": "Stools",
-    "subtitle": "",
-    "description": "Seating Stool. M.S. tubular pipe framework with steel top; Bush fitted in bottom; Height adjustable by rotation; Epoxy powder-coated.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular pipe framework with steel top",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "Epoxy powder-coated",
-      "castors": "",
-      "adjustments": "Height adjustable by rotation",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular pipe framework with steel top",
-      "Bush fitted in bottom",
-      "Height adjustable by rotation",
-      "Epoxy powder-coated"
     ],
     "applications": [],
     "certifications": [],
@@ -506,36 +354,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "M.S. epoxy powder-coated framework",
       "Crib size: 76L x 38W x 26H cm",
       "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "baby-crib-trolley-bk9f8aa",
-    "modelCode": "BK9F8AA",
-    "name": "Baby Crib Trolley",
-    "category": "ward",
-    "categoryLabel": "Baby Cribs",
-    "subtitle": "",
-    "description": "Baby Crib Trolley. M.S. tubular structure on 100 mm castors; Four-side fixed railing; Mattress with rexine cover.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular structure on 100 mm castors",
-      "dimensions": "1100L x 640W x 1040H mm",
-      "size": "1100L x 640W x 1040H mm",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "M.S. tubular structure on 100 mm castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular structure on 100 mm castors",
-      "Four-side fixed railing",
-      "Mattress with rexine cover"
     ],
     "applications": [],
     "certifications": [],
@@ -698,37 +516,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "medicine-trolley-utility-trolley-bk6f5aa",
-    "modelCode": "BK6F5AA",
-    "name": "Medicine Trolley/Utility Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Medicine Trolley/Utility Trolley. M.S. epoxy powder-coated framework; S.S. shelves; One drawer below top shelf; On castors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "",
-      "size": "46 x 46 x 81 cm",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "On castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "S.S. shelves",
-      "One drawer below top shelf",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "medicine-trolley-utility-trolley-bk10f8aa",
     "modelCode": "BK10F8AA",
     "name": "Medicine Trolley/Utility Trolley",
@@ -781,38 +568,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "keyFeatures": [
       "M.S. epoxy powder-coated framework",
       "Two ABS shelves",
-      "On castors; two with brakes"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "ecg-trolley-bk9f7aa",
-    "modelCode": "BK9F7AA",
-    "name": "ECG Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "ECG Trolley. M.S. epoxy powder-coated framework; One S.S. top and two M.S. shelves; M.S. handle; Cable hanger; On castors; two with brakes.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "615 x 460 x 940 mm",
-      "size": "615 x 460 x 940 mm",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "On castors; two with brakes",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "One S.S. top and two M.S. shelves",
-      "M.S. handle",
-      "Cable hanger",
       "On castors; two with brakes"
     ],
     "applications": [],
@@ -882,98 +637,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "dressing-trolley-bk7f9aa",
-    "modelCode": "BK7F9AA",
-    "name": "Dressing Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Dressing Trolley. S.S. framework; One bucket and one bowl; S.S. shelves with four-side railing; On castors.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "76L x 46W x 81H cms",
-      "size": "76L x 46W x 81H cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "On castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "One bucket and one bowl",
-      "S.S. shelves with four-side railing",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "instrument-trolley-bk9f7aa",
-    "modelCode": "BK9F7AA",
-    "name": "Instrument Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Instrument Trolley. S.S. tubular framework; Mounted on 5 cm castors; Three S.S. sheet shelves with three-side railing.",
-    "image": "",
-    "specs": {
-      "material": "S.S. tubular framework",
-      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "Mounted on 5 cm castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. tubular framework",
-      "Mounted on 5 cm castors",
-      "Three S.S. sheet shelves with three-side railing"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "instrument-trolley-bk6f6aa",
-    "modelCode": "BK6F6AA",
-    "name": "Instrument Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Instrument Trolley. S.S. framework; Two S.S. shelves; Push handles on both sides; On castors; two with brakes.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "On castors; two with brakes",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "Two S.S. shelves",
-      "Push handles on both sides",
-      "On castors; two with brakes"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "instrument-trolley-bk10f7aa",
     "modelCode": "BK10F7AA",
     "name": "Instrument Trolley",
@@ -1005,36 +668,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "instrument-trolley-2-shelves-bk4f7aa",
-    "modelCode": "BK4F7AA",
-    "name": "Instrument Trolley (2 Shelves)",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Instrument Trolley (2 Shelves). S.S. framework; Two S.S. shelves; On castors.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "On castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "Two S.S. shelves",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "instrument-trolley-2-shelves-bk5f9aa",
     "modelCode": "BK5F9AA",
     "name": "Instrument Trolley (2 Shelves)",
@@ -1056,36 +689,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "keyFeatures": [
       "S.S. framework",
       "Two S.S. shelves with three-side railing on top shelf",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "instrument-trolley-2-shelves-bk3f9aa",
-    "modelCode": "BK3F9AA",
-    "name": "Instrument Trolley (2 Shelves)",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Instrument Trolley (2 Shelves). M.S. epoxy powder-coated framework; Two M.S. shelves with three-side railings on both shelves; On castors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "size": "60 x 46 x 81 cms; 76 x 46 x 81 cms; 90 x 60 x 81 cms",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "On castors",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "Two M.S. shelves with three-side railings on both shelves",
       "On castors"
     ],
     "applications": [],
@@ -1147,68 +750,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "M.S. three-leg base on 5 cm castors",
       "One approximately 35 cm steel basin",
       "Pre-treated epoxy powder-coated support rod and ring"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "mayo-s-instrument-trolley-bk3f3aa",
-    "modelCode": "BK3F3AA",
-    "name": "Mayo's Instrument Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Mayo's Instrument Trolley. M.S. epoxy powder-coated framework; S.S. top; Height adjustable by knob; On castors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "Tray 56L x 40W cms",
-      "size": "Tray 56L x 40W cms",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "On castors",
-      "adjustments": "Height adjustable by knob",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "S.S. top",
-      "Height adjustable by knob",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "mayo-s-instrument-trolley-bk3f8aa",
-    "modelCode": "BK3F8AA",
-    "name": "Mayo's Instrument Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Mayo's Instrument Trolley. S.S. framework; S.S. tray; Height adjustable by knob; On castors.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "Tray 56L x 40W cms",
-      "size": "Tray 56L x 40W cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "On castors",
-      "adjustments": "Height adjustable by knob",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "S.S. tray",
-      "Height adjustable by knob",
-      "On castors"
     ],
     "applications": [],
     "certifications": [],
@@ -1308,96 +849,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "locker-bed-side-bk5f5aa",
-    "modelCode": "BK5F5AA",
-    "name": "Locker-Bed Side",
-    "category": "ward",
-    "categoryLabel": "Bedside Lockers",
-    "subtitle": "",
-    "description": "Locker-Bed Side. M.S. epoxy powder-coated framework; S.S. top with raised edges on three sides; One storage compartment and one drawer.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "",
-      "size": "16\" x 16\" x 32\"",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "S.S. top with raised edges on three sides",
-      "One storage compartment and one drawer"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "locker-bed-side-bk3f7aa",
-    "modelCode": "BK3F7AA",
-    "name": "Locker-Bed Side",
-    "category": "ward",
-    "categoryLabel": "Bedside Lockers",
-    "subtitle": "",
-    "description": "Locker-Bed Side. M.S. epoxy powder-coated framework; One drawer and one storage compartment; Wooden laminated top and front doors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. epoxy powder-coated framework",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "M.S. epoxy powder-coated framework",
-      "castors": "",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. epoxy powder-coated framework",
-      "One drawer and one storage compartment",
-      "Wooden laminated top and front doors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "locker-bed-side-bk4f3aa",
-    "modelCode": "BK4F3AA",
-    "name": "Locker-Bed Side",
-    "category": "ward",
-    "categoryLabel": "Bedside Lockers",
-    "subtitle": "",
-    "description": "Locker-Bed Side. S.S. top with M.S. body; Epoxy powder-coated body; One storage compartment.",
-    "image": "",
-    "specs": {
-      "material": "S.S. top with M.S. body",
-      "dimensions": "",
-      "size": "16\" x 16\" x 32\"",
-      "loadCapacity": "",
-      "finish": "Epoxy powder-coated body",
-      "castors": "",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. top with M.S. body",
-      "Epoxy powder-coated body",
-      "One storage compartment"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "folding-patient-stretcher-trolley-bk19f7aa",
     "modelCode": "BK19F7AA",
     "name": "Folding Patient Stretcher Trolley",
@@ -1455,67 +906,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "Removable stretcher top",
       "15 cm castors; two with brakes",
       "Epoxy powder-coated finish"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "patient-stretcher-trolley-bk10f7aa",
-    "modelCode": "BK10F7AA",
-    "name": "Patient Stretcher Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Patient Stretcher Trolley. M.S. framework; Removable stretcher top; Pre-treated and epoxy powder-coated finish; 15 cm castors; two with brakes.",
-    "image": "",
-    "specs": {
-      "material": "M.S. framework",
-      "dimensions": "210L x 56W x 81H cms",
-      "size": "210L x 56W x 81H cms",
-      "loadCapacity": "",
-      "finish": "Pre-treated and epoxy powder-coated finish",
-      "castors": "15 cm castors; two with brakes",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. framework",
-      "Removable stretcher top",
-      "Pre-treated and epoxy powder-coated finish",
-      "15 cm castors; two with brakes"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "patient-stretcher-trolley-bk14f9aa",
-    "modelCode": "BK14F9AA",
-    "name": "Patient Stretcher Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Patient Stretcher Trolley. S.S. framework; 15 cm castors; two with brakes; Removable stretcher top.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "210L x 56W x 81H cms",
-      "size": "210L x 56W x 81H cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "15 cm castors; two with brakes",
-      "adjustments": "",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "15 cm castors; two with brakes",
-      "Removable stretcher top"
     ],
     "applications": [],
     "certifications": [],
@@ -1718,38 +1108,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "gynaec-examination-table-two-section-bk11f9aa",
-    "modelCode": "BK11F9AA",
-    "name": "Gynaec Examination Table (Two Section)",
-    "category": "examination",
-    "categoryLabel": "Examination Tables",
-    "subtitle": "",
-    "description": "Gynaec Examination Table (Two Section). M.S. tubular framework; Backrest adjustable on ratchet/lever; PVC stumps on legs; Adjustable lithotomy poles with straps; Epoxy powder-coated finish.",
-    "image": "",
-    "specs": {
-      "material": "M.S. tubular framework",
-      "dimensions": "180L x 60W x 80H cms",
-      "size": "180L x 60W x 80H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder-coated finish",
-      "castors": "",
-      "adjustments": "Backrest adjustable on ratchet/lever; Adjustable lithotomy poles with straps",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. tubular framework",
-      "Backrest adjustable on ratchet/lever",
-      "PVC stumps on legs",
-      "Adjustable lithotomy poles with straps",
-      "Epoxy powder-coated finish"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "gynaec-examination-table-two-section-bk17f7aa",
     "modelCode": "BK17F7AA",
     "name": "Gynaec Examination Table (Two Section)",
@@ -1782,37 +1140,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "examination-table-in-2-parts-2-section-top-bk9f5aa",
-    "modelCode": "BK9F5AA",
-    "name": "Examination Table in 2 Parts (2 Section Top)",
-    "category": "examination",
-    "categoryLabel": "Examination Tables",
-    "subtitle": "",
-    "description": "Examination Table in 2 Parts (2 Section Top). M.S. frame with adjustable backrest; Two-section foam-padded upholstered top; Pre-treated and epoxy powder-coated; Mild steel framework.",
-    "image": "",
-    "specs": {
-      "material": "M.S. frame with adjustable backrest",
-      "dimensions": "180L x 60W x 80H cms",
-      "size": "180L x 60W x 80H cms",
-      "loadCapacity": "",
-      "finish": "Pre-treated and epoxy powder-coated",
-      "castors": "",
-      "adjustments": "M.S. frame with adjustable backrest",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. frame with adjustable backrest",
-      "Two-section foam-padded upholstered top",
-      "Pre-treated and epoxy powder-coated",
-      "Mild steel framework"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "examination-table-in-2-parts-2-section-top-bk13f9aa",
     "modelCode": "BK13F9AA",
     "name": "Examination Table in 2 Parts (2 Section Top)",
@@ -1835,38 +1162,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "S.S. frame with adjustable backrest",
       "Two-section foam upholstered top",
       "Stainless steel framework"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "gynaec-examination-table-three-sections-bk21f6aa",
-    "modelCode": "BK21F6AA",
-    "name": "Gynaec Examination Table (Three Sections)",
-    "category": "examination",
-    "categoryLabel": "Examination Tables",
-    "subtitle": "",
-    "description": "Gynaec Examination Table (Three Sections). S.S. framework; Backrest adjustable on ratchet/lever; PVC stumps on legs; 5 cm foam cushioned rexine-covered top with perineal cut; Adjustable lithotomy poles with straps.",
-    "image": "",
-    "specs": {
-      "material": "S.S. framework",
-      "dimensions": "180L x 60W x 46H cms",
-      "size": "180L x 60W x 46H cms",
-      "loadCapacity": "",
-      "finish": "",
-      "castors": "",
-      "adjustments": "Backrest adjustable on ratchet/lever; Adjustable lithotomy poles with straps",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "S.S. framework",
-      "Backrest adjustable on ratchet/lever",
-      "PVC stumps on legs",
-      "5 cm foam cushioned rexine-covered top with perineal cut",
-      "Adjustable lithotomy poles with straps"
     ],
     "applications": [],
     "certifications": [],
@@ -1928,37 +1223,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     },
     "keyFeatures": [
       "S.S. framework",
-      "Laminated wooden top (30 x 16 inches)",
-      "Height adjustable by knob",
-      "On castors"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "cardiac-table-food-trolley-bk3f3aa",
-    "modelCode": "BK3F3AA",
-    "name": "Cardiac Table / Food Trolley",
-    "category": "trolleys",
-    "categoryLabel": "Trolleys",
-    "subtitle": "",
-    "description": "Cardiac Table / Food Trolley. M.S. framework with epoxy powder coating; Laminated wooden top (30 x 16 inches); Height adjustable by knob; On castors.",
-    "image": "",
-    "specs": {
-      "material": "M.S. framework with epoxy powder coating",
-      "dimensions": "",
-      "size": "",
-      "loadCapacity": "",
-      "finish": "M.S. framework with epoxy powder coating",
-      "castors": "On castors",
-      "adjustments": "Height adjustable by knob",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "M.S. framework with epoxy powder coating",
       "Laminated wooden top (30 x 16 inches)",
       "Height adjustable by knob",
       "On castors"
@@ -2287,109 +1551,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
     "isFeatured": false
   },
   {
-    "id": "icu-bed-bk23f8aa",
-    "modelCode": "BK23F8AA",
-    "name": "ICU Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "ICU Bed. Five functions; Manual back lift and knee-rest lifting; Four-section weld-wire-mesh top; Mild steel framework; Wooden laminated head and foot panels with SS frame; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "",
-    "specs": {
-      "material": "Mild steel framework",
-      "dimensions": "210L x 90W x 60H cms",
-      "size": "210L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating",
-      "castors": "125 mm castors; two with brakes",
-      "adjustments": "Five functions; Manual back lift and knee-rest lifting",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Five functions",
-      "Manual back lift and knee-rest lifting",
-      "Four-section weld-wire-mesh top",
-      "Mild steel framework",
-      "Wooden laminated head and foot panels with SS frame",
-      "125 mm castors; two with brakes",
-      "Epoxy powder coating"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "icu-bed-bk32f7aa",
-    "modelCode": "BK32F7AA",
-    "name": "ICU Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "ICU Bed. Three functions; Manual back lift and knee-rest lifting; Manual Trendelenburg and reverse Trendelenburg listed in catalogue; Removable moulded panels; Aluminium collapsible safety side railings; Four-section top; Mild steel framework; 125 mm castors; two with brakes; Epoxy powder coating.",
-    "image": "",
-    "specs": {
-      "material": "Mild steel framework",
-      "dimensions": "210L x 90W x 60H cms",
-      "size": "210L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating",
-      "castors": "125 mm castors; two with brakes",
-      "adjustments": "Three functions; Manual back lift and knee-rest lifting; Manual Trendelenburg and reverse Trendelenburg listed in catalogue",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Three functions",
-      "Manual back lift and knee-rest lifting",
-      "Manual Trendelenburg and reverse Trendelenburg listed in catalogue",
-      "Removable moulded panels",
-      "Aluminium collapsible safety side railings",
-      "Four-section top",
-      "Mild steel framework",
-      "125 mm castors; two with brakes",
-      "Epoxy powder coating"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "hospital-fowler-bed-bk15f9aa",
-    "modelCode": "BK15F9AA",
-    "name": "Hospital Fowler Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "Hospital Fowler Bed. Two functions; M.S. framework; Manual back lift; Four-section top; Epoxy powder coating; 125 mm castors; two with brakes.",
-    "image": "",
-    "specs": {
-      "material": "M.S. framework",
-      "dimensions": "210L x 90W x 60H cms",
-      "size": "210L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating",
-      "castors": "125 mm castors; two with brakes",
-      "adjustments": "Two functions; Manual back lift",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Two functions",
-      "M.S. framework",
-      "Manual back lift",
-      "Four-section top",
-      "Epoxy powder coating",
-      "125 mm castors; two with brakes"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
     "id": "hospital-fowler-bed-bk19f5aa",
     "modelCode": "BK19F5AA",
     "name": "Hospital Fowler Bed",
@@ -2417,101 +1578,6 @@ export const MEDICAL_PRODUCTS: MedicalProduct[] = [
       "Four-section top",
       "125 mm castors; two with brakes",
       "Epoxy powder coating"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "hospital-semi-fowler-bed-bk10f8aa",
-    "modelCode": "BK10F8AA",
-    "name": "Hospital Semi-Fowler Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Top: two sections; Back lift: manual; Epoxy powder coating.",
-    "image": "",
-    "specs": {
-      "material": "M.S.",
-      "dimensions": "206L x 90W x 60H cms",
-      "size": "206L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating",
-      "castors": "",
-      "adjustments": "Back lift: manual",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Framework: M.S.",
-      "Top: two sections",
-      "Back lift: manual",
-      "Epoxy powder coating"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "hospital-semi-fowler-bed-bk11f5aa",
-    "modelCode": "BK11F5AA",
-    "name": "Hospital Semi-Fowler Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Top: two sections; Tubular head and foot bows of unequal height; Back lift: manual; Epoxy powder coating.",
-    "image": "",
-    "specs": {
-      "material": "M.S.",
-      "dimensions": "206L x 90W x 60H cms",
-      "size": "206L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating",
-      "castors": "",
-      "adjustments": "Back lift: manual",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Framework: M.S.",
-      "Top: two sections",
-      "Tubular head and foot bows of unequal height",
-      "Back lift: manual",
-      "Epoxy powder coating"
-    ],
-    "applications": [],
-    "certifications": [],
-    "inStock": false,
-    "leadTime": "",
-    "isFeatured": false
-  },
-  {
-    "id": "hospital-semi-fowler-bed-bk12f7aa",
-    "modelCode": "BK12F7AA",
-    "name": "Hospital Semi-Fowler Bed",
-    "category": "beds",
-    "categoryLabel": "Hospital Beds",
-    "subtitle": "",
-    "description": "Hospital Semi-Fowler Bed. Framework: M.S.; Head and foot panels: wooden laminated with M.S. frame; Top: two sections; Back lift: manual; Epoxy powder coating, M.S. panels.",
-    "image": "",
-    "specs": {
-      "material": "M.S.",
-      "dimensions": "206L x 90W x 60H cms",
-      "size": "206L x 90W x 60H cms",
-      "loadCapacity": "",
-      "finish": "Epoxy powder coating, M.S. panels",
-      "castors": "",
-      "adjustments": "Back lift: manual",
-      "warranty": ""
-    },
-    "keyFeatures": [
-      "Framework: M.S.",
-      "Head and foot panels: wooden laminated with M.S. frame",
-      "Top: two sections",
-      "Back lift: manual",
-      "Epoxy powder coating, M.S. panels"
     ],
     "applications": [],
     "certifications": [],
