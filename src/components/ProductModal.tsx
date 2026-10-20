@@ -49,17 +49,35 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   if (!product) return null;
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   useEffect(() => {
+    setFailedImages(new Set());
     setActiveImageIndex(0);
   }, [product?.id]);
 
   const productImages = useMemo(() => {
     if (!product) return [];
-    return product.images && product.images.length > 0
-      ? product.images
-      : [product.image];
-  }, [product]);
+    const code = product.modelCode.toLowerCase();
+    const folder = code === 'bk17f9aa' ? 'bk_001' : code;
+
+    const dynamicCandidates = [
+      `/assets/images/${folder}/2.png`,
+      `/assets/images/${folder}/1.jpg`,
+      `/assets/images/${folder}/3.jpg`,
+      `/assets/images/${folder}/4.jpg`,
+      `/assets/images/${folder}/5.jpg`,
+      `/assets/images/${folder}/6.jpg`,
+    ];
+
+    const candidates = product.images && product.images.length > 0
+      ? [...product.images, ...dynamicCandidates]
+      : [...dynamicCandidates, product.image];
+
+    const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+    const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
+    return filtered.length > 0 ? filtered : [product.image];
+  }, [product, failedImages]);
 
   const handleWhatsAppInquiry = () => {
     const text = encodeURIComponent(
@@ -134,6 +152,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   alt={`${product.name} - View ${activeImageIndex + 1}`}
                   className="max-h-60 w-auto object-contain mx-auto transition-all duration-300"
                   referrerPolicy="no-referrer"
+                  onError={() => {
+                    const currentImg = productImages[activeImageIndex];
+                    if (currentImg) {
+                      setFailedImages((prev) => new Set(prev).add(currentImg));
+                      setActiveImageIndex(0);
+                    }
+                  }}
                 />
 
                 {productImages.length > 1 && (

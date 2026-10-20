@@ -49,16 +49,34 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   const currentProduct = MEDICAL_PRODUCTS.find((p) => p.id === activeId) || MEDICAL_PRODUCTS[0];
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setFailedImages(new Set());
     setActiveImageIndex(0);
   }, [activeId]);
 
   const productImages = useMemo(() => {
-    return currentProduct.images && currentProduct.images.length > 0
-      ? currentProduct.images
-      : [currentProduct.image];
-  }, [currentProduct]);
+    const code = currentProduct.modelCode.toLowerCase();
+    const folder = code === 'bk17f9aa' ? 'bk_001' : code;
+
+    const dynamicCandidates = [
+      `/assets/images/${folder}/2.png`,
+      `/assets/images/${folder}/1.jpg`,
+      `/assets/images/${folder}/3.jpg`,
+      `/assets/images/${folder}/4.jpg`,
+      `/assets/images/${folder}/5.jpg`,
+      `/assets/images/${folder}/6.jpg`,
+    ];
+
+    const candidates = currentProduct.images && currentProduct.images.length > 0
+      ? [...currentProduct.images, ...dynamicCandidates]
+      : [...dynamicCandidates, currentProduct.image];
+
+    const uniqueCandidates = Array.from(new Set(candidates.filter(Boolean)));
+    const filtered = uniqueCandidates.filter((img) => !failedImages.has(img));
+    return filtered.length > 0 ? filtered : [currentProduct.image];
+  }, [currentProduct, failedImages]);
 
   const relatedProducts = useMemo(() => {
     const sameCategory = MEDICAL_PRODUCTS.filter(
@@ -236,6 +254,13 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
                     alt={`${currentProduct.name} - View ${activeImageIndex + 1}`}
                     className="max-h-52 sm:max-h-64 w-auto object-contain mx-auto transition-all duration-300 print:max-h-44"
                     referrerPolicy="no-referrer"
+                    onError={() => {
+                      const currentImg = productImages[activeImageIndex];
+                      if (currentImg) {
+                        setFailedImages((prev) => new Set(prev).add(currentImg));
+                        setActiveImageIndex(0);
+                      }
+                    }}
                   />
 
                   {productImages.length > 1 && (
