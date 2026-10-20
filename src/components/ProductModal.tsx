@@ -177,7 +177,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                       }`}
                       title={`Switch to image ${idx + 1}`}
                     >
-                      <img src={img} alt={`Thumb ${idx + 1}`} className="max-h-full max-w-full object-contain" />
+                      <img
+                        src={img}
+                        alt={`Thumb ${idx + 1}`}
+                        className="max-h-full max-w-full object-contain"
+                        onError={() => {
+                          setFailedImages((prev) => new Set(prev).add(img));
+                        }}
+                      />
                     </button>
                   ))}
                 </div>
