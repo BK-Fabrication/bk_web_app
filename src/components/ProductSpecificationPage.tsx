@@ -57,8 +57,7 @@ export const ProductSpecificationPage: React.FC<ProductSpecificationPageProps> =
   }, [activeId]);
 
   const productImages = useMemo(() => {
-    const code = currentProduct.modelCode.toLowerCase();
-    const folder = code === 'bk17f9aa' ? 'bk_001' : code;
+    const folder = currentProduct.modelCode.toLowerCase();
 
     const dynamicCandidates = [
       `/assets/images/${folder}/2.png`,

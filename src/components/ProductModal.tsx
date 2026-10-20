@@ -58,8 +58,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
   const productImages = useMemo(() => {
     if (!product) return [];
-    const code = product.modelCode.toLowerCase();
-    const folder = code === 'bk17f9aa' ? 'bk_001' : code;
+    const folder = product.modelCode.toLowerCase();
 
     const dynamicCandidates = [
       `/assets/images/${folder}/2.png`,
