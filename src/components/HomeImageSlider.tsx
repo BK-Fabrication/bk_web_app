@@ -13,8 +13,6 @@ import { COMPANY_DETAILS } from '../data/products';
 export interface CleanSlideData {
   id: string;
   productId?: string;
-  tag: string;
-  tagColor: string;
   title: string;
   shortDesc: string;
   image: string;
@@ -25,8 +23,6 @@ export interface CleanSlideData {
 const SLIDES: CleanSlideData[] = [
   {
     id: 'slide-1',
-    tag: 'COMPLETE HOSPITAL WARD SETUP',
-    tagColor: 'text-orange-700 bg-orange-50 border-orange-200',
     title: 'Turnkey Ward & ICU Setup',
     shortDesc: 'Heavy-duty hospital beds, patient lockers, and SS 304 furniture supplied at direct factory rates.',
     image: '/assets/images/hero_medical_facility_1792303314930.jpg',
@@ -36,8 +32,6 @@ const SLIDES: CleanSlideData[] = [
   {
     id: 'slide-2',
     productId: 'icu-bed-pro',
-    tag: 'MODEL: BK-ICU-900 · ICU BEDS',
-    tagColor: 'text-blue-700 bg-blue-50 border-blue-200',
     title: 'Electric Multi-Function ICU Bed',
     shortDesc: '4 silent Linak-grade actuators, dual CPR emergency release, and 260 kg weight capacity.',
     image: '/assets/images/product_icu_bed_1792303339395.jpg',
@@ -47,8 +41,6 @@ const SLIDES: CleanSlideData[] = [
   {
     id: 'slide-3',
     productId: 'surgical-dressing-trolley',
-    tag: 'MODEL: BK-DT-304 · SURGICAL OT',
-    tagColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
     title: 'SS 304 Surgical Dressing Trolley',
     shortDesc: '100% pure non-magnetic Grade 304 stainless steel with seamless argon-welded joints.',
     image: '/assets/images/product_dressing_trolley_1792303340011.jpg',
@@ -58,8 +50,6 @@ const SLIDES: CleanSlideData[] = [
   {
     id: 'slide-4',
     productId: 'emergency-crash-cart',
-    tag: 'MODEL: BK-CC-400 · EMERGENCY',
-    tagColor: 'text-rose-700 bg-rose-50 border-rose-200',
     title: 'Emergency Medicine Crash Cart',
     shortDesc: '5 color-coded drawers, breakaway security lock, and 360° rotating defibrillator tray.',
     image: '/assets/images/product_crash_cart_1792303340280.jpg',
@@ -195,13 +185,6 @@ export const HomeImageSlider: React.FC<HomeImageSliderProps> = ({
           
           {/* Left: Clean, Punchy Typography & Fast CTAs */}
           <div className="lg:col-span-5 space-y-4">
-            {/* Tag Badge */}
-            <div>
-              <span className={`inline-block text-[11px] font-mono font-bold tracking-wider px-2.5 py-1 rounded-md border shadow-2xs ${activeSlide.tagColor}`}>
-                {activeSlide.tag}
-              </span>
-            </div>
-
             {/* Title */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
               {activeSlide.title}
